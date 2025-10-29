@@ -3,7 +3,6 @@
 # echo ==Set Variables...==
 SetVariable modsfolder ""
 SetVariable h2maps ""
-SetVariable reachmaps ""
 SetVariable workingdir ""
 
 # echo ==Creating Mod Package...==

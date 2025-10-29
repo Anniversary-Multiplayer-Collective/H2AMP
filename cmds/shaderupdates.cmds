@@ -1024,10 +1024,15 @@ NameTag shaders\shader_options\sfx_distort.render_method_option shaders\shader_o
 ##NameTag ms30\shaders\halogram_templates\_0_1_1_0_0_0_0_0_0.vertex_shader shaders\halogram_templates\_0_1_1_0_0_0_0_0_0
 SaveTagNames
 
-OpenCacheFile reachmaps\m45.map
-PortTag rasterizer\rain\rain_noise_boundary.bitmap
-PortTag shaders\default_bitmaps\bitmaps\color_white_alpha_black.bitmap
-Exit
+#OpenCacheFile reachmaps\m45.map
+#PortTag rasterizer\rain\rain_noise_boundary.bitmap
+#PortTag shaders\default_bitmaps\bitmaps\color_white_alpha_black.bitmap
+#Exit
+
+GenerateBitmap shaders\default_bitmaps\bitmaps\checker_board "workingdir\bitmaps\checker_board.dds"
+GenerateBitmap shaders\default_bitmaps\bitmaps\color_blue "workingdir\bitmaps\color_blue.dds"
+GenerateBitmap shaders\default_bitmaps\bitmaps\color_white_alpha_black "workingdir\bitmaps\color_white_alpha_black.dds"
+GenerateBitmap rasterizer\rain\rain_noise_boundary "workingdir\bitmaps\rain_noise_boundary.dds"
 
 // Maybe move to using loose tags 
 GenerateBitmap shaders\default_bitmaps\bitmaps\checker_board "workingdir\bitmaps\checker_board.dds"
