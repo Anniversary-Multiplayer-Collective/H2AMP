@@ -127,6 +127,8 @@ RunCommands workingdir\cmds\MapFiles.cmds
 
 RunCommands workingdir\cmds\h2hud.cmds
 
+RunCommands workingdir\cmds\Halo_2_Shader_Fixes.cmds
+
 ##EditTag multiplayer\forge_globals.forge_globals_definition
 ##MaximizeBudget All
 ##SaveTagChanges
