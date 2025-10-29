@@ -1,4 +1,6 @@
 opencachefile workingdir\maps\H2CHUD.map
+NameBlamTag ui\chud\elite.chud_definition ui\chud\elite_h2
+NameBlamTag ui\chud\spartan.chud_definition ui\chud\spartan_h2
 
 ## Weapon HUD ##
 PortTag Replace ui\hud\hud_messages.multilingual_unicode_string_list
@@ -55,7 +57,6 @@ PortTag Replace ui\chud\v_wraithturret.chud_definition
 PortTag Replace ui\chud\weapon_backgrounds.chud_definition
 
 
-PortTag Replace ui\chud\elite.chud_definition
 PortTag Replace ui\chud\e_autoturret.chud_definition
 PortTag Replace ui\chud\e_bubbleshield.chud_definition
 PortTag Replace ui\chud\e_flare.chud_definition
@@ -67,9 +68,22 @@ PortTag Replace ui\chud\e_jammer.chud_definition
 PortTag Replace ui\chud\e_powerdrain.chud_definition
 PortTag Replace ui\chud\e_regen.chud_definition
 PortTag Replace ui\chud\e_tripmine.chud_definition
-PortTag Replace ui\chud\spartan.chud_definition
+PortTag Replace ui\chud\spartan_h2.chud_definition
+PortTag Replace ui\chud\elite_h2.chud_definition
 
 Exit
+
+## APPLY NEW HUD ##
+EditTag objects\characters\elite\mp_elite\mp_elite.biped
+SetField HudInterfaces[0].UnitHudInterface ui\chud\elite_h2.chud_definition
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
+SetField HudInterfaces[0].UnitHudInterface ui\chud\spartan_h2.chud_definition
+SaveTagChanges
+Exit
+
 
 ## HUD FIXES ##
 EditTag ui\chud\globals.chud_globals_definition
