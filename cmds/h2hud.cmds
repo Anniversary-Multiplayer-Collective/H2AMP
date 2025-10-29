@@ -104,7 +104,7 @@ SaveTagChanges
 Exit
 
 ## Set Grenade HUD Position,Spartan ##
-EditTag ui\chud\spartan.chud_definition
+EditTag ui\chud\spartan_h2.chud_definition
 SetField HudWidgets[0].StateData[0].NonWeaponFlashHO ShieldMajor,ShieldCritical
 SetField HudWidgets[0].BitmapWidgets[1].RenderData[0].LocalScalarB 0
 SetField HudWidgets[2].PlacementData[0].Offset 0 -12
@@ -119,7 +119,7 @@ SaveTagChanges
 Exit
 
 ## Set Grenade HUD Position, Elite ##
-EditTag ui\chud\elite.chud_definition
+EditTag ui\chud\elite_h2.chud_definition
 SetField HudWidgets[0].StateData[0].NonWeaponFlashHO ShieldMajor,ShieldCritical
 SetField HudWidgets[0].BitmapWidgets[1].RenderData[0].LocalScalarB 0.09
 SetField HudWidgets[2].PlacementData[0].Offset 0 -12
