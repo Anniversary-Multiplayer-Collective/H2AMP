@@ -206,7 +206,7 @@ Exit
 
 EditTag objects\characters\masterchief\fp\weapons\pistol\fp_plasma_pistol\fp_plasma_pistol.model_animation_graph
 SetField SoundReferences[0].Reference sound\weapons\plasma_pistol\plaspistol_melee_one.sound
-SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
+# SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
 SetField SoundReferences[3].Reference sound\weapons\plasma_pistol\plaspistol_overheat_exit.sound
 SetField SoundReferences[4].Reference sound\weapons\plasma_pistol\plaspistol_posing_zero.sound
 SetField SoundReferences[5].Reference sound\weapons\plasma_pistol\plaspistol_posing_one.sound
