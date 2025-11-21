@@ -17,6 +17,7 @@ OpenCacheFile workingdir\maps\h2weapons.map
 # THIS RENDER MODEL IS USED FOR FP AND TP MODEL
 NameBlamTag objects\temp\zekken\weapons\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\battle_rifle
 PortTag Replace objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+PortTag Replace Single objects\weapons\rifle\battle_rifle\battle_rifle.model
 
 # -------------------------------------
 # |            BEAM RIFLE             |
@@ -93,9 +94,11 @@ NameBlamTag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model fu
 
 NameBlamTag objects\temp\zekken\weapons\needler\needler.render_model objects\weapons\pistol\needler\needler
 NameBlamTag objects\temp\zekken\weapons\needler\fp_needler\fp_needler.render_model objects\weapons\pistol\needler\fp_needler\fp_needler
+NameBlamTag objects\temp\zekken\weapons\needler\needler.model objects\weapons\pistol\needler\needler
 
 PortTag Replace objects\weapons\pistol\needler\needler.render_model
 PortTag Replace objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+PortTag Replace Single objects\weapons\pistol\needler\needler.model
 
 # -------------------------------------
 # |           PLASMA PISTOL           |
@@ -289,3 +292,63 @@ SetArgument env_tint_color 0.027450982 0.14117648 0.5803922 1
 SaveTagChanges
 Exit
 
+
+echo temp bitmaps for weapons | remove later
+
+OpenCacheFile "h2maps\zanzibar.map"
+PortTag Replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol.bitmap
+PortTag Replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol_bump.bitmap
+PortTag Replace objects\weapons\rifle\plasma_rifle\bitmaps\plasma_rifle.bitmap
+PortTag Replace objects\weapons\rifle\plasma_rifle\bitmaps\plasma_rifle_bump.bitmap
+PortTag Replace objects\weapons\rifle\covenant_carbine\bitmaps\covenant_carbine.bitmap
+PortTag Replace objects\weapons\rifle\covenant_carbine\bitmaps\covenant_carbine_bump.bitmap
+PortTag Replace objects\weapons\rifle\beam_rifle\bitmaps\beam_rifle.bitmap
+PortTag Replace objects\weapons\rifle\beam_rifle\bitmaps\beam_rifle_bump.bitmap
+PortTag Replace objects\weapons\support_low\brute_shot\bitmaps\brute_shot.bitmap
+PortTag Replace objects\weapons\support_low\brute_shot\bitmaps\brute_shot_bump.bitmap
+PortTag Replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon.bitmap
+PortTag Replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_bump.bitmap
+PortTag Replace objects\weapons\support_high\flak_cannon\bitmaps\flak_cannon_illum.bitmap
+PortTag Replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bitmap
+PortTag Replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitmap
+PortTag Replace objects\weapons\pistol\needler\bitmaps\needler.bitmap
+PortTag Replace objects\weapons\pistol\needler\bitmaps\needler_bump.bitmap
+Exit
+
+Edittag objects\temp\zekken\weapons\sentinel_beam\shaders\sentinel_gun_two.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitmap
+SaveTagChanges
+Exit
+
+EditTag objects\temp\zekken\weapons\covenant_carbine\shaders\carbine_dull.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+Exit
+
+EditTag objects\temp\zekken\weapons\covenant_carbine\shaders\carbine_shiny.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+Exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_dull.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+Exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_amber.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+Exit
+
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_main.shader
+SetField ShaderProperties[0].TextureConstants[5].Bitmap shaders\default_bitmaps\bitmaps\color_black.bitmap
+SaveTagChanges
+Exit
+
+Edittag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+SetField Materials[0].RenderMethod objects\weapons\pistol\needler\shaders\needler_dull.shader
+SetField Materials[1].RenderMethod objects\weapons\pistol\needler\shaders\needler_gun.shader
+SetField Materials[2].RenderMethod objects\weapons\pistol\needler\shaders\needler_luminous.shader
+SaveTagChanges
+Exit
