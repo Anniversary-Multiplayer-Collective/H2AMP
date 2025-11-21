@@ -104,27 +104,17 @@ SetField Events[0].Parts[0].Type sound\weapons\magnum\magnum_fire.sound
 Savetagchanges
 Exit
 
-EditTag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\magnum\mag_dual_ready_l.sound
-SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_r.sound
-SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
-SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
-SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
-SetField SoundReferences[5].Reference sound\weapons\magnum\magnum_ready.sound
-SetField SoundReferences[6].Reference sound\weapons\magnum\magnum_reload.sound
-Savetagchanges
-Exit
-
-EditTag objects\characters\dervish\fp\weapons\pistol\magnum\fp_magnum\fp_magnum.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\magnum\magnum_ready.sound
-SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_r.sound
-SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
-SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
-SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
-SetField SoundReferences[5].Reference sound\weapons\magnum\magnum_ready.sound
-SetField SoundReferences[6].Reference sound\weapons\magnum\magnum_reload.sound
-Savetagchanges
-Exit
+# TODO | put this script in the Elite animation script
+# EditTag objects\characters\dervish\fp\weapons\pistol\magnum\fp_magnum\fp_magnum.model_animation_graph
+# SetField SoundReferences[0].Reference sound\weapons\magnum\magnum_ready.sound
+# SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_r.sound
+# SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
+# SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
+# SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
+# SetField SoundReferences[5].Reference sound\weapons\magnum\magnum_ready.sound
+# SetField SoundReferences[6].Reference sound\weapons\magnum\magnum_reload.sound
+# Savetagchanges
+# Exit
 
 echo Needler
 opencachefile "h2maps\zanzibar.map"
@@ -137,11 +127,11 @@ PortTag Replace sound\weapons\needler\needler_drop_soft.sound
 PortTag Replace sound\weapons\needler\needler_flyby.sound
 PortTag Replace sound\weapons\needler\needler_granite.sound
 PortTag Replace sound\weapons\needler\needler_super_expl.sound
-PortTag sound\weapons\needler\needler_dual_pose_0_l.sound
-PortTag sound\weapons\needler\needler_dual_pose_0_r.sound
-PortTag sound\weapons\needler\needler_dual_pose_1_l.sound
-PortTag sound\weapons\needler\needler_dual_pose_1_r.sound
-PortTag sound\weapons\needler\needler_dual_ready.sound
+# PortTag sound\weapons\needler\needler_dual_pose_0_l.sound
+# PortTag sound\weapons\needler\needler_dual_pose_0_r.sound
+# PortTag sound\weapons\needler\needler_dual_pose_1_l.sound
+# PortTag sound\weapons\needler\needler_dual_pose_1_r.sound
+# PortTag sound\weapons\needler\needler_dual_ready.sound
 PortTag sound\weapons\needler\needler_dual_reload_l.sound
 PortTag sound\weapons\needler\needler_dual_reload_r.sound
 PortTag sound\weapons\needler\needler_melee_1.sound
@@ -152,28 +142,32 @@ PortTag sound\weapons\needler\needler_reload.sound
 PortTag sound\weapons\needler\fire.sound
 exit
 
+DuplicateTag sound\weapons\needler\needler_fp\needler_ready.sound sound\weapons\needler\needler_dual_ready_l
+EditTag sound\weapons\needler\needler_dual_ready_l.sound
+ImportSound workingdir\sounds\duals\needler\ready\left
+SaveTagChanges
+Exit
+
+DuplicateTag sound\weapons\needler\needler_fp\needler_ready.sound sound\weapons\needler\needler_dual_ready_r
+EditTag sound\weapons\needler\needler_dual_ready_r.sound
+ImportSound workingdir\sounds\duals\needler\ready\right
+SaveTagChanges
+Exit
+
 EditTag objects\weapons\pistol\needler\fx\firing.effect
 SetField Events[2].Parts[0].Type sound\weapons\needler\fire.sound
 Savetagchanges
 Exit
 
-EditTag objects\characters\masterchief\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
-SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
-SetField SoundReferences[2].Reference sound\weapons\needler\needler_dual_pose_0_r.sound
-SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
-SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
-Savetagchanges
-Exit
-
-EditTag objects\characters\dervish\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
-SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
-SetField SoundReferences[2].Reference sound\weapons\needler\needler_dual_pose_0_r.sound
-SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
-SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
-Savetagchanges
-Exit
+# TODO | put this script in the Elite animation script
+# EditTag objects\characters\dervish\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
+# SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
+# SetField SoundReferences[1].Reference sound\weapons\needler\needler_dual_pose_0_l.sound
+# SetField SoundReferences[2].Reference sound\weapons\needler\needler_dual_pose_0_r.sound
+# SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
+# SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
+# Savetagchanges
+# Exit
 
 echo Plasma Pistol
 opencachefile "h2maps\zanzibar.map"
@@ -446,7 +440,7 @@ PortTag sound\weapons\shotgun\shotgun_melee2.sound
 PortTag sound\weapons\shotgun\shotgun_posing_one.sound
 PortTag sound\weapons\shotgun\shotgun_posing_zero.sound
 PortTag sound\weapons\shotgun\shotgun_ready.sound
-PortTag sound\weapons\shotgun\shotgun_reload_exit.sound
+# PortTag sound\weapons\shotgun\shotgun_reload_exit.sound
 PortTag sound\weapons\shotgun\shotgun_reload_loop.sound
 exit
 
@@ -455,26 +449,14 @@ SetField Events[0].Parts[0].Type sound\weapons\shotgun\fire.sound
 Savetagchanges
 Exit
 
-EditTag objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
-SetField SoundReferences[1].Reference sound\weapons\shotgun\shotgun_melee1.sound
-SetField SoundReferences[2].Reference sound\weapons\shotgun\shotgun_melee2.sound
-SetField SoundReferences[3].Reference sound\weapons\shotgun\shotgun_posing_zero.sound
-SetField SoundReferences[4].Reference sound\weapons\shotgun\shotgun_posing_one.sound
-SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
-SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
-SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
-Savetagchanges
-Exit
-
 EditTag  objects\characters\dervish\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
+# SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
 SetField SoundReferences[1].Reference sound\weapons\shotgun\shotgun_melee1.sound
 SetField SoundReferences[2].Reference sound\weapons\shotgun\shotgun_melee2.sound
 SetField SoundReferences[3].Reference sound\weapons\shotgun\shotgun_posing_one.sound
 SetField SoundReferences[4].Reference sound\weapons\shotgun\shotgun_posing_zero.sound
 SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
-SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
+# SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
 SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
 Savetagchanges
 Exit
@@ -503,25 +485,6 @@ exit
 
 EditTag objects\weapons\rifle\smg\fx\firing.effect
 SetField Events[0].Parts[0].Type sound\weapons\smg\fire.sound
-Savetagchanges
-Exit
-
-EditTag objects\characters\masterchief\fp\weapons\rifle\fp_smg\fp_smg.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\smg\smg_dual_posing_0_l.sound
-SetField SoundReferences[1].Reference sound\weapons\smg\smg_dual_posing_0_r.sound
-SetField SoundReferences[2].Reference sound\weapons\smg\smg_dual_ready.sound
-SetField SoundReferences[3].Reference sound\weapons\smg\smg_dual_ready.sound
-SetField SoundReferences[4].Reference sound\weapons\smg\smg_dual_reload_left.sound
-SetField SoundReferences[5].Reference sound\weapons\smg\smg_dual_reload_left.sound
-SetField SoundReferences[6].Reference sound\weapons\smg\smg_dual_reload_left.sound
-SetField SoundReferences[7].Reference sound\weapons\smg\smg_dual_reload_right.sound
-SetField SoundReferences[8].Reference sound\weapons\smg\smg_dual_reload_right.sound
-SetField SoundReferences[9].Reference sound\weapons\smg\smg_dual_reload_right.sound
-SetField SoundReferences[10].Reference sound\weapons\smg\smg_melee1.sound
-SetField SoundReferences[11].Reference sound\weapons\smg\smg_posing_var0.sound
-SetField SoundReferences[12].Reference sound\weapons\smg\smg_posing_var1.sound
-SetField SoundReferences[13].Reference sound\weapons\smg\smg_ready.sound
-SetField SoundReferences[14].Reference sound\weapons\smg\smg_reload.sound
 Savetagchanges
 Exit
 
@@ -575,15 +538,7 @@ SetField ZoomOutSound sound\weapons\sniper_rifle\zoom_out.sound
 Savetagchanges
 exit
 
-Edittag objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\sniper_rifle\sniper_melee_first.sound
-SetField SoundReferences[1].Reference sound\weapons\sniper_rifle\sniper_posing.sound
-SetField SoundReferences[2].Reference sound\weapons\sniper_rifle\sniper_ready.sound
-SetField SoundReferences[3].Reference sound\weapons\sniper_rifle\sniper_reload.sound
-SetField SoundReferences[4].Reference sound\weapons\sniper_rifle\sniper_posing.sound
-Savetagchanges
-exit
-
+# ELITE ANIMATION SCRIPT LATER
 Edittag objects\characters\dervish\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph
 SetField SoundReferences[0].Reference sound\weapons\sniper_rifle\sniper_melee_first.sound
 SetField SoundReferences[1].Reference sound\weapons\sniper_rifle\sniper_posing.sound
@@ -643,13 +598,7 @@ SetField ZoomOutSound sound\weapons\sniper_rifle\zoom_out.sound
 Savetagchanges
 exit
 
-EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
-SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_ready.sound
-SetField SoundReferences[5].Reference sound\weapons\rocket_launcher\rocket_reload.sound
-SetField SoundReferences[6].Reference sound\weapons\rocket_launcher\fire.sound
-Savetagchanges
-exit
-
+# ELITE ANIMATION SKRIPT
 EditTag objects\characters\dervish\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
 SetField SoundReferences[0].Reference sound\weapons\rocket_launcher\fire.sound
 SetField SoundReferences[3].Reference sound\weapons\rocket_launcher\rocket_ready.sound
@@ -675,13 +624,6 @@ exit
 
 EditTag objects\weapons\support_low\brute_shot\fx\firing.effect
 SetField Events[0].Parts[0].Type sound\weapons\brute_shot\brute_shot_fire.sound
-Savetagchanges
-exit
-
-EditTag objects\characters\masterchief\fp\weapons\support_low\fp_brute_shot\fp_brute_shot.model_animation_graph
-SetField SoundReferences[0].Reference sound\weapons\brute_shot\brute_shot_reload_full.sound
-SetField SoundReferences[1].Reference sound\weapons\brute_shot\brute_shot_melee.sound
-SetField SoundReferences[2].Reference sound\weapons\brute_shot\brute_shot_ready.sound
 Savetagchanges
 exit
 

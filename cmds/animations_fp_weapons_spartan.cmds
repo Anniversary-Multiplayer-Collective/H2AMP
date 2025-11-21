@@ -1,4 +1,17 @@
-# Test
+# ------------------------------------------
+# |               BRUTE SHOT               |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\support_low\fp_brute_shot\fp_brute_shot.model_animation_graph
+
+SetField SoundReferences[0].Reference sound\weapons\brute_shot\brute_shot_reload_full.sound
+SetField SoundReferences[1].Reference sound\weapons\brute_shot\brute_shot_melee.sound
+SetField SoundReferences[2].Reference sound\weapons\brute_shot\brute_shot_ready.sound
+
+Setfield Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
+
+SaveTagChanges
+Exit
+
 # ------------------------------------------
 # |              ENERGY SWORD              |
 # ------------------------------------------
@@ -26,5 +39,225 @@ Exit
 
 EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
 SortModes
+
+SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_ready.sound
+SetField SoundReferences[5].Reference sound\weapons\rocket_launcher\rocket_reload.sound
+SetField SoundReferences[6].Reference sound\weapons\rocket_launcher\fire.sound
+
+SaveTagChanges
+Exit
+
+
+# ------------------------------------------
+# |                NEEDLER                 |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\needler
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_needler\fp_needler.model_animation_graph
+SortModes
+
+SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.sound
+SetField SoundReferences[1].Reference sound\weapons\needler\needler_posing_zero.sound
+SetField SoundReferences[2].Reference sound\weapons\needler\needler_posing_one.sound
+SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
+
+AddBlockElements SoundReferences 10
+
+SetField SoundReferences[5].Reference sound\weapons\needler\needler_dual_ready_l.sound
+SetField SoundReferences[5].Flags LeftArmOnly
+
+SetField SoundReferences[6].Reference sound\weapons\needler\needler_dual_ready_r.sound
+SetField SoundReferences[6].Flags RightArmOnly
+
+SetField SoundReferences[7].Reference sound\weapons\needler\needler_dual_reload_l.sound
+SetField SoundReferences[7].Flags LeftArmOnly
+
+SetField SoundReferences[8].Reference sound\weapons\needler\needler_dual_reload_r.sound
+SetField SoundReferences[8].Flags RightArmOnly
+
+SetField SoundReferences[9].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose0_l.sound
+SetField SoundReferences[9].Flags LeftArmOnly,FirstPersonOnly
+
+SetField SoundReferences[10].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose0_r.sound
+SetField SoundReferences[10].Flags RightArmOnly,FirstPersonOnly
+
+SetField SoundReferences[11].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose1_l.sound
+SetField SoundReferences[11].Flags LeftArmOnly,FirstPersonOnly
+
+SetField SoundReferences[12].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose1_r.sound
+SetField SoundReferences[12].Flags RightArmOnly,FirstPersonOnly
+
+SetField SoundReferences[13].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose3_l.sound
+SetField SoundReferences[13].Flags LeftArmOnly,FirstPersonOnly
+
+SetField SoundReferences[14].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose3_r.sound
+SetField SoundReferences[14].Flags AllowOnPlayer,RightArmOnly,FirstPersonOnly
+
+# FIRE
+SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[0].Animation 26
+
+SetField Animations[26].Weight 0.34
+SetField Animations[26].AnimationData.NextAnimation 27
+
+SetField Animations[27].Weight 0.67
+SetField Animations[27].AnimationData.NextAnimation 28
+SetField Animations[27].AnimationData.ParentAnimation 26
+
+SetField Animations[28].Weight 1
+SetField Animations[28].AnimationData.ParentAnimation 26
+
+# IDLE
+SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[1].Animation 29
+
+SetField Animations[29].Weight 0.5
+SetField Animations[29].AnimationData.NextAnimation 30
+
+SetField Animations[30].Weight 0.75
+SetField Animations[30].AnimationData.NextAnimation 31
+SetField Animations[30].AnimationData.ParentAnimation 29
+
+SetField Animations[31].Weight 1
+SetField Animations[31].AnimationData.ParentAnimation 29
+
+# PITCH AND TURN
+SetField Animations[37].AnimationData.BlendScreen 0
+
+# POSING
+SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[4].Animation 38
+
+SetField Animations[38].Weight 0.5
+SetField Animations[38].AnimationData.NextAnimation 39
+AddBlockElements Animations[38].AnimationData.SoundEvents 2
+SetField Animations[38].AnimationData.SoundEvents[0].Sound 9
+SetField Animations[38].AnimationData.SoundEvents[1].Sound 10
+
+SetField Animations[39].Weight 0.75
+SetField Animations[39].AnimationData.NextAnimation 40
+SetField Animations[39].AnimationData.ParentAnimation 38
+AddBlockElements Animations[39].AnimationData.SoundEvents 2
+SetField Animations[39].AnimationData.SoundEvents[0].Sound 11
+SetField Animations[39].AnimationData.SoundEvents[1].Sound 12
+
+SetField Animations[40].Weight 1
+SetField Animations[40].AnimationData.ParentAnimation 38
+AddBlockElements Animations[40].AnimationData.SoundEvents 2
+SetField Animations[40].AnimationData.SoundEvents[0].Sound 13
+SetField Animations[40].AnimationData.SoundEvents[1].Sound 14
+
+# READY
+AddBlockElements Animations[42].AnimationData.SoundEvents 2
+SetField Animations[42].AnimationData.SoundEvents[0].Sound 5
+SetField Animations[42].AnimationData.SoundEvents[1].Sound 6
+
+# RELOAD
+AddBlockElements Animations[43].AnimationData.FrameEvents 2
+SetField Animations[43].AnimationData.FrameEvents[0].Frame 41
+SetField Animations[43].AnimationData.FrameEvents[1].TypeED AllowInterruption
+SetField Animations[43].AnimationData.FrameEvents[1].Frame 58
+AddBlockElements Animations[43].AnimationData.SoundEvents 2
+SetField Animations[43].AnimationData.SoundEvents[0].Sound 7
+SetField Animations[43].AnimationData.SoundEvents[1].Sound 8
+
+AddBlockElements Animations[44].AnimationData.FrameEvents 2
+SetField Animations[44].AnimationData.FrameEvents[0].Frame 41
+SetField Animations[44].AnimationData.FrameEvents[1].TypeED AllowInterruption
+SetField Animations[44].AnimationData.FrameEvents[1].Frame 58
+AddBlockElements Animations[44].AnimationData.SoundEvents 2
+SetField Animations[44].AnimationData.SoundEvents[0].Sound 7
+SetField Animations[44].AnimationData.SoundEvents[1].Sound 8
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |                MAGNUM                  |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\magnum
+
+SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_l.sound
+# Yes the script aint wrong, it's at SoundReferences 10
+SetField SoundReferences[10].Reference sound\weapons\magnum\mag_dual_ready_r.sound
+SetField SoundReferences[2].Reference sound\weapons\magnum\mag_dual_reload_l.sound
+SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sound
+SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
+SetField SoundReferences[7].Reference sound\weapons\magnum\magnum_ready.sound
+SetField SoundReferences[8].Reference sound\weapons\magnum\magnum_reload.sound
+Savetagchanges
+Exit
+
+# ------------------------------------------
+# |                SHOTGUN                 |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_shotgun\fp_shotgun.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\shotgun
+
+# SetField SoundReferences[0].Reference sound\weapons\shotgun\fire.sound
+SetField SoundReferences[1].Reference sound\weapons\shotgun\shotgun_melee1.sound
+SetField SoundReferences[2].Reference sound\weapons\shotgun\shotgun_melee2.sound
+SetField SoundReferences[3].Reference sound\weapons\shotgun\shotgun_posing_zero.sound
+SetField SoundReferences[4].Reference sound\weapons\shotgun\shotgun_posing_one.sound
+SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
+# SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
+SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
+
+Setfield Animations[8].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+Setfield Animations[9].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+
+SetField Animations[20].PlaybackFlags ForceWeaponIkOn
+SetField Animations[21].PlaybackFlags DisableWeaponIk
+SetField Animations[22].PlaybackFlags ForceWeaponIkOn
+SetField Animations[23].PlaybackFlags ForceWeaponIkOn
+
+Savetagchanges
+Exit
+
+# ------------------------------------------
+# |                  SMG                   |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_smg\fp_smg.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\smg
+
+SetField SoundReferences[0].Reference sound\weapons\smg\smg_dual_posing_0_l.sound
+SetField SoundReferences[1].Reference sound\weapons\smg\smg_dual_posing_0_r.sound
+SetField SoundReferences[2].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\smg\smg_dual_ready.sound
+SetField SoundReferences[4].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[5].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[6].Reference sound\weapons\smg\smg_dual_reload_left.sound
+SetField SoundReferences[7].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[8].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[9].Reference sound\weapons\smg\smg_dual_reload_right.sound
+SetField SoundReferences[10].Reference sound\weapons\smg\smg_melee1.sound
+SetField SoundReferences[11].Reference sound\weapons\smg\smg_posing_var0.sound
+SetField SoundReferences[12].Reference sound\weapons\smg\smg_posing_var1.sound
+SetField SoundReferences[13].Reference sound\weapons\smg\smg_ready.sound
+SetField SoundReferences[14].Reference sound\weapons\smg\smg_reload.sound
+
+SetField Animations[31].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             SNIPER RIFLE               |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_sniper_rifle\fp_sniper_rifle.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\sniper
+
+SetField SoundReferences[0].Reference sound\weapons\sniper_rifle\sniper_melee_first.sound
+SetField SoundReferences[1].Reference sound\weapons\sniper_rifle\sniper_posing.sound
+SetField SoundReferences[2].Reference sound\weapons\sniper_rifle\sniper_ready.sound
+SetField SoundReferences[3].Reference sound\weapons\sniper_rifle\sniper_reload.sound
+SetField SoundReferences[4].Reference sound\weapons\sniper_rifle\sniper_posing.sound
+
+SetField Animations[1].PlaybackFlags None
+SetField Animations[2].PlaybackFlags None
+SetField Animations[3].PlaybackFlags None
+
+SetField Animations[8].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
 SaveTagChanges
 Exit

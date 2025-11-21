@@ -82,6 +82,12 @@ SetField InitialVelocity 400
 savetagchanges
 exit
 
+# NEEDLER
+EditTag objects\weapons\pistol\needler\needler.weapon
+SetField WeaponFlags.NewFlags CanBeDualWielded
+SaveTagChanges
+Exit
+
 ## MAGNUM
 EditTag objects\weapons\pistol\magnum\magnum.weapon
 SetField Magazines[0].RoundsLoadedMaximum 12
