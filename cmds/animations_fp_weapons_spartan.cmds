@@ -40,6 +40,10 @@ Exit
 EditTag objects\characters\masterchief\fp\weapons\support_high\fp_rocket_launcher\fp_rocket_launcher.model_animation_graph
 SortModes
 
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk
+SetField Modes[0].WeaponClass[0].WeaponIk[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker left_hand_cyborg
+
 SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_ready.sound
 SetField SoundReferences[5].Reference sound\weapons\rocket_launcher\rocket_reload.sound
 SetField SoundReferences[6].Reference sound\weapons\rocket_launcher\fire.sound
