@@ -296,6 +296,8 @@ Exit
 echo temp bitmaps for weapons | remove later
 
 OpenCacheFile "h2maps\zanzibar.map"
+NameBlamTag objects\weapons\pistol\needler\needler.render_model objects\weapons\pistol\needler\needler_only_need_this_for_shader
+
 PortTag Replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol.bitmap
 PortTag Replace objects\weapons\pistol\plasma_pistol\bitmaps\plasma_pistol_bump.bitmap
 PortTag Replace objects\weapons\rifle\plasma_rifle\bitmaps\plasma_rifle.bitmap
@@ -313,6 +315,7 @@ PortTag Replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun.bi
 PortTag Replace objects\weapons\support_low\sentinel_gun\bitmaps\sentinel_gun_bump.bitmap
 PortTag Replace objects\weapons\pistol\needler\bitmaps\needler.bitmap
 PortTag Replace objects\weapons\pistol\needler\bitmaps\needler_bump.bitmap
+PortTag objects\weapons\pistol\needler\needler_only_need_this_for_shader.render_model
 Exit
 
 Edittag objects\temp\zekken\weapons\sentinel_beam\shaders\sentinel_gun_two.shader
