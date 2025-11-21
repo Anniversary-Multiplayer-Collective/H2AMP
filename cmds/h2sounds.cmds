@@ -138,7 +138,7 @@ PortTag sound\weapons\needler\needler_melee_1.sound
 PortTag sound\weapons\needler\needler_posing_one.sound
 PortTag sound\weapons\needler\needler_posing_zero.sound
 PortTag sound\weapons\needler\needler_ready.sound
-PortTag sound\weapons\needler\needler_reload.sound
+# PortTag sound\weapons\needler\needler_reload.sound
 PortTag sound\weapons\needler\fire.sound
 exit
 

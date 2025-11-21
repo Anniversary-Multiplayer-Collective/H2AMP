@@ -63,7 +63,7 @@ SetField SoundReferences[0].Reference sound\weapons\needler\needler_melee_1.soun
 SetField SoundReferences[1].Reference sound\weapons\needler\needler_posing_zero.sound
 SetField SoundReferences[2].Reference sound\weapons\needler\needler_posing_one.sound
 SetField SoundReferences[3].Reference sound\weapons\needler\needler_ready.sound
-SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
+# SetField SoundReferences[4].Reference sound\weapons\needler\needler_reload.sound
 
 AddBlockElements SoundReferences 10
 
