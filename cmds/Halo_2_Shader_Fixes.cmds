@@ -431,3 +431,55 @@ SetField Materials[1].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gla
 savetagchanges
 exit
 
+## Warlocks
+# OpenCacheFile h2maps\warlock.map
+# PortTag scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
+# Exit
+
+DuplicateTag scenarios\shaders\multi\zanzibar\treebark.shader temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient
+EditTag temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
+SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+
+# WATERPOOL
+SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+
+# LIGHTS, I have no idea where these are located
+# SetField Materials[16].RenderMethod null
+# SetField Materials[17].RenderMethod null
+# SetField Materials[18].RenderMethod null
+# SetField Materials[26].RenderMethod null
+# SetField Materials[27].RenderMethod null
+
+SaveTagChanges
+Exit
+
+## Zanzibar
+OpenCacheFile h2maps\zanzibar.map
+PortTag incompetent\bitmaps\treefol.bitmap
+PortTag incompetent\bitmaps\treefol_bump.bitmap
+Exit
+
+DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\multi\zanzibar\treefol
+EditTag temp\scenarios\shaders\multi\zanzibar\treefol.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap incompetent\bitmaps\treefol.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap incompetent\bitmaps\treefol_bump.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap incompetent\bitmaps\treefol_bump.bitmap
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\zanzibar\zanzibar.scenario_structure_bsp
+SetField Materials[72].RenderMethod temp\scenarios\shaders\multi\zanzibar\treefol.shader
+
+# 38 is the shoreline
+# SetField Materials[38].RenderMethod null
+# SetField Materials[93].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+
+SaveTagChanges
+Exit
+
