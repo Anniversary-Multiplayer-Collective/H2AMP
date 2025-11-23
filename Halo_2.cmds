@@ -17,7 +17,7 @@ AMP Collective
 0.1
 Multiplayer MainMenu
 
-#RunCommands "workingdir\cmds\shaderupdates.cmds"
+RunCommands "workingdir\cmds\shaderupdates.cmds"
 
 RunCommands "workingdir\cmds\h2menu.cmds"
 

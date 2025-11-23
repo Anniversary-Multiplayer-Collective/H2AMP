@@ -1,7 +1,7 @@
 
 ## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
@@ -13,7 +13,7 @@ SaveTagChanges
 Exit
 
 EditTag scenarios\shaders\multi\halo\coagulation\coag_washere.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
@@ -77,25 +77,25 @@ exit
 
 ## echo Sanctuary Shader Fixes
 EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
 EditTag scenarios\shaders\multi\halo\warlock\warlock_objects.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
 EditTag scenarios\shaders\multi\halo\warlock\warlock_objects_light.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_0_0_0_0_1_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_0_0_0_0_1_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Additive
 SaveTagChanges
 Exit
 
 EditTag scenarios\shaders\multi\deltatap\sanc_trees.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
@@ -121,7 +121,7 @@ Exit
 
 ## echo Gemeni Shader Fixes
 EditTag scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient_leaves.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
@@ -133,13 +133,13 @@ Exit
 
 ## echo Station Shader Fixes
 EditTag scenarios\shaders\multi\triplicate\station_wall.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
 EditTag scenarios\shaders\multi\triplicate\station_floor.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
@@ -157,7 +157,7 @@ Exit
 
 ## echo Waterworks Shader Fixes
 EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit

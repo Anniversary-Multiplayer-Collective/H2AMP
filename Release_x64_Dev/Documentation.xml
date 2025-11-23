@@ -2126,7 +2126,12 @@
             <br>If parsing fails, or required arguments cannot be resolved, IsValid will be false.</br>
             </summary>
         </member>
-        <!-- Badly formed XML comment ignored for member "P:TagTool.Commands.ParseResult.Parameters" -->
+        <member name="P:TagTool.Commands.ParseResult.Parameters">
+            <summary>
+            Contains any arguments that were identified within the command string. If none are found, the list will be empty (not null).
+            <br>Sometimes a command has no parameters. Sometimes no valid Parameters can be determined.</br>
+            </summary>
+        </member>
         <member name="P:TagTool.Commands.ParseResult.Response">
             <summary>
             Response strings that will be sent to the appropriate party (usually the player that issued a command).
@@ -5123,7 +5128,7 @@
             Converts a <see cref="T:TagTool.Tags.TagStructure"/> from the source cache to the destination cache
             </summary>
             <remarks>
-            This should only be used if all you want to do is convert the fields and nothing else. Consider using <see cref="M:TagTool.Porting.PortingContext.ConvertData(System.IO.Stream,System.IO.Stream,System.Object,System.Object,System.String)"/> or <see cref="!:ConvertDefinition(Stream, Stream, CachedTag, CachedTag, object, out CachedTag, out bool)"/> If it'a tag definition
+            This should only be used if all you want to do is convert the fields and nothing else. Consider using <see cref="M:TagTool.Porting.PortingContext.ConvertData(System.IO.Stream,System.IO.Stream,System.Object,System.Object,System.String)"/> or <see cref="M:TagTool.Porting.PortingContext.ConvertDefinition(System.IO.Stream,System.IO.Stream,TagTool.Cache.CachedTag,TagTool.Cache.CachedTag,System.Object)"/> If it'a tag definition
             </remarks>
             <typeparam name="T"></typeparam>
             <param name="cacheStream"></param>

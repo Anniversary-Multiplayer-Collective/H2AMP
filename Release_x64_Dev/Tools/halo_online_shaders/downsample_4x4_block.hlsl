@@ -57,7 +57,11 @@ float4 albedo_ps(screen_output IN) : SV_Target
 
 screen_output albedo_vs(vertex_type IN)
 {
+#ifdef VERTEX_SHADER
+
     return default_vs(IN);
+
+#endif
 }
 
 float4 static_default_ps(screen_output IN) : SV_Target
@@ -67,7 +71,11 @@ float4 static_default_ps(screen_output IN) : SV_Target
 
 screen_output static_default_vs(vertex_type IN)
 {
+#ifdef VERTEX_SHADER
+
     return default_vs(IN);
+
+#endif
 }
 
 #endif

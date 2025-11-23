@@ -24,6 +24,7 @@
 #define MATERIAL_TYPE_two_lobe_phong_reach 16
 #define MATERIAL_TYPE_pbr 17
 #define MATERIAL_TYPE_pbr_spec_gloss 18
+#define MATERIAL_TYPE_phong_h2 19
 
 
 // all material models must define these 4 functions
@@ -253,5 +254,13 @@ PARAM(bool, no_dynamic_lights);
 //*****************************************************************************
 #if MATERIAL_TYPE(material_type) == MATERIAL_TYPE_pbr_spec_gloss
 #include "pbr_spec_gloss.fx"
+#define NO_ALPHA_TO_COVERAGE
+#endif
+
+//*****************************************************************************
+// totally not just single lobe phong plus some halo 2 code
+//*****************************************************************************
+#if MATERIAL_TYPE(material_type) == MATERIAL_TYPE_phong_h2
+#include "phong_h2.fx"
 #define NO_ALPHA_TO_COVERAGE
 #endif
