@@ -17,15 +17,15 @@ Exit
 # ------------------------------------------
 # Energy blade or whatever
 # Rough as hell but it works for the most part
+# TODO land soft and throw equipment need some fixup
 
 EditTag objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade.model_animation_graph
-AddAnimation workingdir\animations\spartan_fp\sword
-SaveTagChanges
-Exit
-# Will crash if you do sortmodes on new resource that haven't been saved for whatever reasons
+AddAnimation Keep workingdir\animations\spartan_fp\sword
 
-EditTag objects\characters\masterchief\fp\weapons\melee\fp_energy_blade\fp_energy_blade.model_animation_graph
-SortModes
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Actions[8].Animation 11
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Actions[9].Animation 12
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 3
+
 SaveTagChanges
 Exit
 
