@@ -18,6 +18,62 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+opencachefile h2maps\coagulation.map
+porttag scenarios\bitmaps\multi\halo\coagulation\coag_light_bands.bitmap
+exit
+
+Duplicatetag levels\multi\zanzibar\shaders\gen_illum.shader scenarios\shaders\multi\halo\coagulation\coag_light_bands_red
+Duplicatetag levels\multi\zanzibar\shaders\gen_illum.shader scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue
+
+Edittag scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\coagulation\coag_light_bands.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\multi\halo\coagulation\coag_light_bands.bitmap
+SetField ShaderProperties[0].RoutingInfo[1].RegisterIndex 61
+SetField ShaderProperties[0].RoutingInfo[2].RegisterIndex 61
+SetArgument self_illum_color 1 0 0 1
+savetagchanges
+exit
+
+Edittag scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\coagulation\coag_light_bands.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\multi\halo\coagulation\coag_light_bands.bitmap
+SetField ShaderProperties[0].RoutingInfo[1].RegisterIndex 61
+SetField ShaderProperties[0].RoutingInfo[2].RegisterIndex 61
+SetArgument self_illum_color 0 0 1 1
+savetagchanges
+exit
+
+Edittag scenarios\multi\halo\coagulation\coagulation.scenario_structure_bsp
+SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[2].RenderMethod levels\multi\s3d_avalanche\materials\s3d_avalanche_collision_material_55.shader
+SetField Materials[8].RenderMethod scenarios\shaders\solo\alphagasgiant\metals\panel_d.shader
+SetField Materials[13].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[14].RenderMethod null
+SetField Materials[15].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[21].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[22].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[23].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[24].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[25].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[26].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[27].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[28].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[28].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[29].RenderMethod null
+SetField Materials[30].RenderMethod null
+SetField Materials[31].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[32].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[33].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[34].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[35].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[36].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[37].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[38].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[39].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+savetagchanges
+exit
+
+
 
 ## echo Sanctuary Shader Fixes
 EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
@@ -134,6 +190,35 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+opencachefile "h3maps\120_halo.map"
+porttag replace levels\solo\120_halo\shaders\ziggaraut_lights.shader
+porttag replace objects\gear\forerunner\forerunner_holo_switch_floor\shaders\forerunner_holo_switch_base.shader
+Exit
+
+Duplicatetag levels\solo\120_halo\shaders\ziggaraut_lights.shader levels\solo\120_halo\shaders\ziggaraut_lights_blue
+savetagnames
+
+EditTag levels\solo\120_halo\shaders\ziggaraut_lights.shader
+SetArgument albedo_color 0.9 0.7803922 0.5 1
+SetArgument self_illum_color 1 0.2 0.2 1
+SaveTagChanges
+Exit
+
+Edittag scenarios\multi\halo\beavercreek\beavercreek.scenario_structure_bsp
+SetField Materials[6].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[12].RenderMethod levels\solo\120_halo\shaders\ziggaraut_lights.shader
+SetField Materials[18].RenderMethod levels\solo\120_halo\shaders\ziggaraut_lights_blue.shader
+SetField Materials[20].RenderMethod null
+SetField Materials[21].RenderMethod null
+SetField Materials[22].RenderMethod null
+SetField Materials[29].RenderMethod null
+SetField Materials[30].RenderMethod null
+savetagchanges
+exit
+
+
+
+
 ## echo IvoryTower Shader Fixes
 EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
 SetField ShaderProperties[0].BlendMode Opaque
@@ -193,12 +278,156 @@ savetagchanges
 exit
 
 
+## echo Colossus
 
+edittag scenarios\multi\colossus\colossus.scenario_structure_bsp
+SetField Materials[17].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+SetField Materials[19].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+savetagchanges
+exit
 
+## echo Containment
 
+Edittag scenarios\objects\multi\containment\base_gate_blue\shaders\forerunner_rusted_grey_prt.shader
+SetArgument diffuse_coefficient 0.25
+SaveTagChanges
+exit
 
+Edittag scenarios\objects\multi\containment\base_gate_blue\shaders\containment_gate_light.shader
+SetArgument diffuse_coefficient 0.25
+SetArgument normal_specular_tint 0 0 0 1
+SetArgument glancing_specular_tint 0 0 0 1
+SaveTagChanges
+exit
 
+Edittag scenarios\objects\multi\containment\base_gate\shaders\forerunner_rusted_grey_prt.shader
+SetArgument diffuse_coefficient 0.25
+SetArgument normal_specular_tint 0 0 0 1
+SaveTagChanges
+exit
 
+Edittag scenarios\objects\multi\containment\base_gate\shaders\containment_gate_light.shader
+SetArgument diffuse_coefficient 0.25
+SetArgument normal_specular_tint 0 0 0 1
+SetArgument glancing_specular_tint 0 0 0 1
+SaveTagChanges
+exit
 
+Edittag scenarios\multi\containment\containment.scenario_structure_bsp
+SetField Materials[19].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
+SetField Materials[29].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
+SetField Materials[31].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
+SetField Materials[44].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
+SetField Materials[46].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
+savetagchanges
+exit
 
+## echo Desolation
+
+Edittag scenarios\multi\halo\derelict\derelict.scenario_structure_bsp
+SetField Materials[4].RenderMethod null
+SetField Materials[15].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[61].RenderMethod null
+SetField Materials[62].RenderMethod null
+SetField Materials[63].RenderMethod null
+SetField Materials[64].RenderMethod null
+SetField Materials[65].RenderMethod null
+SetField Materials[66].RenderMethod null
+SetField Materials[67].RenderMethod null
+SetField Materials[68].RenderMethod null
+SetField Materials[69].RenderMethod null
+SetField Materials[70].RenderMethod null
+SetField Materials[71].RenderMethod null
+SetField Materials[72].RenderMethod null
+SetField Materials[73].RenderMethod null
+SetField Materials[74].RenderMethod null
+SetField Materials[75].RenderMethod null
+SetField Materials[76].RenderMethod null
+SetField Materials[77].RenderMethod null
+SetField Materials[78].RenderMethod null
+SetField Materials[79].RenderMethod null
+SetField Materials[80].RenderMethod null
+SetField Materials[81].RenderMethod null
+SetField Materials[82].RenderMethod null
+SetField Materials[83].RenderMethod null
+SetField Materials[84].RenderMethod null
+SetField Materials[85].RenderMethod null
+SetField Materials[86].RenderMethod null
+SetField Materials[87].RenderMethod null
+SetField Materials[88].RenderMethod null
+SetField Materials[89].RenderMethod null
+SetField Materials[90].RenderMethod null
+SetField Materials[91].RenderMethod null
+SetField Materials[92].RenderMethod null
+SetField Materials[93].RenderMethod null
+SetField Materials[94].RenderMethod null
+SetField Materials[95].RenderMethod null
+SetField Materials[96].RenderMethod null
+SetField Materials[97].RenderMethod null
+SetField Materials[98].RenderMethod null
+SetField Materials[99].RenderMethod null
+SetField Materials[100].RenderMethod null
+SetField Materials[101].RenderMethod null
+SetField Materials[102].RenderMethod null
+SetField Materials[103].RenderMethod null
+SetField Materials[104].RenderMethod null
+SetField Materials[105].RenderMethod null
+SetField Materials[106].RenderMethod null
+SetField Materials[107].RenderMethod null
+SetField Materials[108].RenderMethod null
+SetField Materials[109].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+savetagchanges
+exit
+
+## echo District
+
+opencachefile "h2maps\street_sweeper.map"
+porttag replace scenarios\bitmaps\multi\street_sweeper\white_stripe_01.bitm
+porttag replace scenarios\bitmaps\multi\street_sweeper\yellow_stripe_01.bitm
+porttag replace scenarios\bitmaps\multi\turf\signs_storefront_01.bitm
+porttag replace scenarios\bitmaps\multi\street_sweeper\signs_random_02.bitm
+exit
+
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\street_sweeper\white_stripe
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\street_sweeper\yellow_stripe
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\turf\signs_storefront_01
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\street_sweeper\signs_random_02
+
+Edittag scenarios\bitmaps\multi\street_sweeper\white_stripe.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\street_sweeper\white_stripe_01.bitm
+savetagchanges
+exit
+
+Edittag scenarios\bitmaps\multi\street_sweeper\yellow_stripe.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\street_sweeper\yellow_stripe_01.bitm
+savetagchanges
+exit
+
+Edittag scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\turf\signs_storefront_01.bitm
+savetagchanges
+exit
+
+Edittag scenarios\bitmaps\multi\street_sweeper\signs_random_02.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\street_sweeper\signs_random_02.bitm
+savetagchanges
+exit
+
+edittag scenarios\multi\street_sweeper\street_sweeper.scenario_structure_bsp
+SetField Materials[71].RenderMethod scenarios\bitmaps\multi\street_sweeper\yellow_stripe.shader
+SetField Materials[72].RenderMethod scenarios\bitmaps\multi\street_sweeper\white_stripe.shader
+SetField Materials[76].RenderMethod null
+SetField Materials[89].RenderMethod null
+SetField Materials[283].RenderMethod scenarios\bitmaps\multi\street_sweeper\signs_random_02.shader
+SetField Materials[284].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[286].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[287].RenderMethod scenarios\bitmaps\multi\street_sweeper\signs_random_02.shader
+SetField Materials[330].RenderMethod levels\multi\cyberdyne\shaders\metal_out_fence.shader
+savetagchanges
+exit
+
+EditTag objects\vehicles\civilian\uberchassis\uberchassis.render_model
+SetField Materials[1].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+savetagchanges
+exit
 
