@@ -611,7 +611,7 @@ Exit
 
 echo elongation
 
-Opencachefile "h3maps\spacecamp.map"
+Opencachefile "h3mythicmaps\spacecamp.map"
 PortTag levels\dlc\spacecamp\sky\spacecamp_sky.scenery
 PortTag levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
 PortTag levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
