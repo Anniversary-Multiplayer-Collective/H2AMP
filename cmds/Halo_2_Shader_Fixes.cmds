@@ -307,6 +307,101 @@ SetField Materials[9].RenderMethod scenarios\shaders\multi\burial_mounds\burial_
 savetagchanges
 exit
 
+EditTag scenarios\shaders\multi\burial_mounds\burial_wreckage_glowy.shader
+SetField ShaderProperties[0].BooleanConstants 0
+AddBlockElements ShaderProperties[0].EntryPoints 20
+SetField ShaderProperties[0].EntryPoints[0].Integer 0
+SetField ShaderProperties[0].EntryPoints[1].Integer 1024
+SetField ShaderProperties[0].EntryPoints[2].Integer 0
+SetField ShaderProperties[0].EntryPoints[3].Integer 1025
+SetField ShaderProperties[0].EntryPoints[4].Integer 1026
+SetField ShaderProperties[0].EntryPoints[5].Integer 1027
+SetField ShaderProperties[0].EntryPoints[6].Integer 1028
+SetField ShaderProperties[0].EntryPoints[7].Integer 1029
+SetField ShaderProperties[0].EntryPoints[8].Integer 1030
+SetField ShaderProperties[0].EntryPoints[9].Integer 1031
+SetField ShaderProperties[0].EntryPoints[10].Integer 1032
+SetField ShaderProperties[0].EntryPoints[11].Integer 0
+SetField ShaderProperties[0].EntryPoints[12].Integer 1033
+SetField ShaderProperties[0].EntryPoints[13].Integer 1034
+SetField ShaderProperties[0].EntryPoints[14].Integer 1035
+SetField ShaderProperties[0].EntryPoints[15].Integer 0
+SetField ShaderProperties[0].EntryPoints[16].Integer 0
+SetField ShaderProperties[0].EntryPoints[17].Integer 1036
+SetField ShaderProperties[0].EntryPoints[18].Integer 0
+SetField ShaderProperties[0].EntryPoints[19].Integer 1037
+AddBlockElements ShaderProperties[0].Passes 14
+SetField ShaderProperties[0].Passes[0].Texture.Integer 0
+SetField ShaderProperties[0].Passes[0].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[0].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[1].Texture.Integer 0
+SetField ShaderProperties[0].Passes[1].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[1].RealPixel.Integer 1024
+SetField ShaderProperties[0].Passes[2].Texture.Integer 0
+SetField ShaderProperties[0].Passes[2].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[2].RealPixel.Integer 1025
+SetField ShaderProperties[0].Passes[3].Texture.Integer 0
+SetField ShaderProperties[0].Passes[3].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[3].RealPixel.Integer 1026
+SetField ShaderProperties[0].Passes[4].Texture.Integer 0
+SetField ShaderProperties[0].Passes[4].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[4].RealPixel.Integer 1027
+SetField ShaderProperties[0].Passes[5].Texture.Integer 0
+SetField ShaderProperties[0].Passes[5].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[5].RealPixel.Integer 1028
+SetField ShaderProperties[0].Passes[6].Texture.Integer 0
+SetField ShaderProperties[0].Passes[6].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[6].RealPixel.Integer 1029
+SetField ShaderProperties[0].Passes[7].Texture.Integer 0
+SetField ShaderProperties[0].Passes[7].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[7].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[8].Texture.Integer 0
+SetField ShaderProperties[0].Passes[8].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[8].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[9].Texture.Integer 0
+SetField ShaderProperties[0].Passes[9].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[9].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[10].Texture.Integer 0
+SetField ShaderProperties[0].Passes[10].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[10].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[11].Texture.Integer 0
+SetField ShaderProperties[0].Passes[11].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[11].RealPixel.Integer 1030
+SetField ShaderProperties[0].Passes[12].Texture.Integer 0
+SetField ShaderProperties[0].Passes[12].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[12].RealPixel.Integer 0
+SetField ShaderProperties[0].Passes[13].Texture.Integer 0
+SetField ShaderProperties[0].Passes[13].RealVertex.Integer 0
+SetField ShaderProperties[0].Passes[13].RealPixel.Integer 0
+AddBlockElements ShaderProperties[0].RoutingInfo 7
+SetField ShaderProperties[0].RoutingInfo[0].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[0].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[0].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[1].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[1].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[1].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[2].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[2].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[2].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[3].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[3].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[3].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[4].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[4].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[4].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[5].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[5].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[5].SourceIndex 19
+SetField ShaderProperties[0].RoutingInfo[6].RegisterIndex 60
+SetField ShaderProperties[0].RoutingInfo[6].FunctionIndex 0
+SetField ShaderProperties[0].RoutingInfo[6].SourceIndex 19
+AddBlockElements ShaderProperties[0].Functions 1
+SetField ShaderProperties[0].Functions[0].Type Color 
+SetField ShaderProperties[0].Functions[0].TimePeriod 5
+SetField ShaderProperties[0].Functions[0].Function.Data 03340200000F2AFF0000000000000000FFFFFFFF0000000000000000140000000ACDCDCD0000803F00000000CDCC4CBE0000C03F
+SaveTagChanges
+Exit
+
 
 ## echo Colossus
 
