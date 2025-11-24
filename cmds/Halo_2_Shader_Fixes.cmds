@@ -119,6 +119,36 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\multi\marathon\foundation\foundation.scenario_structure_bsp
+SetField Materials[20].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[24].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[27].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[28].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[29].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[30].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[31].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[32].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[33].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[34].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[35].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[36].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[37].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[38].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[39].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[40].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[41].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[42].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[43].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[44].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[45].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[46].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+savetagchanges
+exit
+
+
+
+
 ## echo Gemeni Shader Fixes
 EditTag scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient_leaves.shader
 SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
@@ -483,3 +513,35 @@ SetField Materials[72].RenderMethod temp\scenarios\shaders\multi\zanzibar\treefo
 SaveTagChanges
 Exit
 
+
+echo elongation
+
+Opencachefile "h3maps\spacecamp.map"
+PortTag levels\dlc\spacecamp\sky\spacecamp_sky.scenery
+PortTag levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
+PortTag levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
+PortTag levels\dlc\spacecamp\spacecamp.chocolate_mountain_new
+PortTag sound\levels\dlc\space_camp\space_camp_loops\space_camp_loops.sound_looping
+Exit
+
+EditTag scenarios\multi\elongation\elongation.scenario
+SetField SkyReferences[0].SkyObject levels\dlc\spacecamp\sky\spacecamp_sky.scenery
+SetField SkyParameters levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
+SetField DefaultCameraFx levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
+SetField GlobalLighting levels\multi\riverworld\riverworld.chocolate_mountain_new
+
+SaveTagChanges
+Exit
+
+
+EditTag scenarios\multi\elongation\elongation.scenario_structure_bsp
+SetField Materials[24].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[27].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[30].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[35].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[52].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[55].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[68].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SaveTagChanges
+Exit
