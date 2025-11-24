@@ -261,6 +261,23 @@ setfield materials[53].rendermethod objects\levels\atlas\city_bridge\shaders\str
 savetagchanges
 exit
 
+echo halo 3 shields
+
+opencachefile "h3maps\zanzibar.map"
+porttag replace globals\global_shield_impact_settings.shield_impact
+porttag replace globals\masterchief_fp_shield_impact.shield_impact
+porttag replace globals\elite_fp_shield_impact.shield_impact
+porttag replace globals\elite_3p_shield_impact.shield_impact
+Exit
+
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.model
+SetField ShieldImpactThirdPerson fx\shield_impacts\spartan_3p.shield_impact
+SetField ShieldImpactFirstPerson fx\shield_impacts\spartan_1p.shield_impact
+SetField OvershieldThirdPerson fx\shield_impacts\overshield_3p.shield_impact
+SetField OvershieldFirstPerson fx\shield_impacts\overshield_1p.shield_impact
+savetagchanges
+exit
+
 echo halo 2 flashlight
 EditTag objects\characters\masterchief\flashlight_1p.light
 SetField Flags AllowShadowsAndGels,ShadowCasting,RenderFirstPersonOnly,MoveToCameraInFirstPerson,NeverPriorityCull
@@ -288,8 +305,6 @@ SetArgument albedo_color 0 0 0 0.
 SetArgument self_illum_intensity 0
 savetagchanges
 exit
-
-
 
 echo add ranks
 
