@@ -47,8 +47,8 @@ Exit
 EditTag objects\weapons\rifle\covenant_carbine\covenant_carbine.weapon
 SetField Magazines[0].RoundsTotalInitial 36
 SetField Magazines[0].RoundsReloaded 24
-SetField Barrels[0].Firing.FireRecoveryTime 0.35
-SetField Barrels[0].Firing.SoftRecoveryFraction 0.65
+SetField Barrels[0].Firing.FireRecoveryTime 0.17
+SetField Barrels[0].Firing.SoftRecoveryFraction 0.8
 SaveTagChanges
 Exit
 
