@@ -70,6 +70,8 @@ SetField Materials[36].RenderMethod scenarios\shaders\multi\halo\coagulation\coa
 SetField Materials[37].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
 SetField Materials[38].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
 SetField Materials[39].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_red.shader
+SetField Materials[79].RenderMethod scenarios\shaders\covenant\military\metals\strip_a_blue_lit.shader
+SetField Materials[82].RenderMethod scenarios\shaders\covenant\military\metals\strip_a_blue_lit.shader
 savetagchanges
 exit
 
