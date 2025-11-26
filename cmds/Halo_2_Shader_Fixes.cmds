@@ -620,22 +620,28 @@ Exit
 
 echo elongation
 
-Opencachefile "h3mythicmaps\spacecamp.map"
-PortTag levels\dlc\spacecamp\sky\spacecamp_sky.scenery
-PortTag levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
-PortTag levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
-PortTag levels\dlc\spacecamp\spacecamp.chocolate_mountain_new
-PortTag sound\levels\dlc\space_camp\space_camp_loops\space_camp_loops.sound_looping
-Exit
-
-EditTag scenarios\multi\elongation\elongation.scenario
-SetField SkyReferences[0].SkyObject levels\dlc\spacecamp\sky\spacecamp_sky.scenery
-SetField SkyParameters levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
-SetField DefaultCameraFx levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
-SetField GlobalLighting levels\multi\riverworld\riverworld.chocolate_mountain_new
-
+# NO EARTH AND MOON, MESH ARE BORKED
+EditTag scenarios\skies\solo\spacestation\spacestation.render_model
+SetField Nodes[0].DefaultScale 100
 SaveTagChanges
 Exit
+
+# Opencachefile "h3mythicmaps\spacecamp.map"
+# PortTag levels\dlc\spacecamp\sky\spacecamp_sky.scenery
+# PortTag levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
+# PortTag levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
+# PortTag levels\dlc\spacecamp\spacecamp.chocolate_mountain_new
+# PortTag sound\levels\dlc\space_camp\space_camp_loops\space_camp_loops.sound_looping
+# Exit
+
+# EditTag scenarios\multi\elongation\elongation.scenario
+# SetField SkyReferences[0].SkyObject levels\dlc\spacecamp\sky\spacecamp_sky.scenery
+# SetField SkyParameters levels\dlc\spacecamp\sky\spacecamp_atmosphere.sky_atm_parameters
+# SetField DefaultCameraFx levels\dlc\spacecamp\sky\spacecamp_camera.camera_fx_settings
+# SetField GlobalLighting levels\multi\riverworld\riverworld.chocolate_mountain_new
+
+# SaveTagChanges
+# Exit
 
 
 EditTag scenarios\multi\elongation\elongation.scenario_structure_bsp
