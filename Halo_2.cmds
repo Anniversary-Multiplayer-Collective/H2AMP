@@ -306,6 +306,13 @@ SetArgument self_illum_intensity 0
 savetagchanges
 exit
 
+echo Fix Machine Gun Turret
+
+opencachefile "workingdir\maps\h2ampstuff.map"
+NameBlamTag h2\objects\vehicles\h_turret_ap\h_turret_ap.vehicle objects\vehicles\h_turret_ap\h_turret_ap
+Porttag replace objects\vehicles\h_turret_ap\h_turret_ap.vehicle
+Exit
+
 echo add ranks
 
 edittag ui\halox\spartan_program\exp_lg_ui.bitmap

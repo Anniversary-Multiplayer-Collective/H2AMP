@@ -651,13 +651,32 @@ PortTag replace h2amp\multi\gemini\shaders\tree_ancient.shader
 Porttag replace h2amp\multi\gemini\shaders\prof_stat_halo_outer.shader
 Porttag replace h2amp\multi\gemini\shaders\prof_stat_halo.shader
 porttag replace h2amp\multi\gemini\shaders\panel_f_purple.shader
+porttag replace h2amp\multi\gemini\shaders\light_vertstrip_a.shader
+porttag replace h2amp\multi\gemini\shaders\light_vertstrip_a_x.shader
 Exit
 
+opencachefile "workingdir\maps\h2ampstuff.map"
+porttag replace h2\scenarios\objects\solo\highcharity\high_door\shaders\high_door.shader
+porttag replace h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+porttag replace h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_hallway_signs\holo_hallway_signs.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\solo\highcharity\high_door\high_door.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\solo\highcharity\high_door\shaders\high_door.shader
+SaveTagChanges
+exit
 
 Edittag scenarios\multi\marathon\gemini\gemini.scenario_structure_bsp
 SetField Materials[13].RenderMethod h2amp\multi\gemini\shaders\light_floorstrip_purple.shader
 SetField Materials[17].RenderMethod objects\eldewrito\reforge\shaders\water.shader
 SetField Materials[22].RenderMethod null
+SetField Materials[27].RenderMethod scenarios\skies\solo\highcharity\shaders\sky_high_white.shader
 SetField Materials[37].RenderMethod null
 SetField Materials[38].RenderMethod null
 SetField Materials[39].RenderMethod null
@@ -710,6 +729,39 @@ Exit
 
 
 
+echo headlong
+
+Opencachefile "h2maps\headlong.map"
+porttag replace scenarios\bitmaps\multi\headlong\blue_signs.bitmap
+Exit
+
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\headlong\blue_signs
+
+Edittag scenarios\bitmaps\multi\headlong\blue_signs.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\headlong\blue_signs.bitmap
+SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\multi\headlong\blue_signs.bitmap
+savetagchanges
+exit
+
+EditTag scenarios\multi\headlong\headlong.scenario_structure_bsp
+SetField Materials[62].RenderMethod null
+
+
+
+
+SetField Materials[88].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[89].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[90].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[91].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[92].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[93].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[94].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[95].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[102].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+
+
+savetagchanges
+exit
 
 
 
