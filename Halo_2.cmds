@@ -312,8 +312,35 @@ exit
 edittag objects\gear\human\military\shaders\fusion_coil_bloom.shader
 SetArgument albedo_color 0 0 0 0.
 SetArgument self_illum_intensity 0
+SaveTagChanges
+Exit
+
+echo power core - LOOK INTO SHADER FUNCTION
+Opencachefile h2maps\lockout.map
+Porttag replace scenarios\objects\multi\lockout\power_module\power_module.model
+Porttag replace scenarios\objects\multi\lockout\bitmaps\power_modual.bitmap
+Porttag replace scenarios\objects\multi\lockout\bitmaps\power_modual_bump.bitmap
+exit
+
+EditTag scenarios\objects\multi\lockout\power_module\power_module.model
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\covenant_explosion_medium\covenant_explosion_medium_3.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransitionEffect objects\gear\forerunner\power_core_for\fx\trans_destruction.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].TransitionDamageEffect objects\gear\human\military\damage_effects\fusion_coil_explosion.damage_effect
 savetagchanges
 exit
+
+Duplicatetag objects\gear\human\military\shaders\military_equipment_2.shader scenarios\objects\multi\lockout\power_module\power_module_new
+
+Edittag scenarios\objects\multi\lockout\power_module\power_module_new.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\multi\lockout\bitmaps\power_modual.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\objects\multi\lockout\bitmaps\power_modual_bump.bitmap
+Savetagchanges
+Exit
+
+EditTag scenarios\objects\multi\lockout\power_module\power_module.render_model
+SetField Materials[0].RenderMethod scenarios\objects\multi\lockout\power_module\power_module_new.shader
+Savetagchanges
+Exit
 
 echo Fix Machine Gun Turret
 

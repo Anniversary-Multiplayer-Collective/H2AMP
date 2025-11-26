@@ -859,18 +859,3 @@ SetField Materials[66].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gl
 SetField Materials[67].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SaveTagChanges
 exit
-
-
-# Terminal Cancer
-# This fix the vent grate being invis
-EditTag scenarios\shaders\human\urban\metals\girders_a.shader
-SetField ShaderProperties[0].TextureConstants[3].Bitmap shaders\default_bitmaps\bitmaps\alpha_grey25.bitmap
-SaveTagChanges
-Exit
-
-# Turf
-# This fix the bridge grate being invis
-EditTag scenarios\shaders\multi\turf\metal_grey_dark_fence_a.shader
-SetField ShaderProperties[0].TextureConstants[3].Bitmap shaders\default_bitmaps\bitmaps\alpha_grey25.bitmap
-SaveTagChanges
-Exit
