@@ -277,3 +277,12 @@ EditTag objects\weapons\rifle\sniper_rifle\fp_sniper_rifle_h2\fp_sniper_rifle_h2
 SetField Materials[1].RenderMethod objects\weapons\rifle\sniper_rifle\shaders\sniper_rifle_scope_screen_h2.shader
 SaveTagChanges
 Exit
+
+
+# BATTLE RIFLE <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+DuplicateTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
+SaveTagChanges
+Exit
