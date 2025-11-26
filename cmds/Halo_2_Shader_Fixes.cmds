@@ -82,7 +82,10 @@ SetField Materials[82].RenderMethod scenarios\shaders\covenant\military\metals\s
 savetagchanges
 exit
 
-
+EditTag scenarios\skies\multi\halo\coagulation\coagulation.render_model
+SetField Nodes[0].DefaultScale 50
+SaveTagChanges
+Exit
 
 ## echo Sanctuary Shader Fixes
 EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
@@ -446,6 +449,12 @@ SetField Materials[44].RenderMethod scenarios\shaders\multi\containment\plate_ru
 SetField Materials[46].RenderMethod scenarios\shaders\multi\containment\plate_rusted_containment.shader
 savetagchanges
 exit
+
+# fix skybox being too big
+EditTag scenarios\skies\multi\containment\sentinelwall_noon\sentinelwall_noon.render_model
+SetField Nodes[0].DefaultScale 25
+SaveTagChanges
+Exit
 
 ## echo Desolation
 
@@ -864,6 +873,12 @@ exit
 # This fix the vent grate being invis
 EditTag scenarios\shaders\human\urban\metals\girders_a.shader
 SetField ShaderProperties[0].TextureConstants[3].Bitmap shaders\default_bitmaps\bitmaps\alpha_grey25.bitmap
+SaveTagChanges
+Exit
+
+# Fix skybox going out of render view cause it's way to big
+EditTag scenarios\skies\multi\triplicate\triplicate\triplicate.render_model
+SetField Nodes[0].DefaultScale 100
 SaveTagChanges
 Exit
 
