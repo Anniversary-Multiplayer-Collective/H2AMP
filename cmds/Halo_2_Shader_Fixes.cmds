@@ -1,3 +1,10 @@
+DuplicateTag objects\eldewrito\reforge\shaders\water.shader objects\eldewrito\reforge\shaders\water_opaque
+
+EditTag objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField ShaderProperties[0].BlendMode Opaque
+savetagchanges
+exit
+
 
 ## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
@@ -44,7 +51,7 @@ savetagchanges
 exit
 
 Edittag scenarios\multi\halo\coagulation\coagulation.scenario_structure_bsp
-SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[2].RenderMethod levels\multi\s3d_avalanche\materials\s3d_avalanche_collision_material_55.shader
 SetField Materials[8].RenderMethod scenarios\shaders\solo\alphagasgiant\metals\panel_d.shader
 SetField Materials[13].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
@@ -122,29 +129,29 @@ SaveTagChanges
 Exit
 
 EditTag scenarios\multi\marathon\foundation\foundation.scenario_structure_bsp
-SetField Materials[20].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[20].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[24].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[27].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[28].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[29].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[30].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[31].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[32].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[33].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[34].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[35].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[36].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[37].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[38].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[39].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[40].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[41].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[42].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[43].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[44].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[45].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[46].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[28].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[29].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[30].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[31].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[32].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[33].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[34].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[35].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[36].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[37].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[38].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[39].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[40].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[41].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[42].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[43].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[44].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[45].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[46].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 savetagchanges
 exit
 
@@ -237,7 +244,7 @@ SaveTagChanges
 Exit
 
 Edittag scenarios\multi\halo\beavercreek\beavercreek.scenario_structure_bsp
-SetField Materials[6].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[6].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[12].RenderMethod levels\solo\120_halo\shaders\ziggaraut_lights.shader
 SetField Materials[18].RenderMethod levels\solo\120_halo\shaders\ziggaraut_lights_blue.shader
 SetField Materials[20].RenderMethod null
@@ -247,15 +254,6 @@ SetField Materials[29].RenderMethod null
 SetField Materials[30].RenderMethod null
 savetagchanges
 exit
-
-
-
-
-## echo IvoryTower Shader Fixes
-EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
 
 ## echo backwash
 
@@ -573,8 +571,8 @@ EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
 SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
 
 # WATERPOOL
-SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water.shader
-SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 
 # LIGHTS, I have no idea where these are located
 # SetField Materials[16].RenderMethod null
@@ -605,7 +603,7 @@ SetField Materials[72].RenderMethod temp\scenarios\shaders\multi\zanzibar\treefo
 
 # 38 is the shoreline
 # SetField Materials[38].RenderMethod null
-# SetField Materials[93].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+# SetField Materials[93].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 
 SaveTagChanges
 Exit
@@ -674,7 +672,7 @@ exit
 
 Edittag scenarios\multi\marathon\gemini\gemini.scenario_structure_bsp
 SetField Materials[13].RenderMethod h2amp\multi\gemini\shaders\light_floorstrip_purple.shader
-SetField Materials[17].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[17].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[22].RenderMethod null
 SetField Materials[27].RenderMethod scenarios\skies\solo\highcharity\shaders\sky_high_white.shader
 SetField Materials[37].RenderMethod null
@@ -827,4 +825,37 @@ savetagchanges
 exit
 
 
+## echo IvoryTower Shader Fixes
+EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
 
+
+Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
+
+SetField Materials[0].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[12].RenderMethod  objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[25].RenderMethod  objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[48].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[49].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[50].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[51].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[52].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[53].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[54].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[55].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[56].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[57].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[58].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[59].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[60].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[61].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[62].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[63].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[64].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[65].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[66].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[67].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SaveTagChanges
+exit
