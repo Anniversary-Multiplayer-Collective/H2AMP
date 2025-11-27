@@ -859,3 +859,20 @@ SetField Materials[66].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gl
 SetField Materials[67].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SaveTagChanges
 exit
+
+
+# Ammo pack tweaks
+EditTag objects\powerups\smg_ammo\shaders\smg_ammo_bag.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag objects\powerups\pistol_ammo\shaders\pistol_ammo_bag.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag objects\powerups\battle_rifle_ammo\shaders\br_ammo_bag.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
