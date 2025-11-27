@@ -53,6 +53,7 @@ Exit
 #Exit
 
 OpenCacheFile "h2maps\backwash.map"
+NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
 PortTag *.scnr
 Exit
 
@@ -101,6 +102,7 @@ PortTag *.scnr
 Exit
 
 OpenCacheFile "h2maps\derelict.map"
+NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
 PortTag *.scnr
 Exit
 
