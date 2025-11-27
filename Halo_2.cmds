@@ -53,6 +53,7 @@ Exit
 #Exit
 
 OpenCacheFile "h2maps\backwash.map"
+NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
 PortTag *.scnr
 Exit
 
@@ -101,6 +102,7 @@ PortTag *.scnr
 Exit
 
 OpenCacheFile "h2maps\derelict.map"
+NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
 PortTag *.scnr
 Exit
 
@@ -172,6 +174,13 @@ SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransit
 SaveTagChanges
 Exit
 
+EditTag scenarios\objects\multi\zanzibar\main_crane\main_crane.physics_model
+SetField RigidBodies[0].CenterOfMass 3.58999 -0.1496506 -0.9543566
+SetField RigidBodies[0].InertiaTensorX 1632.371 992.3632 -444.5947
+SetField RigidBodies[0].InertiaTensorY 992.3632 20604.76 -55.44954
+SetField RigidBodies[0].InertiaTensorZ -444.5947 -55.44954 21988.77
+SaveTagChanges
+Exit
 
 AddModFiles workingdir\assets
 
