@@ -280,7 +280,7 @@ Exit
 
 
 # BATTLE RIFLE <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
-DuplicateTag objects\weapons\rifle\battle_rifWle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2
+DuplicateTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
 SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
 SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
