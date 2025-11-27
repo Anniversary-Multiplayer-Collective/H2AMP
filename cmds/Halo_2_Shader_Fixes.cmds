@@ -733,9 +733,12 @@ echo headlong
 
 Opencachefile "h2maps\headlong.map"
 porttag replace scenarios\bitmaps\multi\headlong\blue_signs.bitmap
+porttag replace scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow.bitmap
 Exit
 
 Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\bitmaps\multi\headlong\blue_signs
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\shaders\solo\earthcity\sign_welcome_b
 
 Edittag scenarios\bitmaps\multi\headlong\blue_signs.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\headlong\blue_signs.bitmap
@@ -743,12 +746,71 @@ SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\multi\
 savetagchanges
 exit
 
+Edittag scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow.bitmap
+savetagchanges
+exit
+
+Edittag scenarios\shaders\solo\earthcity\sign_welcome_b.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\earthcity\sign_welcome_a.bitmap
+savetagchanges
+exit
+
+Edittag scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow.bitmap
+importbitmap 0 "workingdir\bitmaps\adprojector_bldgfacade_glow.dds"
+Exit
+
+Edittag scenarios\objects\solo\earthcity\signage\sign_vert_facade\sign_vert_facade.render_model
+SetField Materials[2].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[3].RenderMethod scenarios\objects\solo\earthcity\bitmaps\adprojector_bldgfacade_glow.shader
+SaveTagChanges
+Exit
+
 EditTag scenarios\multi\headlong\headlong.scenario_structure_bsp
+SetField Materials[44].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[45].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[46].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[47].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[48].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[49].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[62].RenderMethod null
-
-
-
-
+SetField Materials[63].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[64].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[65].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[66].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[67].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[68].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[69].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[70].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[71].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[72].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[73].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[74].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[76].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[77].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[78].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[79].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[80].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[81].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[82].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[83].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[84].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[85].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[86].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[87].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[96].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[97].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[98].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[99].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[100].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[101].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[100].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[101].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[114].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[115].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[116].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[70].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[88].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[89].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[90].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
@@ -758,12 +820,11 @@ SetField Materials[93].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gl
 SetField Materials[94].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[95].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[102].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-
-
+SetField Materials[144].RenderMethod null
+SetField Materials[161].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[162].RenderMethod scenarios\shaders\solo\earthcity\sign_welcome_b.shader
 savetagchanges
 exit
-
-
 
 
 
