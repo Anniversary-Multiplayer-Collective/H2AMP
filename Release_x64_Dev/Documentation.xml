@@ -591,7 +591,7 @@
             Optional map variant
             </summary>
         </member>
-        <member name="M:TagTool.BlamFile.MapFileUpdater.UpdateMapFiles(TagTool.Cache.GameCache,System.String,System.Boolean)">
+        <member name="M:TagTool.BlamFile.MapFileUpdater.UpdateMapFiles(TagTool.Cache.GameCacheHaloOnlineBase,System.String,System.Boolean)">
             <summary>
             Creates or updates the map files for each scenario tag in the cache
             </summary>
@@ -599,7 +599,7 @@
             <param name="mapInfoDir">Path to the map info directory</param>
             <param name="forceUpdate">Force recreation of the .map file</param>
         </member>
-        <member name="M:TagTool.BlamFile.MapFileUpdater.UpdateMapFile(TagTool.Cache.GameCache,TagTool.Cache.CachedTag,TagTool.Tags.Definitions.Scenario,System.String,System.Boolean)">
+        <member name="M:TagTool.BlamFile.MapFileUpdater.UpdateMapFile(TagTool.Cache.GameCacheHaloOnlineBase,TagTool.Cache.CachedTag,TagTool.Tags.Definitions.Scenario,System.String,System.Boolean)">
             <summary>
             Creates or updates the map file for the given scenario
             </summary>
@@ -1072,6 +1072,47 @@
             </summary>
             <param name="data">The tag data.</param>
             <param name="dataOffset">The offset of the tag data relative to the tag instance's header.</param>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.IMapFileStorage.GetAll">
+            <summary>
+            Retrieves the list of map files.
+            </summary>
+            <returns>An array of <see cref="T:TagTool.BlamFile.MapFile"/></returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.IMapFileStorage.FindByName(System.String)">
+            <summary>
+            Finds a map file by name.
+            </summary>
+            <param name="name">Name of the map (without the .map extension)</param>
+            <returns>The <see cref="T:TagTool.BlamFile.MapFile"/> or null if not found.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.IMapFileStorage.FindByMapId(System.Int32)">
+            <summary>
+            Finds a map file by map id.
+            </summary>
+            <param name="mapId">The map id of the map</param>
+            <returns>The <see cref="T:TagTool.BlamFile.MapFile"/> or null if not found.</returns>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.IMapFileStorage.Add(TagTool.BlamFile.MapFile,System.Int32,System.Boolean)">
+            <summary>
+            Add a map file.
+            </summary>
+            <param name="mapFile">The map file to add</param>
+            <param name="tagCacheIndex">The index of the tag cache to assign - Only applicable to <see cref="T:TagTool.Cache.GameCacheModPackage"/></param>
+            <param name="overwrite">If true overwrites the map file if it already exists</param>
+            <remarks>
+            If a map with the same map id exists and <paramref name="overwrite"/> is true, it'll be overwritten, 
+            otherwise an <see cref="T:System.IO.IOException"/> will be thrown.
+            </remarks>
+        </member>
+        <member name="M:TagTool.Cache.HaloOnline.IMapFileStorage.Delete(System.String)">
+            <summary>
+            Delete a map file.
+            </summary>
+            <param name="name">Name of the map file to delete (without the .map extension)</param>
+            <remarks>
+            If the map file does not exist, no exception will be thrown.
+            </remarks>
         </member>
         <member name="T:TagTool.Cache.HaloOnline.Resolvers.StringIdResolverMS23">
             <summary>
