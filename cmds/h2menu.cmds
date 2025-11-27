@@ -19,6 +19,7 @@ opencachefile "h3mythicmaps\mainmenu.map"
 porttag replace levels\ui\mainmenu\sky\menu.skya
 porttag replace levels\ui\mainmenu\sky\ui.sefc
 DoNotReplaceGroups bitm
+IgnoreBlamTag sound\levels\main_menu\forerunner_int\details\shimmer_details_stereo.sound
 porttag !UpdateMapFiles *.scnr
 exit
 opencachefile "h3maps\030_outskirts.map"
