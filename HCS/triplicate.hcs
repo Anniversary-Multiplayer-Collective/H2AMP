@@ -1,25 +1,24 @@
-(script continuous void train_of_death
-    (begin
-        (object_destroy "eastbound_train")
-        (object_destroy "eastbound_death")
-        (object_destroy "westbound_train")
-        (object_destroy "westbound_death")
+(script continuous train_of_death
 
-        (sleep (random_range 60 360))
+    (object_destroy "eastbound_train")
+    (object_destroy "eastbound_death")
+    (object_destroy "westbound_train")
+    (object_destroy "westbound_death")
 
-        (if (= (random_range 0 2) 0)
-            (begin
-                (object_create "eastbound_train")
-                (object_create "eastbound_death")
-            )
-            (begin
-                (object_create "westbound_train")
-                (object_create "westbound_death")
-            )
+    (sleep (random_range 60 360))
+
+    (if (= (random_range 0 2) 0)
+        (begin
+            (object_create "eastbound_train")
+            (object_create "eastbound_death")
         )
-
-        (sleep 240)
+        (begin
+            (object_create "westbound_train")
+            (object_create "westbound_death")
+        )
     )
+
+    (sleep 240)
 )
 
 ; Globals
