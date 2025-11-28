@@ -180,7 +180,7 @@ Exit
 # |                MAGNUM                  |
 # ------------------------------------------
 EditTag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph
-AddAnimation workingdir\animations\spartan_fp\magnum
+AddAnimation Keep workingdir\animations\spartan_fp\magnum
 
 SetField SoundReferences[1].Reference sound\weapons\magnum\mag_dual_ready_l.sound
 # Yes the script aint wrong, it's at SoundReferences 10
@@ -190,6 +190,18 @@ SetField SoundReferences[3].Reference sound\weapons\magnum\mag_dual_reload_r.sou
 SetField SoundReferences[4].Reference sound\weapons\magnum\magnum_melee.sound
 SetField SoundReferences[7].Reference sound\weapons\magnum\magnum_ready.sound
 SetField SoundReferences[8].Reference sound\weapons\magnum\magnum_reload.sound
+
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_magnum\fp_magnum.model_animation_graph
+
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Actions[0].Animation 20
+SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[0].Animation 0
+
+SetField Animations[22].Weight 1
+SetField Animations[22].AnimationData.NextAnimation -1
+
 Savetagchanges
 Exit
 
