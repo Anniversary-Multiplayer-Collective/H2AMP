@@ -87,32 +87,6 @@ SetField Nodes[0].DefaultScale 50
 SaveTagChanges
 Exit
 
-## echo Sanctuary Shader Fixes
-EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
-EditTag scenarios\shaders\multi\halo\warlock\warlock_objects.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
-EditTag scenarios\shaders\multi\halo\warlock\warlock_objects_light.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_0_0_0_0_1_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Additive
-SaveTagChanges
-Exit
-
-EditTag scenarios\shaders\multi\deltatap\sanc_trees.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
-
 
 ## echo Relic Shader Fixes
 EditTag incompetent\default_object.render_model
@@ -839,8 +813,8 @@ Exit
 Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
 
 SetField Materials[0].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[12].RenderMethod  objects\eldewrito\reforge\shaders\water_opaque.shader
-SetField Materials[25].RenderMethod  objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[12].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
 SetField Materials[48].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[49].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[50].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
@@ -1145,6 +1119,137 @@ SetField Materials[6].RenderMethod scenarios\shaders\multi\dune\dune_plate.shade
 SetField Materials[12].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_waves.shader
 SaveTagChanges
 exit
+
+## echo Sanctuary Shader Fixes
+EditTag scenarios\shaders\multi\deltatap\deltatap_rocks.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\halo\warlock\warlock_objects.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\halo\warlock\warlock_objects_light.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_0_0_0_0_1_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Additive
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\deltatap\sanc_trees.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_0_1_0_0_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+OpenCacheFile "h2maps\deltatap.map"
+porttag replace scenarios\bitmaps\multi\deltatap\deltatap_ground_dirt.bitmap
+Exit
+
+DuplicateTag scenarios\shaders\multi\zanzibar\zanzibar_ground_dirt.shader scenarios\shaders\multi\deltatap\deltatap_ground_dirt
+
+Edittag scenarios\shaders\multi\deltatap\deltatap_ground_dirt.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\deltatap\deltatap_ground_dirt.bitmap
+SaveTagChanges
+exit
+
+EditTag scenarios\multi\deltatap\deltatap.scenario_structure_bsp
+SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[1].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[2].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[12].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[13].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[22].RenderMethod scenarios\shaders\multi\deltatap\deltatap_ground_dirt.shader
+SetField Materials[23].RenderMethod scenarios\shaders\multi\deltatap\deltatap_ground_dirt.shader
+SetField Materials[28].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+SetField Materials[30].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[31].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[32].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[33].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[34].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[35].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[36].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[37].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[38].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[39].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[40].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[41].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[42].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[43].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[44].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[45].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[46].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[47].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[48].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[49].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[50].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[51].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[52].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[53].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[54].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[55].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[56].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[57].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[58].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[59].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[60].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[61].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[62].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[63].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[64].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[65].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[66].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[67].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[68].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[69].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[70].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[71].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[72].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[73].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[74].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[75].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[76].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[77].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[78].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[79].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[80].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[81].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[82].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[83].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[84].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[85].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[86].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[87].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[88].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[89].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[90].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[91].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[92].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[93].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[94].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField Materials[95].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[96].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[97].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[99].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[100].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[101].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[102].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[103].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[105].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[106].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[107].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[108].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[109].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SaveTagChanges
+exit
+
+
+
 
 
 
