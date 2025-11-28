@@ -1124,6 +1124,7 @@ Edittag scenarios\shaders\multi\dune\dune_plate.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_ext.bitmap
 SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_ext.bitmap
 SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_bump.bitmap
+SetArgument detail_map transform 16 16 0 0
 savetagchanges
 exit
 
