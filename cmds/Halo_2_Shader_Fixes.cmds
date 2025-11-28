@@ -1111,4 +1111,46 @@ SetField Materials[200].RenderMethod scenarios\shaders\multi\midship\midship_lig
 SaveTagChanges
 exit
 
+echo Relic
+
+Opencachefile "h2maps\dune.map"
+porttag replace scenarios\bitmaps\forerunner\industrial\floors\plate_ext.bitmap
+porttag replace scenarios\bitmaps\forerunner\industrial\floors\plate_bump.bitmap
+Exit
+
+DuplicateTag scenarios\shaders\multi\dune\dune_metal.shader scenarios\shaders\multi\dune\dune_plate
+
+Edittag scenarios\shaders\multi\dune\dune_plate.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_ext.bitmap
+SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_ext.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\forerunner\industrial\floors\plate_bump.bitmap
+savetagchanges
+exit
+
+Edittag scenarios\objects\multi\dune\dune_ramps\dune_ramps_island\dune_ramps_island.render_model
+SetField Materials[0].RenderMethod scenarios\shaders\forerunner\industrial\metals\panels_thin_strips_rusted.shader
+SetField Materials[2].RenderMethod scenarios\shaders\multi\dune\dune_plate.shader
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\dune\dune_ramps\dune_ramps_planet\dune_ramps_planet.render_model
+SetField Materials[0].RenderMethod scenarios\shaders\forerunner\industrial\metals\panels_thin_strips_rusted.shader
+SetField Materials[2].RenderMethod scenarios\shaders\multi\dune\dune_plate.shader
+SaveTagChanges
+exit
+
+Edittag scenarios\multi\dune\dune.scenario_structure_bsp
+SetField Materials[6].RenderMethod scenarios\shaders\multi\dune\dune_plate.shader
+SetField Materials[12].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_waves.shader
+SaveTagChanges
+exit
+
+
+
+
+
+
+
+
+
 
