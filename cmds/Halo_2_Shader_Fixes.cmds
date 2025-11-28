@@ -1381,34 +1381,109 @@ exit
 
 Edittag scenarios\multi\triplicate\triplicate.scenario_structure_bsp
 SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
-
 SetField Materials[9].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[27].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
-
 SetField Materials[30].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[37].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[42].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
 SetField Materials[45].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
-
 SetField Materials[46].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[48].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[73].RenderMethod scenarios\objects\solo\earthcity\shader\adprojector_angled_glow.shader
+SetField Materials[86].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[87].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[89].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[90].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[99].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[103].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[111].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[115].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[127].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
-
-
-SetField Materials[42].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
-SetField Materials[73].RenderMethod scenarios\objects\solo\earthcity\shader\adprojector_angled_glow.shader
-
-SetField Materials[86].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[87].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[89].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[90].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SaveTagChanges
 exit
 
 
+echo High Plains
+
+opencachefile "h2maps\highplains.map"
+PortTag replace scenarios\bitmaps\multi\halo\highplains\highplains_lights.bitmap
+Porttag replace scenarios\bitmaps\multi\halo\highplains\sodamachinetexture.bitmap
+Porttag replace scenarios\bitmaps\multi\halo\highplains\sodamachinetexture_illum.bitmap
+Porttag replace scenarios\bitmaps\multi\halo\highplains\highplains_viewscreen.bitmap
+Exit
+
+Duplicatetag scenarios\objects\multi\zanzibar\shaders\hinge_light.shader scenarios\bitmaps\multi\halo\highplains\highplains_lights
+Duplicatetag scenarios\objects\human\residential\vending_machine_blue_soda\shaders\vending_machine_blue.shader scenarios\objects\human\residential\vending_machine_green_soda\shaders\vending_machine_green
+Duplicatetag levels\dlc\bunkerworld\shaders\bunker_tech_screen_a.shader scenarios\shader\multi\halo\highplains\highplains_viewscreen
+
+Edittag scenarios\shader\multi\halo\highplains\highplains_viewscreen.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\highplains_viewscreen.bitmap
+SaveTagChanges
+exit
 
 
+EditTag scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\highplains_lights.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\multi\halo\highplains\highplains_lights.bitmap
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\human\residential\vending_machine_green_soda\shaders\vending_machine_green.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\sodamachinetexture.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\multi\halo\highplains\sodamachinetexture_illum.bitmap
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\halo\highplains\highplains_walkwaylight\highplains_walkwaylight.render_model
+SetField Materials[1].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SaveTagChanges
+exit
+
+EditTag scenarios\objects\multi\halo\highplains\hp_boxlight\hp_boxlight.render_model
+SetField Materials[1].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SaveTagChanges
+exit
+
+Edittag scenarios\multi\halo\highplains\highplains.scenario_structure_bsp
+SetField Materials[23].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SetField Materials[24].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[77].RenderMethod scenarios\objects\human\residential\vending_machine_green_soda\shaders\vending_machine_green.shader
+SetField Materials[80].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SetField Materials[84].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
+SetField Materials[89].RenderMethod scenarios\shader\multi\halo\highplains\highplains_viewscreen.shader
+
+savetagchanges
+exit
+
+Echo Turf Shader fixes
+
+DuplicateTag scenarios\shaders\solo\earthcity\base_stucco1_door.shader scenarios\shaders\multi\turf\base_stucco1_damaged_01
+
+Edittag scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\sodamachinetexture.bitmap
+SaveTagChanges
+Exit
+
+Edittag scenarios\multi\turf\turf_bsp0.scenario_structure_bsp
+SetField Materials[53].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[58].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[59].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[71].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[74].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[83].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[86].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[97].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[107].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[115].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[168].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[170].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\multi\turf\tent_medical_solidpanel_turf\tent_medical_solidpanel_turf.render_model
+SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SaveTagChanges
+Exit
 
