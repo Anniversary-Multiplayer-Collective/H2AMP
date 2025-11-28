@@ -74,6 +74,11 @@ OpenCacheFile "h2maps\coagulation.map"
 PortTag *.scnr
 Exit
 
+EditTag scenarios\bitmaps\multi\halo\coagulation\coag_ground.bitmap
+ImportBitmap 0 workingdir\bitmaps\coag_ground.dds
+SaveTagChanges
+Exit
+
 OpenCacheFile "h2maps\colossus.map"
 PortTag *.scnr
 Exit
