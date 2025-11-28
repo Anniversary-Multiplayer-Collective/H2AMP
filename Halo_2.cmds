@@ -222,6 +222,8 @@ RunCommands workingdir\cmds\forge_pallet.cmds
 
 RunCommands workingdir\cmds\podiumcamera.cmds
 
+RunCommands workingdir\cmds\h2_scripts.cmds
+
 #RUN IF YOU WANT BROKEN PORTED H2 VEHICLES :) FIX PLZ
 #RunCommands workingdir\cmds\vehicles.cmds 
 

@@ -1,0 +1,8 @@
+EditTag scenarios\multi\triplicate\triplicate.scenario
+SetField ObjectNames[4].ObjectType.Halo3ODST Machine
+SetField ObjectNames[5].ObjectType.Halo3ODST Machine
+SetField ObjectNames[6].ObjectType.Halo3ODST Machine
+SetField ObjectNames[7].ObjectType.Halo3ODST Machine
+CompileScripts workingdir\HCS\triplicate.hcs
+SaveTagChanges
+Exit
