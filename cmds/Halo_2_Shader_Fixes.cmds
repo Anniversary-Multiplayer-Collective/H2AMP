@@ -1098,6 +1098,12 @@ OpenCacheFile "h2maps\deltatap.map"
 porttag replace scenarios\bitmaps\multi\deltatap\deltatap_ground_dirt.bitmap
 Exit
 
+DuplicateTag scenarios\shaders\multi\zanzibar\treebark.shader temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient
+EditTag temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
+SaveTagChanges
+Exit
+
 DuplicateTag scenarios\shaders\multi\zanzibar\zanzibar_ground_dirt.shader scenarios\shaders\multi\deltatap\deltatap_ground_dirt
 
 Edittag scenarios\shaders\multi\deltatap\deltatap_ground_dirt.shader
@@ -1446,12 +1452,6 @@ echo warlock shader fixes
 # OpenCacheFile h2maps\warlock.map
 # PortTag scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
 # Exit
-
-DuplicateTag scenarios\shaders\multi\zanzibar\treebark.shader temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient
-EditTag temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
-SaveTagChanges
-Exit
 
 EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
 SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
