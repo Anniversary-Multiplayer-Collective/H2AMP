@@ -915,6 +915,72 @@ exit
 
 
 ## echo Midship Shader Fixes
+OpenCacheFile "workingdir\maps\h2ampstuff.map"
+Porttag h2\scenarios\objects\covenant\residential\holo_panels\holo_scarab_full\holo_scarab_full.scenery
+Exit
+
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_med_wall_panela\holo_med_wall_panela.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_med_wall_panelb\holo_med_wall_panelb.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_large_wall_panel\holo_large_wall_panel.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SaveTagChanges
+Exit
+
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_hallway_signs\holo_hallway_signs.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_hallway_signs_frame\holo_hallway_signs_frame.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+SaveTagChanges
+Exit
+
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_generic_slim\holo_generic_slim.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SetField Materials[1].RenderMethod null
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_generic_slim02\holo_generic_slim02.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SetField Materials[1].RenderMethod null
+SetField Materials[2].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_hallway_signs\holo_hallway_signs.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01_blue_tint.shader_halogram
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\covenant\residential\holo_panels\holo_ceiling_decoration\holo_ceiling_decoration.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate01.shader_halogram
+savetagchanges
+exit
+
+Edittag scenarios\objects\covenant\residential\holo_panels\holo_big_wall_decoration\holo_big_wall_decoration.render_model
+SetField Materials[0].RenderMethod null
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\residential\holo_panels\shaders\holo_const_plate02.shader_halogram
+SaveTagChanges
+Exit
+
+
 EditTag scenarios\shaders\multi\midship\midship_rubber_mat_a.shader
 SetArgument bump_map 16 16 0 0
 SaveTagChanges
@@ -930,17 +996,9 @@ SetField Nodes[0].DefaultScale 1
 savetagchanges
 Exit
 
-DuplicateTag objects\weapons\melee\energy_blade\shaders\energy_blade_illum.shader objects\weapons\melee\energy_blade\shaders\energy_blade_illum_midship
-
-Edittag objects\weapons\melee\energy_blade\shaders\energy_blade_illum_midship.shader
-SetField ShaderProperties[0].Functions[0].Type Color
-SetField ShaderProperties[0].Functions[0].TimePeriod 55
-savetagchanges
-exit
-
 Edittag scenarios\multi\midship\midship.scenario_structure_bsp
 
-SetField Materials[13].RenderMethod objects\weapons\melee\energy_blade\shaders\energy_blade_illum_midship.shader
+SetField Materials[13].RenderMethod scenarios\shaders\multi\midship\midship_lights_blue.shader
 SetField Materials[26].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[76].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
@@ -1041,6 +1099,15 @@ SetField Materials[169].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_g
 SetField Materials[170].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[171].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[172].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+
+SetField Materials[183].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+SetField Materials[188].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+SetField Materials[191].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+
+SetField Materials[194].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+SetField Materials[197].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+SetField Materials[197].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
+SetField Materials[200].RenderMethod scenarios\shaders\multi\midship\midship_lights_purple.shader
 SaveTagChanges
 exit
 
