@@ -1518,3 +1518,26 @@ EditTag ui\halox\pregame_lobby\selection\arrow_up_category.gui_bitmap_widget_def
 SetField GuiRenderBlock.Bounds720p -20 80 -4 110
 SaveTagChanges
 Exit
+
+#Fix panels not moving far enough for ultrawide
+#Right Panel
+EditTag ui\halox\start_menu\animations\menu_slide_to_right.gui_widget_position_animation_definition
+SetField Keyframes[1].Position 2000 0 0
+SaveTagChanges
+Exit
+
+EditTag ui\halox\start_menu\animations\menu_slide_from_right.gui_widget_position_animation_definition
+SetField Keyframes[0].Position 2000 0 0
+SaveTagChanges
+Exit
+
+#Left Panel
+EditTag ui\halox\start_menu\animations\menu_slide_to_left_new.gui_widget_position_animation_definition
+SetField Keyframes[1].Position -2000 0 0
+SaveTagChanges
+Exit
+
+EditTag ui\halox\start_menu\animations\menu_slide_from_left_new.gui_widget_position_animation_definition
+SetField Keyframes[0].Position -2000 0 0
+SaveTagChanges
+Exit
