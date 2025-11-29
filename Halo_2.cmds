@@ -221,7 +221,7 @@ SetField Variants[0].Regions[0].Permutations[0].States[0].State2 Destroyed
 CopyBlockElements NewDamageInfo[0].DamageSections[1].InstantResponses 0 1
 PasteBlockElements NewDamageInfo[0].DamageSections[1].InstantResponses
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].ConstraintDamageType None
-SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].ConstraintGroupName 
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].ConstraintGroupName null
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].Region awning
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].RuntimeRegionIndex 0
 CopyBlockElements CollisionRegions[0].Permutations 0 1
