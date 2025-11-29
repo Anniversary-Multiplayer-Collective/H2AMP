@@ -187,6 +187,54 @@ SetField RigidBodies[0].InertiaTensorZ -444.5947 -55.44954 21988.77
 SaveTagChanges
 Exit
 
+# Fix the awning
+EditTag scenarios\objects\multi\zanzibar\awning_def\awning_def.physics_model
+CopyBlockElements RigidBodies 1 1
+PasteBlockElements RigidBodies
+SetField RigidBodies[1].MotionType Keyframed
+CopyBlockElements Regions[0].Permutations 0 1
+PasteBlockElements Regions[0].Permutations
+SetField Regions[0].Permutations[1].Name loosened
+SetField Regions[0].Permutations[1].RigidBodies[0].RigidBodyIndex 2
+SetField RigidBodies[2].Permutation 1
+SetField NodeEdges[0].Constraints[0].Flags None
+SetField RigidBodies[0].Flags DoesNotInteractWithEnvironment
+SetField RigidBodies[1].Flags DoesNotInteractWithEnvironment
+SetField RigidBodies[2].Flags DoesNotInteractWithEnvironment
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\zanzibar\awning_def\awning_def.render_model
+CopyBlockElements Regions[0].Permutations 0 1
+PasteBlockElements Regions[0].Permutations
+SetField Regions[0].Permutations[1].Name loosened
+StringId Add loosened
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\zanzibar\awning_def\awning_def.model
+AddBlockElements Variants[0].Regions[0].Permutations[0].States
+SetField Variants[0].Regions[0].Permutations[0].States[0].Name loosened
+SetField Variants[0].Regions[0].Permutations[0].States[0].ModelPermutationIndex 1
+SetField Variants[0].Regions[0].Permutations[0].States[0].State2 Destroyed
+CopyBlockElements NewDamageInfo[0].DamageSections[1].InstantResponses 0 1
+PasteBlockElements NewDamageInfo[0].DamageSections[1].InstantResponses
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].ConstraintDamageType None
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].ConstraintGroupName 
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].Region awning
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[1].RuntimeRegionIndex 0
+CopyBlockElements CollisionRegions[0].Permutations 0 1
+PasteBlockElements CollisionRegions[0].Permutations
+SetField CollisionRegions[0].Permutations[1].PhysicsPermutationIndex 1
+SetField CollisionRegions[0].Permutations[1].Name loosened
+CopyBlockElements Variants[0].Regions[0].Permutations[0].States 0 1
+PasteBlockElements Variants[0].Regions[0].Permutations[0].States
+SetField Variants[0].Regions[0].Permutations[0].States[1].Name base
+SetField Variants[0].Regions[0].Permutations[0].States[1].ModelPermutationIndex 0
+SetField Variants[0].Regions[0].Permutations[0].States[1].State2 Default
+SaveTagChanges
+Exit
+
 AddModFiles workingdir\assets
 
 UpdateMapFiles
