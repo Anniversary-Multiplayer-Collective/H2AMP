@@ -188,6 +188,8 @@ SaveTagChanges
 Exit
 
 # Fix the awning
+StringId Add loosened
+
 EditTag scenarios\objects\multi\zanzibar\awning_def\awning_def.physics_model
 CopyBlockElements RigidBodies 1 1
 PasteBlockElements RigidBodies
@@ -208,7 +210,6 @@ EditTag scenarios\objects\multi\zanzibar\awning_def\awning_def.render_model
 CopyBlockElements Regions[0].Permutations 0 1
 PasteBlockElements Regions[0].Permutations
 SetField Regions[0].Permutations[1].Name loosened
-StringId Add loosened
 SaveTagChanges
 Exit
 
