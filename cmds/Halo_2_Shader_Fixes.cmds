@@ -5,6 +5,14 @@ SetField ShaderProperties[0].BlendMode Opaque
 savetagchanges
 exit
 
+DuplicateTag scenarios\shaders\multi\zanzibar\zanzibar_glass.shader scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque
+
+Edittag scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+
 
 ## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
@@ -1248,13 +1256,157 @@ SetField Materials[109].RenderMethod objects\eldewrito\reforge\shaders\water.sha
 SaveTagChanges
 exit
 
+echo Terminal 
+echo TRAIN
+opencachefile "h2maps\triplicate.map"
+porttag replace scenarios\objects\multi\triplicate\ze_train\bitmaps\ze_train.bitmap
+porttag replace scenarios\objects\multi\triplicate\ze_train\bitmaps\ze_train_bump.bitmap
+Exit
+
+opencachefile "odstmaps\l300.map"
+porttag replace objects\vehicles\olifaunt\damage_effects\damage_volume.effect
+Exit
+
+DuplicateTag ms30\objects\levels\multi\zanzibar\shaders\metal_wheel.shader scenarios\objects\multi\triplicate\ze_train\shader\ze_train
+
+Edittag scenarios\objects\multi\triplicate\ze_train\shader\ze_train.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\multi\triplicate\ze_train\bitmaps\ze_train.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\objects\multi\triplicate\ze_train\bitmaps\ze_train_bump.bitmap
+savetagchanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train\ze_train.render_model
+SetField Materials[0].RenderMethod scenarios\objects\multi\triplicate\ze_train\shader\ze_train.shader
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train_west\ze_train_west.render_model
+SetField Materials[0].RenderMethod scenarios\objects\multi\triplicate\ze_train\shader\ze_train.shader
+SaveTagChanges
+Exit
 
 
+DuplicateTag objects\levels\dlc\shared\damage_sphere\death_ball.effect effects\scenarios\objects\multi\triplicate\train_cow_catcher
+DuplicateTag objects\levels\dlc\shared\damage_sphere\death_ball.effect effects\scenarios\objects\multi\triplicate\train_cow_catcher_high
+
+Opencachefile "h2maps\triplicate.map"
+porttag scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher.jpt!
+porttag scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher_high.jpt!
+Exit
+
+Edittag effects\scenarios\objects\multi\triplicate\train_cow_catcher.effect
+SetField Events[0].Parts[0].Type scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher.jpt!
+SaveTagChanges
+exit
+
+Edittag effects\scenarios\objects\multi\triplicate\train_cow_catcher_high.effect
+SetField Events[0].Parts[0].Type scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher_high.jpt!
+SaveTagChanges
+exit
+
+EditTag scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher.damage_effect
+SetField Category Vehicle
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\triplicate\ze_train\damage_effects\cow_catcher_high.damage_effect
+SetField Category Vehicle
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train\ze_train.device_machine
+SetField Attachments[0].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher.effect
+SetField Attachments[4].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher_high.effect
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train_west\ze_train_west.device_machine
+SetField Attachments[0].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher.effect
+SetField Attachments[4].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher_high.effect
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train_deathball\ze_train_deathball.device_machine
+SetField Attachments[0].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher.effect
+SetField Attachments[1].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher_high.effect
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\ze_train_west_deathball\ze_train_west_deathball.device_machine
+SetField Attachments[0].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher.effect
+SetField Attachments[1].Type effects\scenarios\objects\multi\triplicate\train_cow_catcher_high.effect
+SaveTagChanges
+exit
+
+Echo Terminal Shaders
+
+OpenCacheFile "h2maps\triplicate.map"
+Porttag scenarios\bitmaps\human\urban\lights\light_florescent_a_dif.bitm
+Porttag scenarios\objects\solo\earthcity\bitmaps\adprojector_angled_glow.bitm
+Porttag scenarios\objects\multi\triplicate\kiosk_monitor\bitmaps\kiosk_monitor_screen.bitm
+Exit
+
+DuplicateTag levels\shared\shaders\multi\light_florescent_a_illum.shader scenarios\shader\human\urban\lights\light_florescent_a_dif
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\objects\solo\earthcity\shader\adprojector_angled_glow
+Duplicatetag levels\dlc\bunkerworld\shaders\bunker_tech_screen_a.shader scenarios\objects\multi\triplicate\kiosk_monitor\shader\kiosk_monitor_screen
+
+Edittag scenarios\objects\solo\earthcity\bitmaps\adprojector_angled_glow.bitm
+importbitmap 0 "workingdir\bitmaps\adprojector_angled_glow.dds"
+Exit
+
+Edittag scenarios\objects\solo\earthcity\shader\adprojector_angled_glow.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\solo\earthcity\bitmaps\adprojector_angled_glow.bitm
+SaveTagChanges
+exit
+
+Edittag scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Parameters[0].Bitmap scenarios\bitmaps\human\urban\lights\light_florescent_a_dif.bitm
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\kiosk_monitor\shader\kiosk_monitor_screen.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\multi\triplicate\kiosk_monitor\bitmaps\kiosk_monitor_screen.bitm
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\triplicate\kiosk_monitor\kiosk_monitor.render_model
+SetField Materials[1].RenderMethod scenarios\objects\multi\triplicate\kiosk_monitor\shader\kiosk_monitor_screen.shader
+savetagchanges
+exit
+
+EditTag scenarios\skies\multi\triplicate\triplicate\triplicate.render_model
+SetField Nodes[0].DefaultScale 175
+SaveTagChanges
+exit
+
+Edittag scenarios\multi\triplicate\triplicate.scenario_structure_bsp
+SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
+
+SetField Materials[9].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[27].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+
+SetField Materials[30].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[37].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[45].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+
+SetField Materials[46].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[48].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[99].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[103].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[111].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[115].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[127].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 
 
+SetField Materials[42].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
+SetField Materials[73].RenderMethod scenarios\objects\solo\earthcity\shader\adprojector_angled_glow.shader
 
-
-
+SetField Materials[86].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[87].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[89].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[90].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SaveTagChanges
+exit
 
 
 
