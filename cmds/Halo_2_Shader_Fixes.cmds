@@ -191,12 +191,6 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
-## echo Zanzibar Shader Fixes
-EditTag scenarios\shaders\multi\zanzibar\spindle_grate.shader
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
 ## echo BeaverCreek Shader Fixes
 EditTag scenarios\shaders\nature\trees\tree_leafy_leaves.shader
 SetField ShaderProperties[0].BlendMode Opaque
@@ -535,31 +529,6 @@ EditTag objects\vehicles\civilian\uberchassis\uberchassis.render_model
 SetField Materials[1].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 savetagchanges
 exit
-
-## Zanzibar
-OpenCacheFile h2maps\zanzibar.map
-PortTag incompetent\bitmaps\treefol.bitmap
-PortTag incompetent\bitmaps\treefol_bump.bitmap
-Exit
-
-DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\multi\zanzibar\treefol
-EditTag temp\scenarios\shaders\multi\zanzibar\treefol.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap incompetent\bitmaps\treefol.bitmap
-SetField ShaderProperties[0].TextureConstants[2].Bitmap incompetent\bitmaps\treefol_bump.bitmap
-SetField ShaderProperties[0].TextureConstants[3].Bitmap incompetent\bitmaps\treefol_bump.bitmap
-SaveTagChanges
-Exit
-
-EditTag scenarios\multi\zanzibar\zanzibar.scenario_structure_bsp
-SetField Materials[72].RenderMethod temp\scenarios\shaders\multi\zanzibar\treefol.shader
-
-# 38 is the shoreline
-# SetField Materials[38].RenderMethod null
-# SetField Materials[93].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
-
-SaveTagChanges
-Exit
-
 
 echo elongation
 
@@ -1560,4 +1529,46 @@ SaveTagChanges
 Exit
 
 
-echo 
+## echo Zanzibar Shader Fixes
+
+OpenCacheFile "h2maps\zanzibar.map"
+porttag replace scenarios\objects\multi\zanzibar\keypad\bitmaps\keypad.bitmap
+PortTag incompetent\bitmaps\treefol.bitmap
+PortTag incompetent\bitmaps\treefol_bump.bitmap
+Exit
+
+Duplicatetag scenarios\shaders\multi\triplicate\hazard_strips_trip.shader scenarios\objects\multi\zanzibar\keypad\shader\keypad
+DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\multi\zanzibar\treefol
+
+EditTag temp\scenarios\shaders\multi\zanzibar\treefol.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap incompetent\bitmaps\treefol.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap incompetent\bitmaps\treefol_bump.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap incompetent\bitmaps\treefol_bump.bitmap
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\multi\zanzibar\keypad\shader\keypad.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\multi\zanzibar\keypad\bitmaps\keypad.bitmap
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\zanzibar\keypad\keypad.render_model
+SetField Materials[0].RenderMethod scenarios\objects\multi\zanzibar\keypad\shader\keypad.shader
+SaveTagChanges
+exit
+
+EditTag scenarios\shaders\multi\zanzibar\spindle_grate.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\zanzibar\zanzibar.scenario_structure_bsp
+SetField Materials[38].RenderMethod null
+SetField Materials[72].RenderMethod temp\scenarios\shaders\multi\zanzibar\treefol.shader
+SaveTagChanges
+Exit
+
+
+
+
+
