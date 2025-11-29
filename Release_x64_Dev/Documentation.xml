@@ -5389,22 +5389,6 @@
             NOTE: For bulk conversion consider using <see cref="M:TagTool.Porting.PortingContext.ConvertTag(System.IO.Stream,System.IO.Stream,TagTool.Cache.CachedTag,System.String,System.Object,TagTool.Porting.PortingContext.ConvertTagOptions@)"/>
             </remarks>
         </member>
-        <member name="T:TagTool.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:TagTool.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:TagTool.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
         <member name="P:TagTool.Scripting.Compiler.ScriptSyntaxReader.Reader">
             <summary>
             The binary reader which reads from the expression data stream.
