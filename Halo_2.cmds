@@ -354,6 +354,11 @@ NameBlamTag h2\objects\vehicles\h_turret_ap\h_turret_ap.vehicle objects\vehicles
 Porttag replace objects\vehicles\h_turret_ap\h_turret_ap.vehicle
 Exit
 
+EditTag objects\vehicles\h_turret_ap\h_turret_ap.vehicle
+SetField Seats[0].Label turret_g
+SaveTagChanges
+Exit
+
 echo add ranks
 
 edittag ui\halox\spartan_program\exp_lg_ui.bitmap
