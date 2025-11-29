@@ -1541,3 +1541,40 @@ EditTag ui\halox\start_menu\animations\menu_slide_from_left_new.gui_widget_posit
 SetField Keyframes[0].Position -2000 0 0
 SaveTagChanges
 Exit
+
+#Add lobby selected button sprite animation
+DuplicateTag ui\halox\director\play_ui.bitmap ui\halox\pregame_lobby\buttons
+
+EditTag ui\halox\pregame_lobby\buttons.bitmap
+ImportBitmap 0 "workingdir\bitmaps\buttonsprite.dds"
+RemoveBlockElements Sequences 2 2
+
+SetField Sequences[0].Sprites[0].RegistrationPoint 0 0
+SetField Sequences[0].Sprites[0].Left 0
+SetField Sequences[0].Sprites[0].Top 0
+SetField Sequences[0].Sprites[0].Bottom 0.5
+
+SetField Sequences[1].Sprites[0].RegistrationPoint 0 0
+SetField Sequences[1].Sprites[0].Right 1
+SetField Sequences[1].Sprites[0].Top 0.5
+SetField Sequences[1].Sprites[0].Bottom 1
+SaveTagChanges
+Exit
+
+DuplicateTag ui\halox\director\frame1.gui_widget_sprite_animation_definition ui\halox\pregame_lobby\buttons_change
+
+EditTag ui\halox\pregame_lobby\buttons_change.gui_widget_sprite_animation_definition
+SetField Keyframes[0].SpriteSequence 1
+SetField Keyframes[1].SpriteSequence 1
+SaveTagChanges
+Exit
+
+EditTag ui\halox\global_animations\animation_definitions\pulsate.gui_widget_animation_definition
+SetField SpriteAnimation ui\halox\pregame_lobby\buttons_change.gui_widget_sprite_animation_definition
+SaveTagChanges
+Exit
+
+EditTag ui\halox\pregame_lobby\list.gui_skin_definition
+SetField BitmapWidgets[0].Definition.Bitmap ui\halox\pregame_lobby\buttons.bitmap
+SaveTagChanges
+Exit
