@@ -1510,4 +1510,54 @@ SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water.sha
 SaveTagChanges
 exit
 
+Echo waterworks shader fixes
 
+OpenCacheFile "h2maps\waterworks.map"
+Porttag replace scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_grey.bitmap
+Porttag replace scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue_bump.bitmap
+porttag replace scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue.bitmap
+Exit
+
+DuplicateTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey
+
+DuplicateTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey_blue
+
+EditTag scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_grey.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue_bump.bitmap
+SaveTagChanges
+exit
+
+EditTag scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey_blue.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue_bump.bitmap
+SaveTagChanges
+exit
+
+Edittag scenarios\objects\multi\waterworks\main_crusher\main_crusher.render_model
+SetField Materials[0].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\waterworks\waterworks.scenario_structure_bsp
+SetField Materials[0].RenderMethod null
+SetField Materials[1].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField Materials[2].RenderMethod null
+SetField Materials[5].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey_blue.shader
+SetField Materials[6].RenderMethod null
+SetField Materials[9].RenderMethod null
+SetField Materials[13].RenderMethod null
+SetField Materials[16].RenderMethod null
+SetField Materials[17].RenderMethod null
+SetField Materials[18].RenderMethod null
+SetField Materials[19].RenderMethod null
+SetField Materials[20].RenderMethod null
+SetField Materials[25].RenderMethod null
+SetField Materials[27].RenderMethod null
+SetField Materials[28].RenderMethod null
+SetField Materials[31].RenderMethod null
+SaveTagChanges
+Exit
+
+
+echo 
