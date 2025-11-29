@@ -1,0 +1,117 @@
+#SMG
+
+EditTag objects\weapons\rifle\smg\smg.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\smg_accuracy.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\smg_accuracy.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\smg_damage.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\smg_power.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\smg\smg_rof.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 120
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\smg_ammo\smg_ammo.equipment
+SaveTagChanges
+Exit
+
+#Battle Rifle
+
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_rof\battle_rifle_rof.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_range\battle_rifle_range.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_power\battle_rifle_power.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_damage\battle_rifle_damage.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_ammo\battle_rifle_ammo.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\rifle\battle_rifle_accuracy\battle_rifle_accuracy.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 72
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\battle_rifle_ammo\br_ammo.equipment
+SaveTagChanges
+Exit
+
+#Mangum
+
+EditTag objects\weapons\pistol\magnum\magnum.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 24
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\pistol_ammo\pistol_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\pistol\magnum\magnum_damage.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 24
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\pistol_ammo\pistol_ammo.equipment
+SaveTagChanges
+Exit
+
+EditTag objects\weapons\pistol\magnum\magnum_power.weapon
+AddBlockElements Magazines[0].MagazineEquipment
+SetField Magazines[0].MagazineEquipment[2].Rounds 24
+SetField Magazines[0].MagazineEquipment[2].Equipment objects\powerups\pistol_ammo\pistol_ammo.equipment
+SaveTagChanges
+Exit
