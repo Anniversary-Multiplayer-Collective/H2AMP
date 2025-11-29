@@ -536,34 +536,6 @@ SetField Materials[1].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gla
 savetagchanges
 exit
 
-## Warlocks
-# OpenCacheFile h2maps\warlock.map
-# PortTag scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
-# Exit
-
-DuplicateTag scenarios\shaders\multi\zanzibar\treebark.shader temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient
-EditTag temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
-SaveTagChanges
-Exit
-
-EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
-SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
-
-# WATERPOOL
-SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
-SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
-
-# LIGHTS, I have no idea where these are located
-# SetField Materials[16].RenderMethod null
-# SetField Materials[17].RenderMethod null
-# SetField Materials[18].RenderMethod null
-# SetField Materials[26].RenderMethod null
-# SetField Materials[27].RenderMethod null
-
-SaveTagChanges
-Exit
-
 ## Zanzibar
 OpenCacheFile h2maps\zanzibar.map
 PortTag incompetent\bitmaps\treefol.bitmap
@@ -1486,4 +1458,56 @@ Edittag scenarios\objects\multi\turf\tent_medical_solidpanel_turf\tent_medical_s
 SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SaveTagChanges
 Exit
+
+
+echo uplift shader fixes
+
+Edittag scenarios\multi\needle\needle.scenario_structure_bsp
+SetField Materials[44].RenderMethod null
+SaveTagChanges
+Exit
+
+EditTag scenarios\skies\multi\needle\needle.render_model
+SetField Nodes[0].DefaultScale 0.1
+SaveTagChanges
+exit
+
+echo warlock shader fixes
+
+# OpenCacheFile h2maps\warlock.map
+# PortTag scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
+# Exit
+
+DuplicateTag scenarios\shaders\multi\zanzibar\treebark.shader temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient
+EditTag temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\objects\nature\trees\tree_ancient\bitmaps\tree_ancient_bark.bitmap
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
+SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
+
+# WATERPOOL
+SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+
+# LIGHTS, I have no idea where these are located
+# SetField Materials[16].RenderMethod null
+# SetField Materials[17].RenderMethod null
+# SetField Materials[18].RenderMethod null
+# SetField Materials[26].RenderMethod null
+# SetField Materials[27].RenderMethod null
+	
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
+SetField Materials[10].RenderMethod scenarios\shaders\multi\halo\warlock\ground_warlock.shader
+SetField Materials[98].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[100].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[101].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SetField Materials[104].RenderMethod objects\eldewrito\reforge\shaders\water.shader
+SaveTagChanges
+exit
+
 
