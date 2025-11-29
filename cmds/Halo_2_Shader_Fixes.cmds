@@ -1456,4 +1456,34 @@ SetField Materials[89].RenderMethod scenarios\shader\multi\halo\highplains\highp
 savetagchanges
 exit
 
+Echo Turf Shader fixes
+
+DuplicateTag scenarios\shaders\solo\earthcity\base_stucco1_door.shader scenarios\shaders\multi\turf\base_stucco1_damaged_01
+
+Edittag scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\sodamachinetexture.bitmap
+SaveTagChanges
+Exit
+
+Edittag scenarios\multi\turf\turf_bsp0.scenario_structure_bsp
+SetField Materials[53].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[58].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[59].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[71].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[74].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[83].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[86].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[97].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[107].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[115].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[168].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SetField Materials[170].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
+SaveTagChanges
+Exit
+
+Edittag scenarios\objects\multi\turf\tent_medical_solidpanel_turf\tent_medical_solidpanel_turf.render_model
+SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SaveTagChanges
+Exit
 
