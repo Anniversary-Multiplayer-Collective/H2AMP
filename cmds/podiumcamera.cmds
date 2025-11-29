@@ -219,8 +219,8 @@ AddBlockElements CutsceneCameraPoints
 SetField CutsceneCameraPoints[0].Position 28.913 -12.783 2.650
 SetField CutsceneCameraPoints[0].Orientation 61.521 -5.402 -9.846
 SetField CutsceneCameraPoints[1].Name "podium_camera"
-SetField CutsceneCameraPoints[1].Position 8.097 -8.239 1.015
-SetField CutsceneCameraPoints[1].Orientation -90 -0.425 0.201
+SetField CutsceneCameraPoints[1].Position 8.014 -4.070 1.016
+SetField CutsceneCameraPoints[1].Orientation 90 0 0
 SetField CutsceneCameraPoints[1].Flags PodiumCameraHack
 CompilePodiumScripts
 SaveTagChanges
