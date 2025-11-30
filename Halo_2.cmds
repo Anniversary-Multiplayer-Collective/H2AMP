@@ -443,7 +443,19 @@ porttag replace objects\powerups\active_camouflage\active_camouflage.equipment
 porttag replace objects\powerups\over_shield\over_shield.equipment
 exit
 
+duplicatetag shaders\default_bitmaps\bitmaps\color_red.bitmap shaders\default_bitmaps\bitmaps\color_yellow
 
+Edittag shaders\default_bitmaps\bitmaps\color_yellow.bitmap
+Importbitmap 0 "workingdir\bitmaps\color_yellow.dds"
+Exit
+
+Edittag custom\powerups\hce_overshield\shaders\overshield.shader
+setfield ShaderProperties[0].TextureConstants[0].Bitmap shaders\default_bitmaps\bitmaps\color_yellow.bitmap
+setfield ShaderProperties[0].Functions[2].Function.Data 0330020027C1D600FF0578000000000000D8FF0000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+setfield ShaderProperties[0].Functions[3].Function.Data 0330020004040FFF4200200000000000009EB80000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+setfield ShaderProperties[0].Functions[4].Function.Data 0330030000BFFF008A89FFFF0000000000D5FF0000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+savetagchanges
+Exit
 
 MapFile Remove 8765
 MapFile Remove 0
