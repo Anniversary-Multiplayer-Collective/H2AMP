@@ -411,6 +411,12 @@ SetField Seats[0].Label turret_g
 SaveTagChanges
 Exit
 
+EditTag h2\objects\vehicles\h_turret_ap\h_turret_ap.model
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].Flags KillsObject
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].EjectingSeatLabel turret_g
+SaveTagChanges
+Exit
+
 echo add ranks
 
 edittag ui\halox\spartan_program\exp_lg_ui.bitmap
