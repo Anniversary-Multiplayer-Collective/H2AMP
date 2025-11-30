@@ -1537,6 +1537,7 @@ SetField Materials[5].RenderMethod scenarios\shader\forerunner\industrial\metals
 SetField Materials[6].RenderMethod null
 SetField Materials[9].RenderMethod null
 SetField Materials[13].RenderMethod null
+SetField Materials[15].RenderMethod null
 SetField Materials[16].RenderMethod null
 SetField Materials[17].RenderMethod null
 SetField Materials[18].RenderMethod null
