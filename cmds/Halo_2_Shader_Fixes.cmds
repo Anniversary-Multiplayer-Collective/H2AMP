@@ -13,6 +13,12 @@ SaveTagChanges
 Exit
 
 
+## echo Ascension Shader Fixes
+EditTag scenarios\shaders\multi\ascension\ascension_jumppad.shader
+SetField ShaderProperties[0].BlendMode AlphaBlend
+SetField SortLayer PrePass
+SaveTagChanges
+Exit
 
 ## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
