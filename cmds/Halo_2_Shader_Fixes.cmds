@@ -270,6 +270,23 @@ exit
 
 ## echo burial ground
 
+opencachefile "workingdir\maps\h2ampstuff.map"
+PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_metal.shader
+PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_shell.shader
+PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_stream.shader
+PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
+savetagchanges
+Exit
+
+EditTag scenarios\objects\covenant\military\cov_recharge_station\cov_recharge_station.render_model
+
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_metal.shader
+SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_shell.shader
+SetField Materials[2].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_stream.shader
+SetField Materials[3].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
+savetagchanges
+Exit
+
 EditTag scenarios\multi\burial_mounds\burial_mounds.scenario_structure_bsp
 SetField Materials[9].RenderMethod scenarios\shaders\multi\burial_mounds\burial_wreckage.shader
 savetagchanges
