@@ -287,9 +287,23 @@ SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_b
 SaveTagChanges
 Exit
 
+edittag objects\temp\zekken\weapons\battle_rifle\shaders\battle_rifle_lens.shader
+setargument glancing_env_tint 0 0 0 1
+SaveTagChanges
+Exit
+
 echo brute shot shiny fix
 
 EditTag objects\temp\zekken\weapons\brute_shot\shaders\brute_shot.shader
 SetArgument analytical_specular_contribution 0
 savetagchanges
 exit
+
+echo fuel rod blue fix
+
+Edittag objects\temp\zekken\weapons\flak_cannon\shaders\flak_cannon_shiny.shader
+setargument normal_env_tint 0 0 0 1
+setargument glancing_env_tint 0.1 0.1 0.1 1
+savetagchanges
+exit
+
