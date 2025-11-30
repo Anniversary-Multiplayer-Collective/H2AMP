@@ -275,7 +275,6 @@ PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_m
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_shell.shader
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_stream.shader
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
-savetagchanges
 Exit
 
 EditTag scenarios\objects\covenant\military\cov_recharge_station\cov_recharge_station.render_model
