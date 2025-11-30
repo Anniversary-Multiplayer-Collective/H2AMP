@@ -1037,3 +1037,13 @@ EditTag shaders\default_bitmaps\bitmaps\vision_mode_mask.bitmap
 ImportBitmap 0 workingdir\bitmaps\vision_mask.dds
 SaveTagChanges
 Exit
+
+EditTag ui\chud\needler.chud_definition
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[8].Name ammo_area_left
+SetField HudWidgets[8].PlacementData[0].Anchor TopLeft
+SetField HudWidgets[8].StateData[0].WeaponArmedStateHO LeftHand
+SetField HudWidgets[8].PlacementData[0].Offset 288 -12
+SaveTagChanges
+Exit
