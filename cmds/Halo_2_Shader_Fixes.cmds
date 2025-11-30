@@ -287,7 +287,7 @@ savetagchanges
 Exit
 
 EditTag scenarios\objects\covenant\military\cov_floodlight\cov_floodlight.render_model
-SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\military\cov_floodlight\shaders\cov_floodlight.shader
 savetagchanges
 Exit
 
