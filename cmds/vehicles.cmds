@@ -1,11 +1,28 @@
 
+echo specture 
 
-opencachefile "h2maps\zanzibar.map"
-DoNotReplaceGroups effe,foot,cont,proj,snd!
-Porttag replace objects\vehicles\ghost\ghost.model
-porttag replace objects\vehicles\scorpion\scorpion.model
-porttag replace objects\vehicles\wraith\wraith.model
+opencachefile "workingdir\maps\h2ampstuff.map"
+porttag replace objects\vehicles\spectre\spectre.vehicle
+Exit
+
+EditTag objects\vehicles\spectre\spectre.render_model
+SetField Materials[0].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_damage.shader
+SetField Materials[1].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_ct.shader
+SetField Materials[2].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_torn.shader
+SetField Materials[3].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_phong.shader
+SaveTagChanges
 exit
+
+EditTag objects\vehicles\spectre\turrets\plasma\plasma.render_model
+SetField Materials[0].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_ct.shader
+SetField Materials[1].RenderMethod objects\vehicles\spectre\shaders\spectre_illum.shader
+SetField Materials[2].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_phong.shader
+SetField Materials[3].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_damage.shader
+SetField Materials[4].RenderMethod objects\vehicles\spectre\shaders\spectre_shadow_torn.shader
+SaveTagChanges
+exit
+
+AddForgeItem "Spectre" "VEHICLES" objects\vehicles\spectre\spectre.vehicle
 
 
 echo warthog
@@ -106,8 +123,6 @@ SetField Model custom\vehicles\tgof_hce_banshee\banshee.model
 SaveTagChanges
 exit
 
-
-
 echo ghost
 
 opencachefile "h2maps\zanzibar.map"
@@ -124,6 +139,12 @@ EditTag objects\vehicles\ghost\ghost.render_model
 SetField Materials[2].RenderMethod null
 SaveTagChanges
 Exit
+
+Edittag objects\vehicles\ghost\shaders\ghost_dash.shader
+SetArgument self_illum_color 1 1 1 0
+savetagchanges
+exit
+
 
 Edittag objects\vehicles\ghost\ghost.vehicle
 SetField Attachments[4].Marker antigrav_light
@@ -146,6 +167,7 @@ exit
 EditTag objects\vehicles\ghost\ghost.hlmt
 SetField NewDamageInfo[0].MaximumVitality 400
 SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\trans_hull_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].DelayEffect objects\vehicles\ghost\fx\destruction\trans_hull_destroyed_delay.effect
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_medium.effect
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[6].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_major.effect
 SetField NewDamageInfo[0].DamageSections[3].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_wing_medium.effect
@@ -155,27 +177,11 @@ SetField NewDamageInfo[0].DamageSections[4].InstantResponses[2].PrimaryTransitio
 SaveTagChanges
 Exit
 
-
-
-
-
-
-
-
-echo ghost
-
-Edittag objects\vehicles\ghost\ghost.render_model
-SetField Materials[2].RenderMethod objects\vehicles\ghost\shaders\ghost_dash_zcam.shader_halogram
-savetagchanges
-exit
-
-Edittag objects\vehicles\ghost\shaders\ghost_dash.shader
-SetArgument self_illum_color 1 1 1 0
-savetagchanges
-exit
-
-
 echo scorpion
+
+opencachefile "h2maps\zanzibar.map"
+porttag replace objects\vehicles\scorpion\scorpion.model
+exit
 
 EditTag objects\vehicles\scorpion\scorpion.vehicle
 SetField Seats[0].MarkerName driver
@@ -183,4 +189,34 @@ SetField Seats[0].EntryMarkerName driver
 savetagchanges
 exit
 
+EditTag objects\vehicles\scorpion\turrets\cannon\weapon\cannon_turret.weapon
+SetField Barrels[0].FiringEffects[0].FiringEffect objects\vehicles\scorpion\fx\weapon\cannon\firing.effect
+SetField Barrels[0].FiringEffects[0].FiringDamage globals\damage_responses\trigger_vehicle_tank.damage_response_definition
+SetField Barrels[0].FiringEffects[0].FiringRiderDamage globals\damage_responses\trigger_vehicle_tank.damage_response_definition
+SetField Barrels[1].FiringEffects[0].FiringEffect objects\vehicles\scorpion\fx\weapon\anti_infantry\firing.effect
+SetField Barrels[1].FiringEffects[0].FiringDamage globals\damage_responses\trigger_vehicle_fullauto.damage_response_definition
+SetField Barrels[1].OptionalBarrelMarkerName secondary_trigger
+SetField HudInterface ui\chud\v_scorpion.chud_definition
+SaveTagChanges
+exit
+
+EditTag objects\vehicles\scorpion\turrets\cannon\weapon\tank_shell.projectile
+SetField MaterialEffects fx\material_effects\objects\weapons\scorpion_cannon.material_effects
+SetField Attachments[0].Type objects\vehicles\scorpion\fx\weapon\cannon\projectile.effect
+SetField AirborneDetonationEffect objects\vehicles\scorpion\fx\weapon\cannon\detonation.effect
+SetField GroundDetonationEffect objects\vehicles\scorpion\fx\weapon\cannon\detonation.effect
+SaveTagChanges
+exit
+
+Edittag objects\vehicles\scorpion\fx\weapon\anti_infantry\firing.effect
+SetField Locations[0].MarkerName secondary_trigger
+SaveTagChanges
+Exit
+
+echo wraith
+
+opencachefile "h2maps\zanzibar.map"
+DoNotReplaceGroups effe,foot,cont,proj,snd!
+porttag replace objects\vehicles\wraith\wraith.model
+exit
 
