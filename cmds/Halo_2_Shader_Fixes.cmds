@@ -275,14 +275,19 @@ PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_m
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_shell.shader
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_stream.shader
 PortTag h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
+PortTag h2\scenarios\objects\covenant\military\cov_floodlight\shaders\cov_floodlight.shader
 Exit
 
 EditTag scenarios\objects\covenant\military\cov_recharge_station\cov_recharge_station.render_model
-
 SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_metal.shader
 SetField Materials[1].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_shell.shader
 SetField Materials[2].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_stream.shader
 SetField Materials[3].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
+savetagchanges
+Exit
+
+EditTag scenarios\objects\covenant\military\cov_floodlight\cov_floodlight.render_model
+SetField Materials[0].RenderMethod h2\scenarios\objects\covenant\military\cov_recharge_station\shaders\cr_illumination.shader
 savetagchanges
 Exit
 
