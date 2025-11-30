@@ -275,8 +275,7 @@ RunCommands workingdir\cmds\h2_scripts.cmds
 
 RunCommands workingdir\cmds\weaponammopack.cmds
 
-#RUN IF YOU WANT BROKEN PORTED H2 VEHICLES :) FIX PLZ
-#RunCommands workingdir\cmds\vehicles.cmds 
+RunCommands workingdir\cmds\vehicles.cmds 
 
 
 echo WHY DOES THIS NEED TO BE HERE
