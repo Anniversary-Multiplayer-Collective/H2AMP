@@ -407,13 +407,25 @@ Porttag replace objects\vehicles\h_turret_ap\h_turret_ap.vehicle
 Exit
 
 EditTag objects\vehicles\h_turret_ap\h_turret_ap.vehicle
+AddBlockElements MultiplayerObject
+SetField MultiplayerObject[0].DefaultSpawnTime 32000
+SetField MultiplayerObject[0].DefaultAbandonTime 32000
 SetField Seats[0].Label turret_g
 SaveTagChanges
 Exit
 
 EditTag h2\objects\vehicles\h_turret_ap\h_turret_ap.model
-SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].Flags KillsObject
-SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].EjectingSeatLabel turret_g
+SetField NewDamageInfo[0].Flags CannotDieFromDamage
+SaveTagChanges
+Exit
+
+EditTag h2\objects\vehicles\h_turret_ap\h_turret_ap.render_model
+SetField MarkerGroups[0].Markers[0].RegionIndex 0
+SetField MarkerGroups[0].Markers[0].PermutationIndex 1
+SetField MarkerGroups[3].Markers[0].RegionIndex 0
+SetField MarkerGroups[3].Markers[0].PermutationIndex 1
+SetField MarkerGroups[4].Markers[0].RegionIndex 0
+SetField MarkerGroups[4].Markers[0].PermutationIndex 1
 SaveTagChanges
 Exit
 
