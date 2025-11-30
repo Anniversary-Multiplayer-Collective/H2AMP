@@ -1381,6 +1381,7 @@ exit
 
 edittag ui\halox\pregame_lobby\animations\standard_list_lobby_bitmaps.wacd
 SetField AmbientUnfocused ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
+SetField AmbientDisabledFocused ui\halox\global_animations\animation_definitions\pulsate.gui_widget_animation_definition
 SetField AmbientDisabledUnfocused ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
 SetField AmbientUnfocusedAlt ui\halox\start_menu\animations\sidebar\unfocused_ice.gui_widget_animation_definition
 SetField ControlLostFocus ui\halox\global_animations\animation_definitions\list_bmp_disable_ice.gui_widget_animation_definition
