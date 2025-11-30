@@ -2,8 +2,6 @@
 
 opencachefile "h2maps\zanzibar.map"
 DoNotReplaceGroups effe,foot,cont,proj,snd!
-Porttag replace objects\vehicles\warthog\warthog.model
-porttag replace objects\vehicles\banshee\banshee.model
 Porttag replace objects\vehicles\ghost\ghost.model
 porttag replace objects\vehicles\scorpion\scorpion.model
 porttag replace objects\vehicles\wraith\wraith.model
@@ -11,6 +9,13 @@ exit
 
 
 echo warthog
+
+opencachefile "h2maps\zanzibar.map"
+DoNotReplaceGroups effe,foot,cont,proj,snd!
+Porttag replace objects\vehicles\warthog\warthog.model
+Porttag replace sound\weapons\chain_gun\fire.snd!
+Porttag replace sound\weapons\gauss_rifle\fire.snd!
+Exit
 
 EditTag objects\vehicles\warthog\shaders\console.shader
 SetArgument self_illum_intensity 0
@@ -22,6 +27,138 @@ SetField Materials[9].RenderMethod null
 SetField Materials[13].RenderMethod null
 savetagchanges
 Exit
+
+Edittag objects\vehicles\warthog\warthog.model
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_tire_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_tire_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].PrimaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_tire_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[4].PrimaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_tire_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\human_explosion_large\human_explosion_large.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].SecondaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_hull_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[0].TransitionDamageEffect objects\vehicles\damage_effects\large_trans_damage.damage_effect
+SetField NewDamageInfo[0].DamageSections[13].InstantResponses[2].PrimaryTransitionEffect fx\scenery_fx\destruction\human_mech_break_tiny\human_mech_break_tiny.effect
+SetField NewDamageInfo[0].DamageSections[13].InstantResponses[2].SecondaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_bumper_destroyed.effect
+SetField NewDamageInfo[0].MaximumVitality 500
+Savetagchanges
+Exit
+
+EditTag objects\vehicles\warthog\warthog.vehicle
+SetField Attachments[0].Marker headlights
+SetField Attachments[1].Marker headlights
+SetField Attachments[2].Marker taillights
+SetField Attachments[2].ChangeColor Primary
+SaveTagChanges
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\warthog\fx\running\headlights.effect
+SetField Locations[0].MarkerName headlights
+SaveTagChanges
+exit
+
+EditTag objects\vehicles\warthog\turrets\chaingun\chaingun.model
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\human_explosion_small\human_explosion_small.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].SecondaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_turret_chaingun_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].TransitionDamageEffect objects\vehicles\damage_effects\med_trans_damage.damage_effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[2].PrimaryTransitionEffect objects\gear\human\residential\telephone_wall_box\spawn_handset.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[2].SecondaryTransitionEffect objects\vehicles\warthog\fx\destruction\trans_turret_chaingun_major.effect
+Savetagchanges
+exit
+
+Edittag objects\vehicles\warthog\turrets\chaingun\weapon\chaingun_turret.weapon
+SetField Attachments[0].Type objects\vehicles\warthog\fx\weapon\chaingun\firing.light
+SetField Attachments[1].Type sound\weapons\chain_gun\chain_spin\chain_spin_no_in.sound_looping
+SetField Barrels[0].FiringEffects[0].FiringEffect objects\vehicles\warthog\fx\weapon\chaingun\firing.effect
+SetField Barrels[0].FiringEffects[0].FiringDamage globals\damage_responses\trigger_vehicle_warthog.damage_response_definition
+SetField Barrels[0].FiringEffects[0].FiringRiderDamage globals\damage_responses\trigger_vehicle_warthog.damage_response_definition
+SetField HudInterface ui\chud\v_chaingun.chud_definition
+Savetagchanges
+Exit
+
+EditTag objects\vehicles\warthog\turrets\gauss\weapon\gauss_turret.weapon
+SetField Barrels[0].FiringEffects[0].FiringEffect objects\vehicles\warthog\fx\weapon\gauss\firing.effect
+SetField Barrels[0].FiringEffects[0].FiringRiderDamage globals\damage_responses\trigger_vehicle_semiauto.damage_response_definition
+SetField Barrels[0].FiringEffects[0].FiringDamage globals\damage_responses\trigger_vehicle_semiauto.damage_response_definition
+SetField HudInterface ui\chud\v_gaussturret.chud_definition
+SaveTagChanges
+Exit
+
+
+Edittag objects\vehicles\warthog\fx\weapon\chaingun\firing.effect
+SetField Events[0].Parts[1].Type sound\weapons\chain_gun\fire.snd!
+Savetagchanges
+Exit
+
+Edittag objects\vehicles\warthog\fx\weapon\gauss\firing.effect
+SetField Events[0].Parts[1].Type sound\weapons\gauss_rifle\fire.snd!
+Savetagchanges
+Exit
+
+
+echo banshee
+
+OpenCacheFile "workingdir\maps\CEAMP.map"
+Porttag custom\vehicles\tgof_hce_banshee\banshee.model 
+Exit
+
+EditTag objects\vehicles\banshee\banshee.vehicle
+SetField Model custom\vehicles\tgof_hce_banshee\banshee.model
+SaveTagChanges
+exit
+
+
+
+echo ghost
+
+opencachefile "h2maps\zanzibar.map"
+Porttag replace objects\vehicles\ghost\ghost.model
+porttag replace objects\vehicles\ghost\garbage\hull_shell\hull_shell.model
+porttag replace objects\vehicles\ghost\garbage\seat\seat.model
+Exit
+
+OpenCacheFile "h3maps\zanzibar.map"
+porttag replace objects\vehicles\ghost\ghost.physics_model
+Exit
+
+EditTag objects\vehicles\ghost\ghost.render_model
+SetField Materials[2].RenderMethod null
+SaveTagChanges
+Exit
+
+Edittag objects\vehicles\ghost\ghost.vehicle
+SetField Attachments[4].Marker antigrav_light
+SetField Attachments[4].ChangeColor Primary
+SetField Attachments[8].Marker plasma_vent
+SetField Attachments[9].Marker plasma_vent
+SaveTagChanges
+exit
+
+EditTag objects\vehicles\ghost\fx\running\boost_trails.effect
+SetField Locations[0].MarkerName plasma_vent
+SaveTagChanges
+exit
+
+EditTag objects\vehicles\ghost\fx\running\boost.effect
+SetField Locations[0].MarkerName plasma_vent
+SaveTagChanges
+exit
+
+EditTag objects\vehicles\ghost\ghost.hlmt
+SetField NewDamageInfo[0].MaximumVitality 400
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\trans_hull_destroyed.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_medium.effect
+SetField NewDamageInfo[0].DamageSections[1].InstantResponses[6].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_major.effect
+SetField NewDamageInfo[0].DamageSections[3].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_wing_medium.effect
+SetField NewDamageInfo[0].DamageSections[3].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_wing_major.effect
+SetField NewDamageInfo[0].DamageSections[4].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_medium.effect
+SetField NewDamageInfo[0].DamageSections[4].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_wing_major.effect
+SaveTagChanges
+Exit
+
+
+
+
+
 
 
 

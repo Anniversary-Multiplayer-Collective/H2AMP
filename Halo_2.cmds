@@ -434,6 +434,17 @@ SetField Materials[1].RenderMethod null
 savetagchanges
 exit
 
+echo powerup fixes
+
+OpenCacheFile "workingdir\maps\CEAMP.map"
+NameBlamTag custom\powerups\hce_camo\hce_camo.equipment objects\powerups\active_camouflage\active_camouflage
+NameBlamTag custom\powerups\hce_overshield\hce_overshield.equipment objects\powerups\over_shield\over_shield
+porttag replace objects\powerups\active_camouflage\active_camouflage.equipment
+porttag replace objects\powerups\over_shield\over_shield.equipment
+exit
+
+
+
 MapFile Remove 8765
 MapFile Remove 0
 
