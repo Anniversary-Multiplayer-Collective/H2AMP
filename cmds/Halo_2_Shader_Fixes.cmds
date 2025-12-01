@@ -25,6 +25,7 @@ DuplicateTag levels\multi\s3d_avalanche\fx\s3d_avalanche_effect_scenery_16.effec
 DuplicateTag levels\multi\s3d_avalanche\fx\s3d_avalanche_effect_scenery_16_light_volume.effect fx\distortion\effect
 
 EditTag fx\distortion\effect.effect
+RemoveBlockElements Events[0].Parts 0 1
 SetField Events[0].ParticleSystems[0].Particle null
 SetField Events[0].ParticleSystems[1].Particle null
 SetField Events[0].ParticleSystems[2].Particle null
@@ -33,7 +34,6 @@ SaveTagChanges
 Exit
 
 EditTag fx\distortion.effect_scenery
-RemoveBlockElements Events[0].Parts 0 1
 SetField Attachments[0].Type fx\distortion\effect.effect
 SaveTagChanges
 Exit
