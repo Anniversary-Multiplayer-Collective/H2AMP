@@ -1515,6 +1515,7 @@ echo warlock shader fixes
 # Exit
 
 EditTag scenarios\multi\halo\warlock\warlock.scenario_structure_bsp
+SetField Materials[2].RenderMethod temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
 SetField Materials[94].RenderMethod temp\scenarios\shaders\solo\earthcity\new_mombassa\tree_ancient.shader
 
 # WATERPOOL
