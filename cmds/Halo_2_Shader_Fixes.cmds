@@ -1597,10 +1597,16 @@ SetField Materials[17].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_s
 SetField Materials[18].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
 SetField Materials[19].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
 SetField Materials[20].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetField Materials[24].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
 SetField Materials[25].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_a.shader
-SetField Materials[27].RenderMethod null
-SetField Materials[28].RenderMethod null
-SetField Materials[31].RenderMethod null
+SetField Materials[26].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField Materials[27].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField Materials[28].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_c.shader
+SetField Materials[29].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField Materials[30].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+SetField Materials[31].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_c.shader
+SetField Materials[32].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
+
 SaveTagChanges
 Exit
 
