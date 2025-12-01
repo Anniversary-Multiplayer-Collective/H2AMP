@@ -116,7 +116,17 @@ echo banshee
 
 OpenCacheFile "workingdir\maps\CEAMP.map"
 Porttag custom\vehicles\tgof_hce_banshee\banshee.model 
+Exit 
+
+Opencachefile "h2maps\ascension.map"
+porttag replace objects\vehicles\banshee\banshee.mode
 Exit
+
+Edittag custom\vehicles\tgof_hce_banshee\tgof_hce_banshee.render_model
+Setfield Materials[0].RenderMethod objects\vehicles\banshee\shaders\banshee.shader
+Setfield Materials[1].RenderMethod objects\vehicles\banshee\shaders\banshee.shader
+SaveTagChanges
+exit
 
 EditTag objects\vehicles\banshee\banshee.vehicle
 SetField Model custom\vehicles\tgof_hce_banshee\banshee.model
@@ -145,7 +155,6 @@ SetArgument self_illum_color 1 1 1 0
 savetagchanges
 exit
 
-
 Edittag objects\vehicles\ghost\ghost.vehicle
 SetField Attachments[4].Marker antigrav_light
 SetField Attachments[4].ChangeColor Primary
@@ -167,7 +176,9 @@ exit
 EditTag objects\vehicles\ghost\ghost.hlmt
 SetField NewDamageInfo[0].MaximumVitality 400
 SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\trans_hull_destroyed.effect
-SetField NewDamageInfo[0].DamageSections[0].InstantResponses[3].DelayEffect objects\vehicles\ghost\fx\destruction\trans_hull_destroyed_delay.effect
+setfield NewDamageInfo[0].DamageSections[0].InstantResponses[3].PrimaryTransitionEffect fx\scenery_fx\explosions\covenant_explosion_medium\covenant_explosion_medium_3.effect
+setfield NewDamageInfo[0].DamageSections[0].InstantResponses[4].PrimaryTransitionEffect fx\scenery_fx\explosions\covenant_explosion_medium\covenant_explosion_medium_3.effect
+setfield NewDamageInfo[0].DamageSections[1].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\covenant_explosion_medium\covenant_explosion_medium_3.effect
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_medium.effect
 SetField NewDamageInfo[0].DamageSections[1].InstantResponses[6].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_hull_major.effect
 SetField NewDamageInfo[0].DamageSections[3].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\ghost\fx\destruction\perm_wing_medium.effect
@@ -187,6 +198,22 @@ EditTag objects\vehicles\scorpion\scorpion.vehicle
 SetField Seats[0].MarkerName driver
 SetField Seats[0].EntryMarkerName driver
 savetagchanges
+exit
+
+Edittag objects\vehicles\scorpion\scorpion.model
+setfield NewDamageInfo[0].DamageSections[0].InstantResponses[0].PrimaryTransitionEffect fx\scenery_fx\explosions\human_explosion_large\human_explosion_large.effect
+SetField NewDamageInfo[0].DamageSections[0].InstantResponses[0].DelayEffect fx\scenery_fx\explosions\human_explosion_large\human_explosion_large.effect
+setfield NewDamageInfo[0].DamageSections[0].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_hull_destroyed.effect
+setfield NewDamageInfo[0].DamageSections[1].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_hull_major.effect
+setfield NewDamageInfo[0].DamageSections[1].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_hull_major.effect
+setfield NewDamageInfo[0].DamageSections[2].InstantResponses[1].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\perm_hull_medium.effect
+setfield NewDamageInfo[0].DamageSections[2].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\perm_hull_major.effect
+setfield NewDamageInfo[0].DamageSections[4].InstantResponses[5].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_lf_tread_major.effect
+setfield NewDamageInfo[0].DamageSections[5].InstantResponses[5].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_rf_tread_major.effect
+setfield NewDamageInfo[0].DamageSections[6].InstantResponses[5].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_lb_tread_major.effect
+setfield NewDamageInfo[0].DamageSections[7].InstantResponses[5].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_rb_tread_major.effect
+setfield NewDamageInfo[0].DamageSections[3].InstantResponses[2].PrimaryTransitionEffect objects\vehicles\scorpion\fx\destruction\trans_driver_major.effect
+SaveTagChanges
 exit
 
 EditTag objects\vehicles\scorpion\turrets\cannon\weapon\cannon_turret.weapon
@@ -219,4 +246,3 @@ opencachefile "h2maps\zanzibar.map"
 DoNotReplaceGroups effe,foot,cont,proj,snd!
 porttag replace objects\vehicles\wraith\wraith.model
 exit
-
