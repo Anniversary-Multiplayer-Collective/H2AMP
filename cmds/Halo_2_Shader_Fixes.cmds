@@ -13,6 +13,44 @@ SaveTagChanges
 Exit
 
 
+## echo Ascension Shader Fixes
+EditTag scenarios\shaders\multi\ascension\ascension_jumppad.shader
+SetField ShaderProperties[0].BlendMode AlphaBlend
+SetField SortLayer PrePass
+SaveTagChanges
+Exit
+
+#add distortion effect to ascension jumppad
+DuplicateTag levels\multi\s3d_avalanche\fx\s3d_avalanche_effect_scenery_16.effect_scenery fx\distortion
+DuplicateTag levels\multi\s3d_avalanche\fx\s3d_avalanche_effect_scenery_16_light_volume.effect fx\distortion\effect
+
+EditTag fx\distortion\effect.effect
+SetField Events[0].ParticleSystems[0].Particle null
+SetField Events[0].ParticleSystems[1].Particle null
+SetField Events[0].ParticleSystems[2].Particle null
+SetField Events[0].ParticleSystems[3].LodOutDistance 1000
+SaveTagChanges
+Exit
+
+EditTag fx\distortion.effect_scenery
+RemoveBlockElements Events[0].Parts 0 1
+SetField Attachments[0].Type fx\distortion\effect.effect
+SaveTagChanges
+Exit
+
+EditTag scenarios\multi\ascension\ascension.scenario
+AddBlockElements EffectScenery
+SetField EffectScenery[0].Position 16.138 -5.384 -5.215
+SetField EffectScenery[0].Rotation 84.624 -57.91 3.6309998
+SetField EffectScenery[0].NameIndex -1
+SetField EffectScenery[0].EditingBoundToBsp -1
+SetField EffectScenery[0].EditorFolder -1
+SetField EffectScenery[0].CanAttachToBspFlags 1
+SetField EffectScenery[0].ParentId.NameIndex -1
+SetField EffectScenery[0].ObjectId.Source Editor
+SetField EffectScenery[0].ObjectId.Type.Halo3ODST EffectScenery
+AddBlockElements EffectSceneryPalette
+SetField EffectSceneryPalette[0].Object fx\distortion.effect_scenery
 
 ## echo Coagulation Shader Fixes
 EditTag scenarios\shaders\multi\halo\coagulation\coag_rocks.shader
@@ -1529,19 +1567,36 @@ SetField Materials[0].RenderMethod scenarios\shader\forerunner\industrial\metals
 SaveTagChanges
 Exit
 
+DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\solo\deltatemple\tower_vines
+
+EditTag temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_dif.bitm
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
+SaveTagChanges
+Exit
+
+
+DuplicateTag levels\multi\shrine\shaders\fx_godrays.shader_halogram temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume
+EditTag temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetArgument self_illum_intensity 0.1
+SaveTagChanges
+Exit
+
 EditTag scenarios\multi\waterworks\waterworks.scenario_structure_bsp
 SetField Materials[0].RenderMethod null
 SetField Materials[1].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey.shader
-SetField Materials[2].RenderMethod null
+SetField Materials[2].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_b.shader
 SetField Materials[5].RenderMethod scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey_blue.shader
-SetField Materials[6].RenderMethod null
-SetField Materials[9].RenderMethod null
-SetField Materials[13].RenderMethod null
-SetField Materials[16].RenderMethod null
-SetField Materials[17].RenderMethod null
-SetField Materials[18].RenderMethod null
-SetField Materials[19].RenderMethod null
-SetField Materials[20].RenderMethod null
+SetField Materials[6].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_c.shader
+SetField Materials[9].RenderMethod scenarios\shaders\multi\waterworks\ww_light_bands_a.shader
+SetField Materials[13].RenderMethod temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
+SetField Materials[15].RenderMethod null
+SetField Materials[16].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetField Materials[17].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetField Materials[18].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetField Materials[19].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
+SetField Materials[20].RenderMethod temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
 SetField Materials[25].RenderMethod null
 SetField Materials[27].RenderMethod null
 SetField Materials[28].RenderMethod null
