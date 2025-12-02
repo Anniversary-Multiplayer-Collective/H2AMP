@@ -17,10 +17,6 @@ SetVariable medium_speed 10000
 SetVariable slow_speed 20000
 SetVariable fast_speed 5000
 
-# SetVariable medium_anim ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_collection_definition
-# SetVariable slow_anim ui\halox\h2\scrolling_tracks_slow.gui_widget_animation_collection_definition
-# SetVariable fast_anim ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_collection_definition
-
 # TRACK BITMAPS
 GenerateBitmap ui\halox\h2\track1 "workingdir\bitmaps\tracks\track1.dds"
 GenerateBitmap ui\halox\h2\track2b "workingdir\bitmaps\tracks\track2b.dds"
@@ -229,7 +225,7 @@ SetField BitmapWidgets[*].Definition.GuiRenderBlock.AnimationCollection ui\halox
 SetField BitmapWidgets[*].Definition.Bitmap ui\halox\h2\track_timeline2b.bitmap
 ForEach BitmapWidgets SetField Definition.Flags DoNotApplyOldContentUpscaling,ScaleToFitBounds
 ForEach BitmapWidgets SetField Definition.GuiRenderBlock.ScaledPositioning LeftEdge
-ForEach BitmapWidgets SetField Definition.GuiRenderBlock.RenderDepthBias -10000
+ForEach BitmapWidgets SetField Definition.GuiRenderBlock.RenderDepthBias -49
 ForEach BitmapWidgets SetField Definition.BlendMethod AlphaBlend
 SaveTagChanges
 Exit
@@ -241,15 +237,3 @@ ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.F
 ForEach scn3 contains: pregame_lobby\pregame_lobby AddBlockElements GroupWidgets
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].TemplateReference ui\halox\h2\scrolling_tracks.gui_group_widget_definition
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling
-
-# EditTag levels\ui\mainmenu\sky\ui.area_screen_effect
-# SetField ScreenEffects[0].ColorFilter 1 1 1
-# SetField ScreenEffects[0].ColorFloor 1 1 1
-# SaveTagChanges
-# Exit
-
-# EditTag ui\halox\h2\track3.bitmap
-# ImportBitmap 0 "D:\Development\Mods\h2a\tracks\track3.dds"
-# SaveTagChanges
-# Exit
-
