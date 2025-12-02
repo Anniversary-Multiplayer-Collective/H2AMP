@@ -1468,7 +1468,11 @@ SetField Materials[77].RenderMethod scenarios\objects\human\residential\vending_
 SetField Materials[80].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
 SetField Materials[84].RenderMethod scenarios\bitmaps\multi\halo\highplains\highplains_lights.shader
 SetField Materials[89].RenderMethod scenarios\shader\multi\halo\highplains\highplains_viewscreen.shader
+savetagchanges
+exit
 
+EditTag scenarios\shaders\multi\halo\highplains\highplains_storagegate.shader
+SetField ShaderProperties[0].BlendMode Opaque
 savetagchanges
 exit
 
