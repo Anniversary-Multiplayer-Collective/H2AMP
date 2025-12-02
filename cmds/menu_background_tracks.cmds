@@ -9,13 +9,14 @@
 # LEFT SIDE BOUND: SCALE BOUNDS * -0.5
 # RIGHT SIDE BOUND: SCALE BOUNDS * 0.5
 
-SetVariable keyframe_distance 1560
+SetVariable keyframe_distance 780
+SetVariable keyframe_distance2 1560
 SetVariable left_bound -2048
 SetVariable right_bound 2048
 
-SetVariable medium_speed 10000
-SetVariable slow_speed 20000
-SetVariable fast_speed 5000
+SetVariable medium_speed 5000
+SetVariable slow_speed 10000
+SetVariable fast_speed 2500
 
 # TRACK BITMAPS
 GenerateBitmap ui\halox\h2\track1 "workingdir\bitmaps\tracks\track1.dds"
@@ -45,6 +46,9 @@ SetField Keyframes[*].Position 0 0 0
 AddBlockElements Keyframes
 SetField Keyframes[*].TimeOffset medium_speed
 SetField Keyframes[*].Position keyframe_distance 0 0
+AddBlockElements Keyframes
+SetField Keyframes[*].TimeOffset medium_speed
+SetField Keyframes[*].Position keyframe_distance2 0 0
 SetField Function.Data 08340000000000000000803F000000000000000048E1FA3E0000003F1400000001000000040000CDFFFF7F7F0000803F00000000
 SaveTagChanges
 Exit
@@ -58,7 +62,8 @@ Exit
 # SCROLL ANIMATION SLOW
 DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition ui\halox\h2\scrolling_tracks_slow
 EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_position_animation_definition
-SetField Keyframes[*].TimeOffset slow_speed
+SetField Keyframes[1].TimeOffset slow_speed
+SetField Keyframes[2].TimeOffset slow_speed
 SaveTagChanges
 Exit
 
@@ -71,7 +76,8 @@ Exit
 # SCROLL ANIMATION FAST
 DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition ui\halox\h2\scrolling_tracks_fast
 EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_position_animation_definition
-SetField Keyframes[*].TimeOffset fast_speed
+SetField Keyframes[1].TimeOffset fast_speed
+SetField Keyframes[2].TimeOffset fast_speed
 SaveTagChanges
 Exit
 
