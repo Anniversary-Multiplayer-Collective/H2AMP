@@ -1060,7 +1060,7 @@ GenerateRmdf Glass
 GenerateRmdf Halogram
 GenerateRmdf LightVolume
 GenerateRmdf Mux
-GenerateRmdf Particle
+GenerateRmdf Particle NoGlobals
 GenerateRmdf Screen
 GenerateRmdf Shader
 GenerateRmdf Terrain
@@ -1080,7 +1080,7 @@ RecompileShaders glass
 RecompileShaders halogram
 RecompileShaders light_volume
 RecompileShaders mux
-RecompileShaders particle
+## RecompileShaders particle
 RecompileShaders screen
 RecompileShaders shader
 RecompileShaders terrain
