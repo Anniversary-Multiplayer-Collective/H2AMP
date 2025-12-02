@@ -484,8 +484,17 @@ Exit
 #Active Camo Glass
 EditTag custom\powerups\hce_camo\shaders\powerup_glass.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
-SetArgument albedo_color 0 0.2 0.4 0.4
+setargument albedo_color 0 0.1 0.4 0.4
 SaveTagChanges
+Exit
+
+Edittag custom\powerups\hce_camo\shaders\camo.shader
+setfield ShaderProperties[0].TextureConstants[0].Bitmap h2amp\multi\gemini\bitmaps\color_black.bitmap
+setfield ShaderProperties[0].Functions[2].Function.Data 0330020000000000FF05780000000000FFAB000000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+setfield ShaderProperties[0].Functions[3].Function.Data 03300200000000004200200000000000FFAB000000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+setfield ShaderProperties[0].Functions[4].Function.Data 03300300FF7F0000FF7F000000000000FF7F000000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+setfield ShaderProperties[0].Functions[5].Function.Data 033000000000004000002040000000000000000000000000000000001400000006CDCDCD0000803F00000000000000000000803F
+savetagchanges
 Exit
 
 MapFile Remove 8765
