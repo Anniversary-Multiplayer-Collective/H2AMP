@@ -1416,6 +1416,18 @@ Porttag replace scenarios\bitmaps\multi\halo\highplains\sodamachinetexture_illum
 Porttag replace scenarios\bitmaps\multi\halo\highplains\highplains_viewscreen.bitmap
 Exit
 
+DuplicateTag scenarios\shaders\multi\waterworks\ww_light_bands_a.shader scenarios\shaders\multi\halo\highplains\highplains_lights_dim
+
+EditTag scenarios\shaders\multi\halo\highplains\highplains_lights_dim.shader
+SetField ShaderProperties[0].TextureConstants[4].Bitmap scenarios\bitmaps\multi\halo\highplains\highplains_lights.bitmap
+SaveTagChanges
+Exit
+
+EditTag scenarios\objects\multi\halo\highplains\longlight_dim\longlight_dim.render_model
+SetField Materials[0].RenderMethod scenarios\shaders\multi\halo\highplains\highplains_lights_dim.shader
+SaveTagChanges
+Exit
+
 Duplicatetag scenarios\objects\multi\zanzibar\shaders\hinge_light.shader scenarios\bitmaps\multi\halo\highplains\highplains_lights
 Duplicatetag scenarios\objects\human\residential\vending_machine_blue_soda\shaders\vending_machine_blue.shader scenarios\objects\human\residential\vending_machine_green_soda\shaders\vending_machine_green
 Duplicatetag levels\dlc\bunkerworld\shaders\bunker_tech_screen_a.shader scenarios\shader\multi\halo\highplains\highplains_viewscreen
