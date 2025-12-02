@@ -12,6 +12,16 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+#used in waterworks and warlock
+DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\solo\deltatemple\tower_vines
+
+EditTag temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_dif.bitm
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
+SaveTagChanges
+Exit
+
 
 ## echo Ascension Shader Fixes
 EditTag scenarios\shaders\multi\ascension\ascension_jumppad.shader
@@ -135,13 +145,6 @@ SetField Nodes[0].DefaultScale 50
 SaveTagChanges
 Exit
 
-
-## echo Relic Shader Fixes
-EditTag incompetent\default_object.render_model
-SetField Materials[0].RenderMethod objects\multi\shaders\invisible.shader
-SaveTagChanges
-Exit
-
 ## echo Foundation Shader Fixes
 EditTag scenarios\shaders\multi\marathon\foundation\foun_grate.shader
 SetField ShaderProperties[0].BlendMode Opaque
@@ -195,18 +198,6 @@ SetArgument bump_map 16 16 0 0
 SaveTagChanges
 Exit
 
-## echo Station Shader Fixes
-EditTag scenarios\shaders\multi\triplicate\station_wall.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
-EditTag scenarios\shaders\multi\triplicate\station_floor.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
 
 ## echo Tombstone Shader Fixes
 EditTag scenarios\shaders\multi\halo\highplains\highplains_metal_walkways_grate.shader
@@ -219,17 +210,6 @@ SetArgument self_illum_intensity 1
 SaveTagChanges
 Exit
 
-## echo Waterworks Shader Fixes
-EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
-
-EditTag scenarios\shaders\multi\waterworks\multi_banner.shader
-SetField ShaderProperties[0].BlendMode Opaque
-SaveTagChanges
-Exit
 
 ## echo BeaverCreek Shader Fixes
 EditTag scenarios\shaders\nature\trees\tree_leafy_leaves.shader
@@ -1172,6 +1152,11 @@ SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\
 SaveTagChanges
 exit
 
+EditTag incompetent\default_object.render_model
+SetField Materials[0].RenderMethod objects\multi\shaders\invisible.shader
+SaveTagChanges
+Exit
+
 EditTag scenarios\multi\deltatap\deltatap.scenario_structure_bsp
 SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water.shader
 SetField Materials[1].RenderMethod levels\multi\riverworld\shaders\vahalla_waterfall.shader
@@ -1264,7 +1249,7 @@ SetField Materials[109].RenderMethod objects\eldewrito\reforge\shaders\water.sha
 SaveTagChanges
 exit
 
-echo Terminal 
+echo Terminal
 echo TRAIN
 opencachefile "h2maps\triplicate.map"
 porttag replace scenarios\objects\multi\triplicate\ze_train\bitmaps\ze_train.bitmap
@@ -1386,6 +1371,18 @@ EditTag scenarios\skies\multi\triplicate\triplicate\triplicate.render_model
 SetField Nodes[0].DefaultScale 175
 SaveTagChanges
 exit
+
+EditTag scenarios\shaders\multi\triplicate\station_wall.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\triplicate\station_floor.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
 
 Edittag scenarios\multi\triplicate\triplicate.scenario_structure_bsp
 SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
@@ -1570,21 +1567,24 @@ SetField Materials[0].RenderMethod scenarios\shader\forerunner\industrial\metals
 SaveTagChanges
 Exit
 
-DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\solo\deltatemple\tower_vines
-
-EditTag temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_dif.bitm
-SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
-SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
-SaveTagChanges
-Exit
-
-
 DuplicateTag levels\multi\shrine\shaders\fx_godrays.shader_halogram temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume
 EditTag temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
 SetArgument self_illum_intensity 0.1
 SaveTagChanges
 Exit
+
+
+EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\multi\waterworks\multi_banner.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
 
 EditTag scenarios\multi\waterworks\waterworks.scenario_structure_bsp
 SetField Materials[0].RenderMethod null
