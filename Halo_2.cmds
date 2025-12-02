@@ -20,6 +20,7 @@ Multiplayer MainMenu
 RunCommands "workingdir\cmds\shaderupdates.cmds"
 
 RunCommands "workingdir\cmds\h2menu.cmds"
+RunCommands "workingdir\cmds\menu_background_tracks.cmds"
 
 EditTag objects\gear\human\military\crate_packing_giant\crate_packing_giant.render_model
 SaveTagChanges

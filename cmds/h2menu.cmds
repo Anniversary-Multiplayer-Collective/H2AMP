@@ -1579,3 +1579,4 @@ EditTag ui\halox\pregame_lobby\list.gui_skin_definition
 SetField BitmapWidgets[0].Definition.Bitmap ui\halox\pregame_lobby\buttons.bitmap
 SaveTagChanges
 Exit
+
