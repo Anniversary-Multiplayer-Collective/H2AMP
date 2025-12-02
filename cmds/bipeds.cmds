@@ -1,14 +1,18 @@
 
 opencachefile "workingdir\maps\h2assets.map"
 porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.biped
-porttag objects\characters\h2_elite\mp_elite.biped
 porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp\fp.mode
 porttag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp_body\fp_body.mode
 exit
 
+opencachefile "workingdir\maps\h2elitemp.map"
+porttag objects\characters\h2_elite\mp_elite.biped
+porttag objects\characters\h2_elite\fp_arms\fp_arms.render_model
+porttag objects\characters\h2_elite\fp_body\fp_body.render_model
+exit
+
 edittag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
 SetField Model bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
-
 SaveTagChanges
 exit
 
@@ -30,9 +34,12 @@ SetField Materials[2].RenderMethod objects\characters\masterchief\shaders\mp_vis
 SaveTagChanges
 exit
 
+
 EditTag globals\globals.globals
 SetField PlayerRepresentation[2].FirstPersonHands bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp\fp.mode
 SetField PlayerRepresentation[2].FirstPersonBody bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\fp_body\fp_body.mode
+SetField PlayerRepresentation[3].FirstPersonHands objects\characters\h2_elite\fp_arms\fp_arms.render_model
+SetField PlayerRepresentation[3].FirstPersonBody objects\characters\h2_elite\fp_body\fp_body.render_model
 savetagchanges
 exit
 
