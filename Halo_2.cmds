@@ -275,7 +275,9 @@ RunCommands workingdir\cmds\h2_scripts.cmds
 
 RunCommands workingdir\cmds\weaponammopack.cmds
 
-RunCommands workingdir\cmds\vehicles.cmds 
+RunCommands workingdir\cmds\vehicles.cmds
+
+RunCommands workingdir\cmds\EffectScenery.cmds
 
 
 echo WHY DOES THIS NEED TO BE HERE
