@@ -240,6 +240,10 @@ Exit
 ForEach scn3 contains: main_menu\main_menu AddBlockElements GroupWidgets
 ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].TemplateReference ui\halox\h2\scrolling_tracks.gui_group_widget_definition
 ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling
+ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -756 0 0
+ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -420 0 0
 ForEach scn3 contains: pregame_lobby\pregame_lobby AddBlockElements GroupWidgets
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].TemplateReference ui\halox\h2\scrolling_tracks.gui_group_widget_definition
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling
+ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -756 0 0
+ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -420 0 0
