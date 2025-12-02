@@ -22,19 +22,6 @@ SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\d
 SaveTagChanges
 Exit
 
-#Overshield Glass
-EditTag custom\powerups\hce_overshield\shaders\powerup_glass.shader
-SetArgument albedo_color 0.2 0.2 0 1
-SaveTagChanges
-Exit
-
-#Active Camo Glass
-EditTag custom\powerups\hce_camo\shaders\powerup_glass.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
-SetArgument albedo_color 0 0.2 0.4 0.4
-SaveTagChanges
-Exit
-
 ## echo Ascension Shader Fixes
 EditTag scenarios\shaders\multi\ascension\ascension_jumppad.shader
 SetField ShaderProperties[0].BlendMode AlphaBlend

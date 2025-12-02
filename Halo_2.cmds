@@ -474,6 +474,20 @@ setfield ShaderProperties[0].Functions[4].Function.Data 0330030000BFFF008A89FFFF
 savetagchanges
 Exit
 
+
+#Overshield Glass
+EditTag custom\powerups\hce_overshield\shaders\powerup_glass.shader
+SetArgument albedo_color 0.2 0.2 0 1
+SaveTagChanges
+Exit
+
+#Active Camo Glass
+EditTag custom\powerups\hce_camo\shaders\powerup_glass.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
+SetArgument albedo_color 0 0.2 0.4 0.4
+SaveTagChanges
+Exit
+
 MapFile Remove 8765
 MapFile Remove 0
 
