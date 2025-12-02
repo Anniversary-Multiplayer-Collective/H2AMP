@@ -43,3 +43,13 @@ SetField PlayerRepresentation[3].FirstPersonBody objects\characters\h2_elite\fp_
 savetagchanges
 exit
 
+
+edittag objects\characters\h2_elite\fp_arms\shaders\elite_fp_leather.shader
+setargument specular_coefficient 0.25
+SaveTagChanges
+exit
+
+edittag objects\characters\h2_elite\fp_arms\shaders\elite_fp_armor.shader
+setargument specular_coefficient 0.25
+savetagchanges
+exit
