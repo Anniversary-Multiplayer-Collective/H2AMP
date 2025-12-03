@@ -291,3 +291,217 @@ exit
 
 
 
+
+
+
+SetField Variants[0].Regions[2].Permutations[1].Probability 0.1
+SetField Variants[0].Regions[2].Permutations[0].Probability 0
+
+
+
+Echo Elites
+
+
+edittag objects\characters\h2_elite\h2_elite.render_model
+replacerendergeometry "workingdir\models\h2elite.dae" TriangleList
+Exit
+
+Edittag objects\characters\h2_elite\h2_elite_mp.model
+UpdateModelRegions 0
+SetField Variants[0].Regions[2].Permutations[1].Probability 1
+SetField Variants[0].Regions[2].Permutations[0].Probability 0
+SetField Variants[0].Regions[9].Permutations[0].Probability 0
+SetField Variants[0].Regions[9].Permutations[5].Probability 0.1
+savetagchanges
+exit
+
+
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+SetField Universal[0].CustomizableCharacters[1].Regions[0].Permutations[1].Variant[0].Region helmet
+SetField Universal[0].CustomizableCharacters[1].Regions[0].Permutations[2].Variant[0].Region helmet
+SetField Universal[0].CustomizableCharacters[1].Regions[0].Permutations[3].Variant[0].Region helmet
+SetField Universal[0].CustomizableCharacters[1].Regions[0].Permutations[4].Variant[0].Region helmet
+SaveTagChanges
+Exit
+
+
+stringid add custom_mp_council
+stringid add custom_mp_council_desctiption
+stringid add custom_mp_honor
+stringid add custom_mp_honor_desctiption
+stringid add custom_mp_ranger
+stringid add custom_mp_ranger_desctiption
+stringid add custom_mp_soc
+stringid add custom_mp_soc_desctiption
+
+edittag ui\halox\start_menu\panes\settings_appearance_model\strings.unic
+setstring english custom_mp_council "Council"
+setstring english custom_mp_council_desctiption "High Councilor is a title that was granted to Sangheili within the Covenant Empire's government."
+setstring english custom_mp_honor "Honor Guard"
+setstring english custom_mp_honor_desctiption "Honor Guardsman, or simply Honor Guard, was a notable rank of highly-skilled Covenant warriors, who were employed within the Covenant Honor Guard unit"
+setstring english custom_mp_ranger "Ranger"
+setstring english custom_mp_ranger_desctiption "The Sangheili Ranger is a Covenant Sangheili Special Warfare Group member, a class of highly skilled Fleet Security soldiers who focus on extra-vehicular activity (EVA) warfare"
+setstring english custom_mp_soc "Shitmaster"
+setstring english custom_mp_soc_desctiption "Someone didn't play nice"
+SaveTagChanges
+exit
+
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Name custom_mp_council
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Description custom_mp_council_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Region helmet
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Permutation council
+savetagchanges
+exit
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Name custom_mp_honor
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Description custom_mp_honor_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Region helmet
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Permutation honor
+savetagchanges
+exit
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Name custom_mp_ranger
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Description custom_mp_ranger_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Region helmet
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Permutation ranger
+savetagchanges
+exit
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Name custom_mp_soc
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Description custom_mp_soc_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Region helmet
+setfield Universal[0].CustomizableCharacters[1].Regions[0].Permutations[*].Variant[0].Permutation soc
+savetagchanges
+exit
+
+
+echo arms
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[1].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[1].Permutations[*].Name custom_mp_honor
+setfield Universal[0].CustomizableCharacters[1].Regions[1].Permutations[*].Description custom_mp_honor_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[1].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[1].Permutations[*].Variant[0].Region leftshoulder
+setfield Universal[0].CustomizableCharacters[1].Regions[1].Permutations[*].Variant[0].Permutation honor
+savetagchanges
+exit
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[2].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[2].Permutations[*].Name custom_mp_honor
+setfield Universal[0].CustomizableCharacters[1].Regions[2].Permutations[*].Description custom_mp_honor_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[2].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[2].Permutations[*].Variant[0].Region rightshoulder
+setfield Universal[0].CustomizableCharacters[1].Regions[2].Permutations[*].Variant[0].Permutation honor
+savetagchanges
+exit
+
+
+echo body
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[3].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Name custom_mp_honor
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Description custom_mp_honor_desctiption
+addblockelements Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant[0].Region chest
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant[0].Permutation honor
+savetagchanges
+exit
+
+echo shaders\lights
+
+opencachefile "h2maps\01b_spacestation.map"
+porttag objects\characters\elite\elite_ranger\bitmaps\ranger_helmet.bitmap
+porttag objects\characters\elite\elite_ranger\bitmaps\ranger_helmet_bump.bitmap
+Exit
+
+Duplicatetag objects\characters\h2_elite\shaders\helmet.shader objects\characters\elite\elite_ranger\shader\ranger_helmet
+Duplicatetag objects\characters\h2_elite\bitmaps\helmet_change_color.bitmap objects\characters\elite\elite_ranger\shader\ranger_helmet_cc
+Duplicatetag objects\characters\masterchief\shaders\mp_visor.shader objects\characters\elite\elite_ranger\shader\ranger_helmet_visor
+
+Edittag objects\characters\elite\elite_ranger\bitmaps\ranger_helmet.bitmap
+importbitmap 0 "workingdir\bitmaps\ranger_d.dds"
+Exit
+
+Edittag objects\characters\elite\elite_ranger\shader\ranger_helmet_cc.bitmap
+importbitmap 0 "workingdir\bitmaps\ranger_cc.dds"
+Exit
+
+
+edittag objects\characters\elite\elite_ranger\shader\ranger_helmet.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\elite\elite_ranger\bitmaps\ranger_helmet.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\elite\elite_ranger\shader\ranger_helmet_cc.bitmap
+SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\elite\elite_ranger\bitmaps\ranger_helmet_bump.bitmap
+SaveTagChanges
+exit
+
+Edittag objects\characters\elite\elite_ranger\shader\ranger_helmet_visor.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap objects\characters\elite\elite_ranger\bitmaps\ranger_helmet.bitmap
+SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\elite\elite_ranger\bitmaps\ranger_helmet_bump.bitmap
+savetagchanges
+exit
+
+Edittag objects\characters\h2_elite\h2_elite.render_model
+replacerendergeometry "workingdir\models\h2elite.dae" TriangleList
+SetField Materials[16].RenderMethod objects\characters\elite\shaders\mp_raptor.shader
+SetField Materials[17].RenderMethod objects\characters\elite\shaders\mp_raptor_lights.shader
+SetField Materials[18].RenderMethod objects\characters\elite\shaders\mp_raptor_visor.shader
+SetField Materials[19].RenderMethod objects\characters\elite\shaders\mp_blades.shader
+SetField Materials[20].RenderMethod objects\characters\elite\shaders\mp_scythe.shader
+SetField Materials[21].RenderMethod objects\characters\elite\shaders\mp_predator.shader
+SetField Materials[22].RenderMethod objects\characters\h2_elite\shaders\head.shader
+SetField Materials[23].RenderMethod objects\characters\elite\elite_ranger\shader\ranger_helmet.shader
+SetField Materials[24].RenderMethod objects\characters\elite\elite_ranger\shader\ranger_helmet_visor.shader
+SaveTagChanges
+exit
+
+echo lights
+
+Edittag objects\characters\h2_elite\shaders\inset_lights.shader
+addblockelements ShaderProperties[0].Functions
+setfield ShaderProperties[0].Functions[1].Function.Data 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+SetField ShaderProperties[0].Functions[1].Type ChangeColorQuaternary
+AddFunction albedo_color Real 1
+SaveTagChanges
+Exit
+
+Edittag objects\characters\h2_elite\shaders\elite_honor_inset_lights.shader
+addblockelements ShaderProperties[0].Functions
+setfield ShaderProperties[0].Functions[1].Function.Data 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+SetField ShaderProperties[0].Functions[1].Type ChangeColorQuaternary
+AddFunction albedo_color Real 1
+SaveTagChanges
+Exit
+
+echo seperate h2 elites from base cache elites
+
+EditTag globals\globals.globals
+StringId Add elite_h2
+SetField PlayerCharacterTypes[1].Name elite_h2
+SaveTagChanges
+Exit
+
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+SetField Universal[0].CustomizableCharacters[1].CharacterName elite_h2
+SaveTagChanges
+Exit
+
+EditTag multiplayer\mod_globals.mod_globals
+SetField PlayerCharacterSets[0].Characters[1].Name elite_h2
+SaveTagChanges
+Exit
