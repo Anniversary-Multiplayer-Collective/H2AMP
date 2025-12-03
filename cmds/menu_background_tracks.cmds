@@ -1,22 +1,17 @@
-
-#ECHO SETUP MAIN MENU TRACKS
+# ECHO SETUP MAIN MENU TRACKS
 
 # BITMAP MUST BE MADE HORIZONTALLY TILEABLE
 # BITMAP WIDTH: 4096
 # SCALE BOUNDS: BITMAP WIDTH * 1
-# MAGIC NUMBERS:
-# ANIMATION KEYFRAME DISTANCE: SCALE BOUNDS * 0.380859375
 # LEFT SIDE BOUND: SCALE BOUNDS * -0.5
 # RIGHT SIDE BOUND: SCALE BOUNDS * 0.5
 
-SetVariable keyframe_distance 780
-SetVariable keyframe_distance2 1560
 SetVariable left_bound -2048
 SetVariable right_bound 2048
 
-SetVariable medium_speed 5000
-SetVariable slow_speed 10000
-SetVariable fast_speed 2500
+SetVariable fast_speed 10000
+SetVariable medium_speed 20000
+SetVariable slow_speed 40000
 
 # TRACK BITMAPS
 GenerateBitmap ui\halox\h2\track1 "workingdir\bitmaps\tracks\track1.dds"
@@ -36,54 +31,49 @@ GenerateBitmap ui\halox\h2\track_timeline "workingdir\bitmaps\tracks\track_timel
 GenerateBitmap ui\halox\h2\track_timeline2a "workingdir\bitmaps\tracks\track_timeline2a.dds"
 GenerateBitmap ui\halox\h2\track_timeline2b "workingdir\bitmaps\tracks\track_timeline2b.dds"
 
-# SCROLL ANIMATION MEDIUM
-CreateTag wpos ui\halox\h2\scrolling_tracks_medium
-EditTag ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition
+# SCROLL ANIMATION FAST
+CreateTag wtuv ui\halox\h2\scrolling_tracks_fast
+EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_texture_coordinate_animation_definition
 SetField Flags LoopCyclic
 AddBlockElements Keyframes
 SetField Keyframes[*].TimeOffset 0
-SetField Keyframes[*].Position 0 0 0
+SetField Keyframes[*].UVs 0 0
 AddBlockElements Keyframes
-SetField Keyframes[*].TimeOffset medium_speed
-SetField Keyframes[*].Position keyframe_distance 0 0
-AddBlockElements Keyframes
-SetField Keyframes[*].TimeOffset medium_speed
-SetField Keyframes[*].Position keyframe_distance2 0 0
-SetField Function.Data 08340000000000000000803F000000000000000048E1FA3E0000003F1400000001000000040000CDFFFF7F7F0000803F00000000
-SaveTagChanges
-Exit
-
-CreateTag wgan ui\halox\h2\scrolling_tracks_medium
-EditTag ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_definition
-SetField PositionAnimation ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition
-SaveTagChanges
-Exit
-
-# SCROLL ANIMATION SLOW
-DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition ui\halox\h2\scrolling_tracks_slow
-EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_position_animation_definition
-SetField Keyframes[1].TimeOffset slow_speed
-SetField Keyframes[2].TimeOffset slow_speed
-SaveTagChanges
-Exit
-
-CreateTag wgan ui\halox\h2\scrolling_tracks_slow
-EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_animation_definition
-SetField PositionAnimation ui\halox\h2\scrolling_tracks_slow.gui_widget_position_animation_definition
-SaveTagChanges
-Exit
-
-# SCROLL ANIMATION FAST
-DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_position_animation_definition ui\halox\h2\scrolling_tracks_fast
-EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_position_animation_definition
-SetField Keyframes[1].TimeOffset fast_speed
-SetField Keyframes[2].TimeOffset fast_speed
+SetField Keyframes[*].TimeOffset fast_speed
+SetField Keyframes[*].UVs -1 0
+SetField DefaultFunction.Data 08340000000000000000803F00000000000000000000000000000000140000000100000004000000FFFF7F7F0000803F00000000
 SaveTagChanges
 Exit
 
 CreateTag wgan ui\halox\h2\scrolling_tracks_fast
 EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_definition
-SetField PositionAnimation ui\halox\h2\scrolling_tracks_fast.gui_widget_position_animation_definition
+SetField TextureCoordinateAnimation ui\halox\h2\scrolling_tracks_fast.gui_widget_texture_coordinate_animation_definition
+SaveTagChanges
+Exit
+
+# SCROLL ANIMATION MEDIUM
+DuplicateTag ui\halox\h2\scrolling_tracks_fast.gui_widget_texture_coordinate_animation_definition ui\halox\h2\scrolling_tracks_medium
+EditTag ui\halox\h2\scrolling_tracks_medium.gui_widget_texture_coordinate_animation_definition
+SetField Keyframes[*].TimeOffset medium_speed
+SaveTagChanges
+Exit
+
+CreateTag wgan ui\halox\h2\scrolling_tracks_medium
+EditTag ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_definition
+SetField TextureCoordinateAnimation ui\halox\h2\scrolling_tracks_medium.gui_widget_texture_coordinate_animation_definition
+SaveTagChanges
+Exit
+
+# SCROLL ANIMATION SLOW
+DuplicateTag ui\halox\h2\scrolling_tracks_fast.gui_widget_texture_coordinate_animation_definition ui\halox\h2\scrolling_tracks_slow
+EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_texture_coordinate_animation_definition
+SetField Keyframes[*].TimeOffset slow_speed
+SaveTagChanges
+Exit
+
+CreateTag wgan ui\halox\h2\scrolling_tracks_slow
+EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_animation_definition
+SetField TextureCoordinateAnimation ui\halox\h2\scrolling_tracks_slow.gui_widget_texture_coordinate_animation_definition
 SaveTagChanges
 Exit
 
@@ -92,9 +82,11 @@ CreateTag wscl ui\halox\h2\scrolling_tracks_hide
 EditTag ui\halox\h2\scrolling_tracks_hide.gui_widget_scale_animation_definition
 AddBlockElements Keyframes
 SetField Keyframes[*].TimeOffset 0
-SetField Keyframes[*].LocalOrigin 0 0
 SetField Keyframes[*].ScaleFactor 0 0
-SetField DefaultFunction.Data 08340000000000000000803F000000000000000048E1FA3E0000003F1400000001000000040000CDFFFF7F7F0000803F00000000
+AddBlockElements Keyframes
+SetField Keyframes[*].TimeOffset 100
+SetField Keyframes[*].ScaleFactor 0 0
+SetField DefaultFunction.Data 08340000000000000000803F00000000000000000000000000000000140000000100000004000000FFFF7F7F0000803F00000000
 SaveTagChanges
 Exit
 
@@ -107,7 +99,8 @@ Exit
 # SHOW ANIMATION
 DuplicateTag ui\halox\h2\scrolling_tracks_hide.gui_widget_scale_animation_definition ui\halox\h2\scrolling_tracks_show
 EditTag ui\halox\h2\scrolling_tracks_show.gui_widget_scale_animation_definition
-SetField Keyframes[*].ScaleFactor 1 1
+SetField Keyframes[0].ScaleFactor 1 1
+SetField Keyframes[1].ScaleFactor 1 1
 SaveTagChanges
 Exit
 
@@ -117,26 +110,26 @@ SetField ScaleAnimation ui\halox\h2\scrolling_tracks_show.gui_widget_scale_anima
 SaveTagChanges
 Exit
 
+# ANIMATION EVENTS FAST
+CreateTag wacd ui\halox\h2\scrolling_tracks_fast
+EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_collection_definition
+SetField AmbientUnfocused ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_definition
+SetField TransitionFrom ui\halox\h2\scrolling_tracks_hide.gui_widget_animation_definition
+SetField TransitionTo ui\halox\h2\scrolling_tracks_show.gui_widget_animation_definition
+SaveTagChanges
+Exit
+
 # ANIMATION EVENTS MEDIUM
-CreateTag wacd ui\halox\h2\scrolling_tracks_medium
+DuplicateTag ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_collection_definition ui\halox\h2\scrolling_tracks_medium
 EditTag ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_collection_definition
 SetField AmbientUnfocused ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_definition
-#SetField TransitionFrom ui\halox\h2\scrolling_tracks_hide.gui_widget_animation_definition
-#SetField TransitionTo ui\halox\h2\scrolling_tracks_show.gui_widget_animation_definition
 SaveTagChanges
 Exit
 
 # ANIMATION EVENTS SLOW
-DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_collection_definition ui\halox\h2\scrolling_tracks_slow
+DuplicateTag ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_collection_definition ui\halox\h2\scrolling_tracks_slow
 EditTag ui\halox\h2\scrolling_tracks_slow.gui_widget_animation_collection_definition
 SetField AmbientUnfocused ui\halox\h2\scrolling_tracks_slow.gui_widget_animation_definition
-SaveTagChanges
-Exit
-
-# ANIMATION EVENTS FAST
-DuplicateTag ui\halox\h2\scrolling_tracks_medium.gui_widget_animation_collection_definition ui\halox\h2\scrolling_tracks_fast
-EditTag ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_collection_definition
-SetField AmbientUnfocused ui\halox\h2\scrolling_tracks_fast.gui_widget_animation_definition
 SaveTagChanges
 Exit
 
@@ -240,10 +233,10 @@ Exit
 ForEach scn3 contains: main_menu\main_menu AddBlockElements GroupWidgets
 ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].TemplateReference ui\halox\h2\scrolling_tracks.gui_group_widget_definition
 ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling
-ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -756 0 0
-ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -420 0 0
+ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -700 0 0
+ForEach scn3 contains: main_menu\main_menu SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -400 0 0
 ForEach scn3 contains: pregame_lobby\pregame_lobby AddBlockElements GroupWidgets
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].TemplateReference ui\halox\h2\scrolling_tracks.gui_group_widget_definition
 ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.Flags DoNotApplyOldContentUpscaling
-ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -756 0 0
-ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -420 0 0
+ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds720p 1 -10 0 0
+ForEach scn3 contains: pregame_lobby\pregame_lobby SetField GroupWidgets[*].Definition.GuiRenderBlock.Bounds480i 1 -10 0 0
