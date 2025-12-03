@@ -387,6 +387,55 @@ setfield cutscenecamerapoints[86].orientation 0 0 0
 setfield cutscenecamerapoints[87].name server_browser_path_04
 setfield cutscenecamerapoints[87].position 0 0 0
 setfield cutscenecamerapoints[87].orientation 0 0 0
+echo h2_camera_points
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_01
+SetField CutsceneCameraPoints[*].Position -2.538603 -35.515491 219.592575
+SetField CutsceneCameraPoints[*].Orientation 105.590652 -1.357727 4.853798
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_02
+SetField CutsceneCameraPoints[*].Position -7.735726 -9.679266 226.427872
+SetField CutsceneCameraPoints[*].Orientation 110.108009 18.531189 -41.163113
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_03
+SetField CutsceneCameraPoints[*].Position -33.853554 21.242224 229.662552
+SetField CutsceneCameraPoints[*].Orientation 112.001518 -12.878792 11.914230
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_04
+SetField CutsceneCameraPoints[*].Position -50.061111 34.512562 265.145386
+SetField CutsceneCameraPoints[*].Orientation 81.550079 -5.862476 -34.510540
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_05
+SetField CutsceneCameraPoints[*].Position -49.812786 89.533524 280.576538
+SetField CutsceneCameraPoints[*].Orientation 6.431278 -44.308456 -8.130524
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_06
+SetField CutsceneCameraPoints[*].Position -10.450286 129.739807 258.239624
+SetField CutsceneCameraPoints[*].Orientation -60.905167 -27.173380 37.188835
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_07
+SetField CutsceneCameraPoints[*].Position 29.099705 121.244614 246.993698
+SetField CutsceneCameraPoints[*].Orientation -100.158226 10.404168 45.225212
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_08
+SetField CutsceneCameraPoints[*].Position 50.273457 93.342590 239.223663
+SetField CutsceneCameraPoints[*].Orientation -138.798645 30.628269 24.038078
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_09
+SetField CutsceneCameraPoints[*].Position 16.080996 46.229244 242.625885
+SetField CutsceneCameraPoints[*].Orientation -106.861443 26.267038 44.341507
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_10
+SetField CutsceneCameraPoints[*].Position -5.761314 7.973097 228.731674
+SetField CutsceneCameraPoints[*].Orientation -100.370918 21.069847 36.027027
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_11
+SetField CutsceneCameraPoints[*].Position -18.463383 -14.107456 225.479462
+SetField CutsceneCameraPoints[*].Orientation -14.835349 -35.830959 8.813732
+AddBlockElements CutsceneCameraPoints
+SetField CutsceneCameraPoints[*].Name ui_path_12
+SetField CutsceneCameraPoints[*].Position -13.978420 -34.016537 221.873917
+SetField CutsceneCameraPoints[*].Orientation 48.993477 -1.922366 -9.112026
 savetagchanges
 
 compilescripts workingdir\assets\mainmenu_mythic.hsc
