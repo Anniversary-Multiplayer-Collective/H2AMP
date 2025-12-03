@@ -289,16 +289,6 @@ SetField OvershieldFirstPerson fx\shield_impacts\elite_overshield_1p.shield_impa
 savetagchanges
 exit
 
-
-
-
-
-
-SetField Variants[0].Regions[2].Permutations[1].Probability 0.1
-SetField Variants[0].Regions[2].Permutations[0].Probability 0
-
-
-
 Echo Elites
 
 
