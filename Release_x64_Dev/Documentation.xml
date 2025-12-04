@@ -2280,14 +2280,6 @@
             A Textwriter implementation that automatically appends the ansi reset sequence
             </summary>
         </member>
-        <member name="M:TagTool.Common.AnsiWriter.EnableVTP">
-            <summary>
-            Enables Virtual Terminal Processing for ANSI escape sequences in Windows Console
-            </summary>
-            <returns>
-            True if VTP was successfully enabled, false otherwise
-            </returns>
-        </member>
         <member name="M:TagTool.Common.ArrayUtil.Replace(System.Byte[],System.Int32,System.Int32,System.Byte[])">
             <summary>
             Reallocates an array, replacing a block of data in it.
