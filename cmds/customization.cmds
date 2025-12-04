@@ -291,7 +291,6 @@ exit
 
 Echo Elites
 
-
 edittag objects\characters\h2_elite\h2_elite.render_model
 replacerendergeometry "workingdir\models\h2elite.dae" TriangleList
 Exit
@@ -300,8 +299,8 @@ Edittag objects\characters\h2_elite\h2_elite_mp.model
 UpdateModelRegions 0
 SetField Variants[0].Regions[2].Permutations[1].Probability 1
 SetField Variants[0].Regions[2].Permutations[0].Probability 0
-SetField Variants[0].Regions[9].Permutations[0].Probability 0
-SetField Variants[0].Regions[9].Permutations[5].Probability 0.1
+SetField Variants[0].Regions[7].Permutations[0].Probability 0
+SetField Variants[0].Regions[7].Permutations[5].Probability 0.1
 savetagchanges
 exit
 
@@ -459,6 +458,23 @@ SetField Materials[23].RenderMethod objects\characters\elite\elite_ranger\shader
 SetField Materials[24].RenderMethod objects\characters\elite\elite_ranger\shader\ranger_helmet_visor.shader
 SaveTagChanges
 exit
+
+echo NEEDS TO RAN TWICE?
+
+Edittag objects\characters\h2_elite\h2_elite.render_model
+replacerendergeometry "workingdir\models\h2elite.dae" TriangleList
+SetField Materials[16].RenderMethod objects\characters\elite\shaders\mp_raptor.shader
+SetField Materials[17].RenderMethod objects\characters\elite\shaders\mp_raptor_lights.shader
+SetField Materials[18].RenderMethod objects\characters\elite\shaders\mp_raptor_visor.shader
+SetField Materials[19].RenderMethod objects\characters\elite\shaders\mp_blades.shader
+SetField Materials[20].RenderMethod objects\characters\elite\shaders\mp_scythe.shader
+SetField Materials[21].RenderMethod objects\characters\elite\shaders\mp_predator.shader
+SetField Materials[22].RenderMethod objects\characters\h2_elite\shaders\head.shader
+SetField Materials[23].RenderMethod objects\characters\elite\elite_ranger\shader\ranger_helmet.shader
+SetField Materials[24].RenderMethod objects\characters\elite\elite_ranger\shader\ranger_helmet_visor.shader
+SaveTagChanges
+exit
+
 
 echo lights
 
