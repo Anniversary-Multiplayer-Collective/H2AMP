@@ -1527,6 +1527,12 @@ Porttag replace scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted
 porttag replace scenarios\bitmaps\forerunner\industrial\metals\forerunner_rusted_blue.bitmap
 Exit
 
+EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
+SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
 DuplicateTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey
 
 DuplicateTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader scenarios\shader\forerunner\industrial\metals\forerunner_rusted_grey_blue
@@ -1551,13 +1557,6 @@ Exit
 DuplicateTag levels\multi\shrine\shaders\fx_godrays.shader_halogram temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume
 EditTag temp\scenarios\shaders\multi\waterworks\ww_sunlight_volume.shader_halogram
 SetArgument self_illum_intensity 0.1
-SaveTagChanges
-Exit
-
-
-EditTag scenarios\shaders\forerunner\industrial\floors\plate_rusted.shader
-SetField ShaderProperties[0].Template shaders\shader_templates\_0_1_0_1_2_0_0_0_0_0_0_0_0_0_0.render_method_template
-SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
