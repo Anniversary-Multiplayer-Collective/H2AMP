@@ -330,7 +330,7 @@ setstring english custom_mp_honor "Honor Guard"
 setstring english custom_mp_honor_desctiption "Honor Guardsman, or simply Honor Guard, was a notable rank of highly-skilled Covenant warriors, who were employed within the Covenant Honor Guard unit"
 setstring english custom_mp_ranger "Ranger"
 setstring english custom_mp_ranger_desctiption "The Sangheili Ranger is a Covenant Sangheili Special Warfare Group member, a class of highly skilled Fleet Security soldiers who focus on extra-vehicular activity (EVA) warfare"
-setstring english custom_mp_soc "Shitmaster"
+setstring english custom_mp_soc "Shipmaster"
 setstring english custom_mp_soc_desctiption "Someone didn't play nice"
 SaveTagChanges
 exit
@@ -511,3 +511,20 @@ EditTag multiplayer\mod_globals.mod_globals
 SetField PlayerCharacterSets[0].Characters[1].Name elite_h2
 SaveTagChanges
 Exit
+
+echo council helmet CC
+
+edittag objects\characters\elite\bitmaps\council_helmet.bitmap
+importbitmap 0 "workingdir\bitmaps\council_helmet.dds"
+exit
+
+duplicatetag objects\characters\h2_elite\bitmaps\helmet_change_color.bitmap objects\characters\h2_elite\bitmaps\council_change_color
+
+edittag objects\characters\h2_elite\bitmaps\council_change_color.bitmap
+importbitmap 0 "workingdir\bitmaps\council_helmet_cc.dds"
+exit
+
+EditTag objects\characters\h2_elite\shaders\council_helmet.shader
+SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\h2_elite\bitmaps\council_change_color.bitmap
+savetagchanges
+exit
