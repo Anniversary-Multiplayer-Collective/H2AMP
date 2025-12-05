@@ -1511,7 +1511,7 @@ savetagchanges
 exit
 
 edittag ui\halox\main_menu\main_menu.gui_screen_widget_definition
-SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p -110 -375 0 0
+SetField GroupWidgets[1].Definition.GuiRenderBlock.Bounds720p 0 -375 0 0
 SetField GroupWidgets[1].Definition.BitmapWidgets[0].Definition.GuiRenderBlock.Bounds720p 345 355 0 0
 savetagchanges
 exit
@@ -1628,4 +1628,125 @@ EditTag ui\halox\pregame_lobby\list.gui_skin_definition
 SetField BitmapWidgets[0].Definition.Bitmap ui\halox\pregame_lobby\buttons.bitmap
 SaveTagChanges
 Exit
+
+
+
+
+
+
+
+opencachefile "workingdir\maps\mainmenu_h2.map"
+Porttag h2amp\ui\mainmenu\mainmenu.scenario_structure_bsp
+Porttag single !updatemapfiles h2amp\ui\mainmenu\mainmenu_h2.scenario
+Porttag h2amp\ui\mainmenu\mainmenu_faux_lightmap.scenario_lightmap
+porttag h2amp\ui\mainmenu\sky\h2_mm.sky_atm_parameters
+porttag h2amp\ui\mainmenu\sky\ui.area_screen_effect
+porttag scenarios\objects\cinematics\cinematic_anchor\cinematic_anchor.scenery
+porttag h2\scenarios\objects\covenant\military\capital_ship\capital_ship.scenery
+exit
+
+edittag levels\ui\mainmenu\mainmenu.scenario
+SetField StructureBsps[0].StructureBsp h2amp\ui\mainmenu\mainmenu.scenario_structure_bsp
+SaveTagChanges
+exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+RemoveBlockElements StructureBsps 0 *
+RemoveBlockElements ZoneSetPvs 0 *
+RemoveBlockElements ZoneSetAudibility 0 *
+RemoveBlockElements ZoneSets 0 *
+RemoveBlockElements SkyReferences 0 *
+RemoveBlockElements ScenarioClusterData 0 *
+
+RemoveBlockElements Scenery 0 *
+RemoveBlockElements SceneryPalette 0 *
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements StructureBsps 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements StructureBsps 0
+SaveTagChanges
+Exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements ZoneSetPvs 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements ZoneSetPvs 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements ZoneSetAudibility 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements ZoneSetAudibility 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements ZoneSets 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements ZoneSets 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements SkyReferences 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements SkyReferences 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements ScenarioClusterData 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements ScenarioClusterData 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements Scenery 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements Scenery 0
+SaveTagChanges
+exit
+
+Edittag h2amp\ui\mainmenu\mainmenu_h2.scenario
+CopyBlockElements SceneryPalette 0 *
+Exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+Pasteblockelements SceneryPalette 0
+SaveTagChanges
+exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+SetField SceneryPalette[1].Object h2\scenarios\objects\covenant\military\capital_ship\capital_ship.scenery
+SetField SceneryPalette[0].Object scenarios\objects\cinematics\cinematic_anchor\cinematic_anchor.scenery
+setfield DefaultScreenFX h2amp\ui\mainmenu\sky\ui.area_screen_effect
+SetField skyparameters h2amp\ui\mainmenu\sky\h2_mm.sky_atm_parameters
+setfield Lightmap h2amp\ui\mainmenu\mainmenu_faux_lightmap.scenario_lightmap
+SaveTagChanges
+exit
+
+Edittag levels\ui\mainmenu\mainmenu.scenario
+SetField CutsceneCameraPoints[36].Position -9.7241 -33.9789 218.0598
+SetField CutsceneCameraPoints[36].Orientation 93.0310 0.0083 -0.1563
+savetagchanges
+exit
 

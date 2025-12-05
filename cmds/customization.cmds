@@ -528,3 +528,19 @@ EditTag objects\characters\h2_elite\shaders\council_helmet.shader
 SetField ShaderProperties[0].TextureConstants[2].Bitmap objects\characters\h2_elite\bitmaps\council_change_color.bitmap
 savetagchanges
 exit
+
+Edittag multiplayer\mod_globals.mod_globals
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[0].BipedRotation -60
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[1].BipedRotation -60
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[2].BipedRotation -60
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[3].BipedRotation -60
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[4].BipedRotation -60
+SetField PlayerCharacterCustomizations[0].RegionCameraScripts[6].BipedRotation -60
+SetField PlayerCharacterCustomizations[1].RegionCameraScripts[0].BipedRotation -100
+SetField PlayerCharacterCustomizations[1].RegionCameraScripts[1].BipedRotation -100
+SetField PlayerCharacterCustomizations[1].RegionCameraScripts[2].BipedRotation -100
+SetField PlayerCharacterCustomizations[1].RegionCameraScripts[3].BipedRotation -100
+SetField PlayerCharacterCustomizations[1].RegionCameraScripts[4].BipedRotation -100
+SaveTagChanges
+exit
+
