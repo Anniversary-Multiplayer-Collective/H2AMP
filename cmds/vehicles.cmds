@@ -32,6 +32,7 @@ DoNotReplaceGroups effe,foot,cont,proj,snd!
 Porttag replace objects\vehicles\warthog\warthog.model
 Porttag replace sound\weapons\chain_gun\fire.snd!
 Porttag replace sound\weapons\gauss_rifle\fire.snd!
+porttag replace sound\weapons\chain_gun\fire.snd!
 Exit
 
 EditTag objects\vehicles\warthog\shaders\console.shader
@@ -103,6 +104,11 @@ Exit
 
 Edittag objects\vehicles\warthog\fx\weapon\chaingun\firing.effect
 SetField Events[0].Parts[1].Type sound\weapons\chain_gun\fire.snd!
+Savetagchanges
+Exit
+
+Edittag objects\vehicles\warthog\fx\weapon\chaingun\projectile.effect
+SetField LoopingSound sound\weapons\chain_gun\fire.snd!
 Savetagchanges
 Exit
 
