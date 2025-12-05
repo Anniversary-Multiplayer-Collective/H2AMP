@@ -280,6 +280,7 @@ RunCommands workingdir\cmds\vehicles.cmds
 
 RunCommands workingdir\cmds\EffectScenery.cmds
 
+RunCommands workingdir\cmds\WeaponVariants.cmds
 
 echo WHY DOES THIS NEED TO BE HERE
 
