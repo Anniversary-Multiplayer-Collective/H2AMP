@@ -1750,6 +1750,15 @@ SetField CutsceneCameraPoints[36].Orientation 93.0310 0.0083 -0.1563
 savetagchanges
 exit
 
+echo fix capital ship
+
+opencachefile "h2maps\mainmenu.map"
+NameBlamTag scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_a_bump.bitm h2\scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_a_bump
+NameBlamTag scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_b_bump.bitm h2\scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_b_bump
+porttag replace h2\scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_a_bump.bitmap
+porttag replace h2\scenarios\objects\covenant\military\capital_ship\bitmaps\capital_ship_b_bump.bitmap
+exit
+
 edittag h2\scenarios\objects\covenant\military\capital_ship\shaders\antigrav_effects.shader_halogram
 setfield ShaderProperties[0].Functions[7].Function.Data 0034030060606000F50E870000000000F0001100000000000000000000000000
 setfield ShaderProperties[0].Functions[8].Function.Data 003403008B8B8B00B91A1A000000000095062D00000000000000000000000000
