@@ -774,6 +774,17 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+#NEEDS TO BE FIXED STILL
+EditTag scenarios\shaders\nature\trees\bush_vine.shader
+SetArgument bump_map 1 1 0 0
+SaveTagChanges
+Exit
+
+EditTag scenarios\shaders\nature\flora\salal.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
 Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
 
 SetField Materials[0].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
