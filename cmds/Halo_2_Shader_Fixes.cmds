@@ -769,6 +769,11 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\shaders\nature\trees\alder_leaf.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
+
 Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
 
 SetField Materials[0].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
