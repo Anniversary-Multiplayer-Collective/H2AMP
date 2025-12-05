@@ -764,6 +764,10 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+EditTag scenarios\shaders\multi\cyclotron\cyclotron_vent.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+Exit
 
 Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
 
