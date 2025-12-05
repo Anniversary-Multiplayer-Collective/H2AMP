@@ -299,8 +299,8 @@ Edittag objects\characters\h2_elite\h2_elite_mp.model
 UpdateModelRegions 0
 SetField Variants[0].Regions[2].Permutations[1].Probability 1
 SetField Variants[0].Regions[2].Permutations[0].Probability 0
-SetField Variants[0].Regions[7].Permutations[0].Probability 0
-SetField Variants[0].Regions[7].Permutations[5].Probability 0.1
+SetField Variants[0].Regions[7].Permutations[0].Probability 0.1
+SetField Variants[0].Regions[7].Permutations[5].Probability 0
 savetagchanges
 exit
 
