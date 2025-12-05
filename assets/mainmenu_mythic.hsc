@@ -8,17 +8,17 @@
 
 ; Scripts
 (script static void (sleep_ui (long timer_ticks))
-	(print "sleep ui script")
 	(set ui_location_clock_start ui_location)
 	(set wait_ticks 0)
-	(sleep_until (begin
-		(set wait_ticks (+ wait_ticks 1))
-		(if (!= ui_location ui_location_clock_start)
-			(set wait_ticks timer_ticks)
+	(sleep_until 
+		(begin
+			(set wait_ticks (+ wait_ticks 1))
+			(if (!= ui_location ui_location_clock_start)
+				(set wait_ticks timer_ticks)
+			)
+			(>= wait_ticks timer_ticks)
 		)
-		(>= wait_ticks timer_ticks)
 	)
-	 1)
 )
 
 (script static void (set_ui_location (short location))
@@ -105,7 +105,7 @@
 
 (script static void mainmenu_cam
 	(print "mainmenu camera")
-	(sleep_ui 10)
+;	(sleep_ui 10)
 	(set_ui_location 0)
 	(kill_camera_scripts)
 	(object_destroy_containing "editor_")
@@ -113,7 +113,7 @@
 	(render_depth_of_field_enable true)
 	(render_depth_of_field 1 2 5 10)
 	(camera_set "ui_path_01" 0)
-	(sleep 90)
+;	(sleep 90)
 	(camera_set "ui_path_02" 500)
 	(sleep 250)
 	(camera_set "ui_path_03" 500)
