@@ -363,6 +363,11 @@ exit
 echo ##Battle Rifle
 echo ##Green
 
+EditTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model
+SwapBlockElements Regions 0 1
+Savetagchanges
+exit
+
 DuplicateTag objects\weapons\rifle\battle_rifle\battle_rifle.render_model
 NameTag * objects\weapons\rifle\battle_rifle\battle_rifle_green
 DuplicateTag objects\weapons\rifle\battle_rifle\fp_battle_rifle_h2\fp_battle_rifle_h2.render_model
