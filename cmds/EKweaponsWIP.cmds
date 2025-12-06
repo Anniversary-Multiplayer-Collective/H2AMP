@@ -313,3 +313,28 @@ EditTag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
 ReplaceRenderGeometry workingdir\models\fp_19_needles_needler.dae TriangeStrip
 SaveTagChanges
 Exit
+
+echo spartan laser
+
+opencachefile "h3maps\zanzibar.map"
+ignoreblamtag objects\characters\masterchief\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
+ignoreblamtag objects\characters\dervish\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
+Porttag replace objects\weapons\support_high\spartan_laser\spartan_laser.model
+Porttag replace objects\weapons\support_high\spartan_laser\fp_spartan_laser\fp_spartan_laser.render_model
+Exit
+
+echo Mauler
+opencachefile "h3maps\guardian.map"
+Ignoreblamtag objects\characters\masterchief\fp\weapons\pistol\fp_excavator\fp_excavator.model_animation_graph
+Porttag replace objects\weapons\pistol\excavator\excavator.model
+Porttag replace objects\weapons\pistol\excavator\fp_excavator\fp_excavator.render_model
+Exit
+
+echo spiker
+opencachefile "h3maps\zanzibar.map"
+ignoreblamtag objects\characters\masterchief\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
+ignoreblamtag objects\characters\dervish\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
+Porttag replace objects\weapons\rifle\spike_rifle\spike_rifle.model
+Porttag replace objects\weapons\rifle\spike_rifle\fp_spike_rifle\fp_spike_rifle.render_model
+Exit
+
