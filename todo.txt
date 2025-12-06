@@ -1,0 +1,36 @@
+# CREDIT TODO
+- Port Peestain H2 Mongoose Port
+- Credit, Oli, Alexis, and others who helped on H2AMP
+- Credit the guy who makes the H2 HUD for H3
+
+# Taggy Waggy in My Tummy
+- Mips in general aren't porting correctly for normals resulting in harsh shadow/texture when you're far away from it
+
+# Animation TODO
+- Elite mouth wailing when it's picking up the energy sword
+- Elite sprint animation
+- Elite FP animation (this is going to be a pain)
+
+# Maps TODO
+- Skybox needs proper lighting and fog, fuck riverworld (valhalla) blue tint
+|-> to fix the skybox not appearing, it needs proper Nodes and Collision Region in the model tag
+  |-> and the first mesh shader need to be set to opaque
+ 
+- Ivory Tower glass look like dogshit, and the foliage need to be set to prepass
+- MainMenu fog don't appear
+
+# HUD TODO
+- Use Halo 2 Font Package
+- Use Halo 2 Scematic for HUD (if possible)
+- Needler is missing dual wield pickup string
+- Needler HUD Scematic is still using an animation data when picking it up
+- Needler HUD ammo counter aren't flipped when dual wielding
+
+# Misc TODO
+- Spectre when
+
+# Porting issue
+- something related to porttag replace fucks up Last Resort and Valhalla shader, I'm pretty sure it's the Oli Weapons script
+
+
+# This is purely just for me (Minelol) to get working on when I have free time working for H2AMP, assuming you guys haven't fixed it yourself
