@@ -491,6 +491,15 @@ setfield ShaderProperties[0].Functions[5].Function.Data 033000000000004000002040
 savetagchanges
 Exit
 
+echo spartan sheild effects
+
+EditTag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.model
+SetField ShieldImpactThirdPerson fx\shield_impacts\spartan_3p.shield_impact
+SetField ShieldImpactFirstPerson fx\shield_impacts\spartan_3p.shield_impact
+Savetagchanges
+exit
+
+
 MapFile Remove 8765
 MapFile Remove 0
 

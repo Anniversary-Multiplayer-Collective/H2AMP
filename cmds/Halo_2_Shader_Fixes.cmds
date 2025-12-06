@@ -1363,6 +1363,9 @@ OpenCacheFile "h2maps\triplicate.map"
 Porttag scenarios\bitmaps\human\urban\lights\light_florescent_a_dif.bitm
 Porttag scenarios\objects\solo\earthcity\bitmaps\adprojector_angled_glow.bitm
 Porttag scenarios\objects\multi\triplicate\kiosk_monitor\bitmaps\kiosk_monitor_screen.bitm
+porttag scenarios\bitmaps\solo\earthcity\light_small.bitmap
+porttag scenarios\bitmaps\solo\earthcity\light_small_bump.bitmap
+porttag scenarios\bitmaps\solo\earthcity\light_small_illum.bitmap
 Exit
 
 DuplicateTag levels\shared\shaders\multi\light_florescent_a_illum.shader scenarios\shader\human\urban\lights\light_florescent_a_dif
@@ -1410,6 +1413,17 @@ SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
 Exit
 
+DuplicateTag objects\characters\masterchief\shaders\mp_masterchief.shader scenarios\shaders\multi\triplicate\light_small_dark_blue
+
+edittag scenarios\shaders\multi\triplicate\light_small_dark_blue.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\earthcity\light_small.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap h2amp\multi\gemini\bitmaps\color_black.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\earthcity\light_small_bump.bitmap
+SetField ShaderProperties[0].TextureConstants[7].Bitmap scenarios\bitmaps\solo\earthcity\light_small_illum.bitmap
+SaveTagChanges
+exit
+
+
 Edittag scenarios\multi\triplicate\triplicate.scenario_structure_bsp
 SetField Materials[3].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass_opaque.shader
 SetField Materials[9].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
@@ -1420,6 +1434,7 @@ SetField Materials[42].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gl
 SetField Materials[45].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[46].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
 SetField Materials[48].RenderMethod scenarios\shader\human\urban\lights\light_florescent_a_dif.shader
+SetField Materials[49].RenderMethod scenarios\shaders\multi\triplicate\light_small_dark_blue.shader
 SetField Materials[73].RenderMethod scenarios\objects\solo\earthcity\shader\adprojector_angled_glow.shader
 SetField Materials[86].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[87].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
