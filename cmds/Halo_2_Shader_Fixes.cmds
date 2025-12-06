@@ -1270,6 +1270,11 @@ SetField Materials[109].RenderMethod objects\eldewrito\reforge\shaders\water.sha
 SaveTagChanges
 exit
 
+EditTag scenarios\shaders\solo\deltacontrolroom\grass_hang.shader
+SetField ShaderProperties[0].BlendMode Opaque
+SaveTagChanges
+exit
+
 echo Terminal
 echo TRAIN
 opencachefile "h2maps\triplicate.map"
