@@ -1493,6 +1493,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\dmr_accuracy\dmr_accuracy.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_green.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_green.render_model
 savetagchanges
 exit
 
@@ -1549,6 +1550,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\dmr_ammo\dmr_ammo.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_blue.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_blue.render_model
 savetagchanges
 exit
 
@@ -1602,6 +1604,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\dmr_rof\dmr_rof.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_yellow.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_yellow.render_model
 savetagchanges
 exit
 
@@ -1652,6 +1655,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\dmr_damage\dmr_damage.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_red.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_red.render_model
 savetagchanges
 exit
 
@@ -1698,6 +1702,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\dmr_power\dmr_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_gold.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\dmr\fp_dmr\fp_dmr_gold.render_model
 savetagchanges
 exit
 
