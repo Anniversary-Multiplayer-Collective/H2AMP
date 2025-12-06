@@ -464,7 +464,7 @@ savetagchanges
 exit
 
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle_ammo.model
-SetField RenderModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_blue.render_model
+SetField RenderModel objects\weapons\rifle\battle_rifle\battle_rifle_blue.render_model
 savetagchanges
 exit
 
@@ -537,7 +537,7 @@ savetagchanges
 exit
 
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle_range.model
-SetField RenderModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_purple.render_model
+SetField RenderModel objects\weapons\rifle\battle_rifle\battle_rifle_purple.render_model
 savetagchanges
 exit
 
@@ -609,7 +609,7 @@ savetagchanges
 exit
 
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle_rof.model
-SetField RenderModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_yellow.render_model
+SetField RenderModel objects\weapons\rifle\battle_rifle\battle_rifle_yellow.render_model
 savetagchanges
 exit
 
@@ -678,7 +678,7 @@ savetagchanges
 exit
 
 EditTag objects\weapons\rifle\battle_rifle\battle_rifle_damage.model
-SetField RenderModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_red.render_model
+SetField RenderModel objects\weapons\rifle\battle_rifle\battle_rifle_red.render_model
 savetagchanges
 exit
 
@@ -1775,7 +1775,7 @@ EditTag objects\weapons\rifle\dmr\dmr_red.render_model
 SwapBlockElements Regions 0 1
 Savetagchanges
 exit
-
+ 
 EditTag objects\weapons\rifle\dmr\dmr_yellow.render_model
 SwapBlockElements Regions 0 1
 Savetagchanges
