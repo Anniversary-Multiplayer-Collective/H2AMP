@@ -19,6 +19,12 @@ EditTag temp\scenarios\shaders\solo\deltatemple\tower_vines.shader
 SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_dif.bitm
 SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
 SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\solo\deltatemple\dt_vines_bump.bitm
+SetField SortLayer PrePass
+SaveTagChanges
+Exit
+
+EditTag levels\multi\riverworld\shaders\vahalla_waterfall.shader
+SetField SortLayer PostPass
 SaveTagChanges
 Exit
 
