@@ -25,6 +25,7 @@ savetagnames
 EditTag objects\weapons\rifle\assault_rifle_damage\assault_rifle_damage.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_red.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_red.render_model
 savetagchanges
 exit
 
@@ -111,6 +112,7 @@ savetagnames
 EditTag objects\weapons\rifle\assault_rifle_accuracy\assault_rifle_accuracy.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_green.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_green.render_model
 savetagchanges
 exit
 
@@ -199,6 +201,7 @@ savetagnames
 EditTag objects\weapons\rifle\assault_rifle_rof\assault_rifle_rof.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_yellow.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_yellow.render_model
 savetagchanges
 exit
 
@@ -309,6 +312,7 @@ savetagnames
 EditTag objects\weapons\rifle\assault_rifle_power\assault_rifle_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_gold.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.model_animation_graph
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle_gold.render_model
 savetagchanges
 exit
 
@@ -379,6 +383,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_accuracy\battle_rifle_accuracy.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_green.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_green.render_model
 savetagchanges
 exit
 
@@ -448,6 +453,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_ammo\battle_rifle_ammo.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_blue.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_blue.render_model
 savetagchanges
 exit
 
@@ -519,6 +525,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_range\battle_rifle_range.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_purple.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_purple.render_model
 savetagchanges
 exit
 
@@ -589,6 +596,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_rof\battle_rifle_rof.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_yellow.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_yellow.render_model
 savetagchanges
 exit
 
@@ -656,6 +664,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_damage\battle_rifle_damage.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_red.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_red.render_model
 savetagchanges
 exit
 
@@ -715,6 +724,7 @@ savetagnames
 EditTag objects\weapons\rifle\battle_rifle_power\battle_rifle_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_gold.render_model
 SetField HudInterface ui\chud\battle_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\battle_rifle\fp_battle_rifle\fp_battle_rifle_gold.render_model
 savetagchanges
 exit
 
@@ -776,6 +786,7 @@ savetagnames
 EditTag objects\weapons\rifle\smg\smg_accuracy.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_green.render_model
 setfield HudInterface ui\chud\smg.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_green.render_model
 savetagchanges
 exit
 
@@ -818,6 +829,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\smg\smg_damage.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_red.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_red.render_model
 setfield HudInterface ui\chud\smg.chud_definition
 savetagchanges
 exit
@@ -860,6 +872,7 @@ savetagnames
 
 EditTag objects\weapons\rifle\smg\smg_rof.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_yellow.render_model
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_yellow.render_model
 setfield HudInterface ui\chud\smg.chud_definition
 savetagchanges
 exit
@@ -908,6 +921,7 @@ savetagnames
 EditTag objects\weapons\rifle\smg\smg_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_gold.render_model
 setfield HudInterface ui\chud\smg.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\smg\fp_smg\fp_smg_gold.render_model
 savetagchanges
 exit
 
@@ -965,6 +979,7 @@ savetagnames
 EditTag objects\weapons\pistol\magnum\magnum_damage.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\pistol\magnum\fp_magnum\fp_magnum_red.render_model
 setfield HudInterface ui\chud\magnum.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\pistol\magnum\fp_magnum\fp_magnum_red.render_model
 savetagchanges
 exit
 
@@ -1012,6 +1027,7 @@ savetagnames
 EditTag objects\weapons\pistol\magnum\magnum_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\pistol\magnum\fp_magnum\fp_magnum_gold.render_model
 setfield HudInterface ui\chud\magnum.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\pistol\magnum\fp_magnum\fp_magnum_gold.render_model
 savetagchanges
 exit
 
@@ -1069,6 +1085,7 @@ EditTag objects\weapons\rifle\covenant_carbine_damage\covenant_carbine_damage.we
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_red.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
 SetField HudInterface ui\chud\carbine.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_red.render_model
 savetagchanges
 exit
 
@@ -1112,6 +1129,7 @@ EditTag objects\weapons\rifle\covenant_carbine_accuracy\covenant_carbine_accurac
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_green.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
 SetField HudInterface ui\chud\carbine.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_green.render_model
 savetagchanges
 exit
 
@@ -1155,6 +1173,7 @@ EditTag objects\weapons\rifle\covenant_carbine_ammo\covenant_carbine_ammo.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_blue.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
 SetField HudInterface ui\chud\carbine.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_blue.render_model
 savetagchanges
 exit
 
@@ -1198,6 +1217,7 @@ EditTag objects\weapons\rifle\covenant_carbine_rof\covenant_carbine_rof.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_yellow.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
 SetField HudInterface ui\chud\carbine.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_yellow.render_model
 savetagchanges
 exit
 
@@ -1242,6 +1262,7 @@ EditTag objects\weapons\rifle\covenant_carbine_range\covenant_carbine_range.weap
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_purple.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
 SetField HudInterface ui\chud\carbine.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_purple.render_model
 savetagchanges
 exit
 
@@ -1285,6 +1306,7 @@ savetagnames
 EditTag objects\weapons\rifle\covenant_carbine_power\covenant_carbine_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_gold.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.model_animation_graph
+setfield FirstPerson[1].FirstPersonModel objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine_gold.render_model
 SetField HudInterface ui\chud\carbine.chud_definition
 savetagchanges
 exit
@@ -1329,6 +1351,7 @@ EditTag objects\weapons\pistol\plasma_pistol\plasma_pistol_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol_gold.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\pistol\fp_plasma_pistol\fp_plasma_pistol.model_animation_graph
 setfield HudInterface ui\chud\plasma_pistol.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol_gold.render_model
 savetagchanges
 exit
 
@@ -1371,6 +1394,7 @@ EditTag objects\weapons\rifle\plasma_rifle\plasma_rifle_power.weapon
 setfield FirstPerson[0].FirstPersonModel objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle_gold.render_model
 setfield FirstPerson[0].FirstPersonAnimations objects\characters\masterchief\fp\weapons\rifle\fp_plasma_rifle\fp_plasma_rifle.model_animation_graph
 setfield HudInterface ui\chud\plasma_rifle.chud_definition
+setfield FirstPerson[1].FirstPersonModel objects\weapons\pistol\plasma_pistol\fp_plasma_pistol\fp_plasma_pistol_gold.render_model
 savetagchanges
 exit
 

@@ -282,6 +282,12 @@ RunCommands workingdir\cmds\EffectScenery.cmds
 
 RunCommands workingdir\cmds\WeaponVariants.cmds
 
+##echo emotes
+
+openmodpackage workingdir\paks\refined_emotes.pak
+applymodpackage
+exitmodpackage
+
 echo WHY DOES THIS NEED TO BE HERE
 
 
