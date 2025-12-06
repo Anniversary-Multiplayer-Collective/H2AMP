@@ -1,4 +1,52 @@
 # ------------------------------------------
+# |             ASSAULT RIFLE              |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_assault_rifle\fp_assault_rifle.jmad
+Setfield Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
+AddAnimation workingdir\animations\spartan_fp\assault_rifle
+
+SetField Animations[9].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+SetField Animations[10].PlaybackFlags DisableWeaponAim1stPerson
+SetField Animations[15].PlaybackFlags DisableWeaponIk
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |              BATTLE RIFLE              |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_battle_rifle\fp_battle_rifle.jmad
+Setfield Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
+AddAnimation Keep workingdir\animations\spartan_fp\battle_rifle
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |               BEAM RIFLE               |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\beam_rifle
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_beam_rifle\fp_beam_rifle.model_animation_graph
+SortModes
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk 1
+SetField Modes[0].WeaponClass[0].WeaponIK[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIK[0].AttachToMarker left_hand_cyborg
+
+SetField Animations[4].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[7].PlaybackFlags DisableWeaponIk
+SetField Animations[8].PlaybackFlags DisableWeaponIk
+SetField Animations[9].PlaybackFlags DisableWeaponIk
+SetField Animations[12].PlaybackFlags DisableWeaponIk
+SetField Animations[13].PlaybackFlags DisableWeaponIk
+SetField Animations[15].PlaybackFlags ForceWeaponIkOn
+SetField Animations[18].PlaybackFlags DisableWeaponIk
+SaveTagChanges
+Exit
+
+# ------------------------------------------
 # |               BRUTE SHOT               |
 # ------------------------------------------
 EditTag objects\characters\masterchief\fp\weapons\support_low\fp_brute_shot\fp_brute_shot.model_animation_graph
@@ -7,10 +55,40 @@ SetField SoundReferences[0].Reference sound\weapons\brute_shot\brute_shot_reload
 SetField SoundReferences[1].Reference sound\weapons\brute_shot\brute_shot_melee.sound
 SetField SoundReferences[2].Reference sound\weapons\brute_shot\brute_shot_ready.sound
 
-Setfield Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
 
 SaveTagChanges
 Exit
+
+# ------------------------------------------
+# |                CARBINE                 |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_covenant_carbine\fp_covenant_carbine.jmad
+SetField modes[0].weaponclass[0].weapontype[0].set.overlays[1].Animation 6
+AddAnimation workingdir\animations\spartan_fp\carbine
+SetField Animations[8].weight 0.555
+SetField Animations[8].animationdata.NextAnimation 28
+
+AddBlockElements Animations[28].animationdata.FrameEvents 3
+AddBlockElements Animations[28].animationdata.SoundEvents 1
+SetField Animations[28].Weight 1
+SetField Animations[28].AnimationData.ParentAnimation 8
+SetField Animations[28].AnimationData.Soundevents[0].Sound 6
+SetField Animations[28].AnimationData.Frameevents[0].Frame 4
+SetField Animations[28].AnimationData.Frameevents[1].TypeED SecondaryKeyframe
+SetField Animations[28].AnimationData.Frameevents[1].Frame 14
+SetField Animations[28].AnimationData.Frameevents[2].TypeED AllowInterruption
+SetField Animations[28].AnimationData.Frameevents[2].Frame 23
+SetField Animations[28].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+
+SetField Animations[10].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[11].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[12].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[27].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+RemoveBlockElements Modes[0].WeaponClass[0].WeaponType[0].Set.Actions 19 *
+SaveTagChanges
+Exit
+
 
 # ------------------------------------------
 # |              ENERGY SWORD              |
@@ -26,6 +104,32 @@ SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Actions[8].Animation 11
 SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Actions[9].Animation 12
 SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 3
 
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |                FUEL ROD                |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\support_high\fp_flak_cannon\fp_flak_cannon.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\fuel_rod
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 6
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |            GRAVITY HAMMER              |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\melee\fp_gravity_hammer\fp_gravity_hammer.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\hammer
+
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 3
+
+AddBlockElements Modes[0].WeaponClass[0].WeaponIk 1
+SetField Modes[0].WeaponClass[0].WeaponIK[0].Marker left_hand
+SetField Modes[0].WeaponClass[0].WeaponIK[0].AttachToMarker left_hand
+
+RemoveBlockElements Animations[8].AnimationData.EffectEvents 0 *
+RemoveBlockElements Animations[9].AnimationData.EffectEvents 0 *
 SaveTagChanges
 Exit
 
@@ -47,6 +151,9 @@ SetField Modes[0].WeaponClass[0].WeaponIk[0].AttachToMarker left_hand_cyborg
 SetField SoundReferences[4].Reference sound\weapons\rocket_launcher\rocket_ready.sound
 SetField SoundReferences[5].Reference sound\weapons\rocket_launcher\rocket_reload.sound
 SetField SoundReferences[6].Reference sound\weapons\rocket_launcher\fire.sound
+
+SetField Animations[13].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[14].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
 
 SaveTagChanges
 Exit
@@ -100,6 +207,8 @@ SetField SoundReferences[13].Flags LeftArmOnly,FirstPersonOnly
 
 SetField SoundReferences[14].Reference sound\weapons\plasma_rifle\plasrifle_dual_pose3_r.sound
 SetField SoundReferences[14].Flags AllowOnPlayer,RightArmOnly,FirstPersonOnly
+
+SetField Modes[0].WeaponClass[0].WeaponType[0].Set.Overlays[1].Animation 7
 
 # FIRE
 SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[0].Animation 26
@@ -202,7 +311,24 @@ SetField Modes[0].WeaponClass[1].WeaponType[0].Set.Actions[0].Animation 0
 SetField Animations[22].Weight 1
 SetField Animations[22].AnimationData.NextAnimation -1
 
+SetField Animations[28].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[29].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SetField Animations[33].PlaybackFlags DisableWeaponIk
+SetField Animations[40].PlaybackFlags DisableWeaponIk
+SetField Animations[42].PlaybackFlags DisableWeaponIk
+
 Savetagchanges
+Exit
+
+# ------------------------------------------
+# |             SENTINEL BEAM              |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\support_low\fp_sentinel_beam\fp_sentinel_beam.model_animation_graph
+AddAnimation workingdir\animations\spartan_fp\sentinel_beam
+Setfield Animations[14].PlaybackFlags ForceWeaponIkOn
+Setfield Animations[15].PlaybackFlags DisableWeaponAim1stPerson
+Setfield Animations[16].PlaybackFlags DisableWeaponAim1stPerson
+SaveTagChanges
 Exit
 
 # ------------------------------------------
@@ -220,8 +346,8 @@ SetField SoundReferences[5].Reference sound\weapons\shotgun\shotgun_ready.sound
 # SetField SoundReferences[6].Reference sound\weapons\shotgun\shotgun_reload_exit.sound
 SetField SoundReferences[7].Reference sound\weapons\shotgun\shotgun_reload_loop.sound
 
-Setfield Animations[8].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
-Setfield Animations[9].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+SetField Animations[8].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
+SetField Animations[9].PlaybackFlags DisableWeaponAim1stPerson,ForceWeaponIkOn
 
 SetField Animations[20].PlaybackFlags ForceWeaponIkOn
 SetField Animations[21].PlaybackFlags DisableWeaponIk
@@ -275,5 +401,33 @@ SetField Animations[2].PlaybackFlags None
 SetField Animations[3].PlaybackFlags None
 
 SetField Animations[8].PlaybackFlags DisableWeaponIk,DisableWeaponAim1stPerson
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             PLASMA PISTOL              |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\pistol\fp_plasma_pistol\fp_plasma_pistol.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\plasma_pistol
+
+SetField Animations[35].PlaybackFlags DisableWeaponIk
+SetField Animations[37].PlaybackFlags DisableWeaponIk
+SetField Animations[38].PlaybackFlags DisableWeaponIk
+SetField Animations[52].PlaybackFlags DisableWeaponIk
+
+SetField Animations[49].PlaybackFlags DisableWeaponIk
+SaveTagChanges
+Exit
+
+# ------------------------------------------
+# |             PLASMA RIFLE               |
+# ------------------------------------------
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_plasma_rifle\fp_plasma_rifle.model_animation_graph
+AddAnimation Keep workingdir\animations\spartan_fp\plasma_rifle
+
+SetField Animations[28].PlaybackFlags DisableWeaponIk
+SetField Animations[29].PlaybackFlags DisableWeaponIk
+SetField Animations[30].PlaybackFlags DisableWeaponIk
+SetField Animations[44].PlaybackFlags DisableWeaponIk
 SaveTagChanges
 Exit

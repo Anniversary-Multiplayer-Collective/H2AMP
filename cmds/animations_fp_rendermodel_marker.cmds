@@ -17,6 +17,27 @@ SaveTagChanges
 Exit
 
 # ------------------------------------------
+# |              BEAM RIFLE                |
+# ------------------------------------------
+EditTag objects\weapons\rifle\beam_rifle\fp_beam_rifle\fp_beam_rifle.render_model
+
+# Spartan
+AddBlockElements MarkerGroups
+SetField MarkerGroups[*].Name left_hand_cyborg
+AddBlockElements MarkerGroups[*].Markers
+SetField MarkerGroups[*].Markers[0].Translation -0.0768 -0.002 -0.0539
+SetField MarkerGroups[*].Markers[0].Rotation -0.559 0.118 -0.28 0.61
+
+# Elite
+AddBlockElements MarkerGroups
+SetField MarkerGroups[*].Name left_hand_elite
+AddBlockElements MarkerGroups[*].Markers
+SetField MarkerGroups[*].Markers[0].Translation 0.1393 -0.00518 -0.044
+SetField MarkerGroups[*].Markers[0].Rotation -0.575 0.094 -0.35 0.7
+SaveTagChanges
+Exit
+
+# ------------------------------------------
 # |              BRUTE SHOT                |
 # ------------------------------------------
 EditTag objects\weapons\support_low\brute_shot\fp_brute_shot\fp_brute_shot.render_model
@@ -86,6 +107,21 @@ SaveTagChanges
 Exit
 
 # ------------------------------------------
+# |             GRAVITY HAMMER             |
+# ------------------------------------------
+EditTag objects\weapons\melee\gravity_hammer\fp_gravity_hammer\fp_gravity_hammer.render_model
+
+# SPARTAN
+SetField MarkerGroups[3].Markers[0].Translation -0.0089413 0.02415987 -0.10795
+SetField MarkerGroups[3].Markers[0].Rotation 0.085 0.1152043 0.4 -0.763
+
+# ELITE
+SetField MarkerGroups[5].Markers[0].Translation -0.015 0.03 -0.107
+SetField MarkerGroups[5].Markers[0].Rotation 0.05 0.08 0.38 -0.91
+SaveTagChanges
+Exit
+
+# ------------------------------------------
 # |            ROCKET LAUNCHER             |
 # ------------------------------------------
 EditTag objects\weapons\support_high\rocket_launcher\fp_rocket_launcher\fp_rocket_launcher.render_model
@@ -105,6 +141,15 @@ SetField MarkerGroups[3].Markers[0].Translation -0.0515 0.0663 0.052
 SetField MarkerGroups[3].Markers[0].Rotation 0.618 -0.205 -0.18 0.72
 SaveTagChanges
 Exit
+
+# # ------------------------------------------
+# # |                SHOTGUN                 |
+# # ------------------------------------------
+# EditTag objects\weapons\rifle\shotgun\fp_shotgun\fp_shotgun.render_model
+# SetField MarkerGroups[1].Markers[0].Translation -0.009387273 0.001 -0.016
+# SetField MarkerGroups[1].Markers[0].Rotation -0.6016453 0.094376266 -0.3454954 0.7139671
+# SaveTagChanges
+# Exit
 
 # ------------------------------------------
 # |             SNIPER RIFLE               |

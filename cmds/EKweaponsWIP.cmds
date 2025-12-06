@@ -307,3 +307,9 @@ setargument glancing_env_tint 0.1 0.1 0.1 1
 savetagchanges
 exit
 
+# NEEDLER <-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<-<
+# REMOVE THIS IF WE DECIDE TO MAKE THE NEEDLER AMMO COUNT To 30
+EditTag objects\weapons\pistol\needler\fp_needler\fp_needler.render_model
+ReplaceRenderGeometry workingdir\models\fp_19_needles_needler.dae TriangeStrip
+SaveTagChanges
+Exit

@@ -256,6 +256,8 @@ RunCommands workingdir\cmds\bipeds.cmds
 
 RunCommands workingdir\cmds\EKweaponsWIP.cmds
 
+RunCommands workingdir\cmds\hammer.cmds
+
 RunCommands workingdir\cmds\h2sounds.cmds
 
 RunCommands workingdir\cmds\animations_fp_rendermodel_marker.cmds
@@ -265,8 +267,6 @@ RunCommands workingdir\cmds\animations_fp_weapons_spartan.cmds
 RunCommands workingdir\cmds\h2stats.cmds
 
 RunCommands workingdir\cmds\customization.cmds
-
-RunCommands workingdir\cmds\hammer.cmds
 
 RunCommands workingdir\cmds\forge_pallet.cmds
 
@@ -281,6 +281,12 @@ RunCommands workingdir\cmds\vehicles.cmds
 RunCommands workingdir\cmds\EffectScenery.cmds
 
 RunCommands workingdir\cmds\WeaponVariants.cmds
+
+# Heat still doesnt appear
+# And shooting flare isn't working as intended
+RunCommands workingdir\cmds\brute_plasma_rifle_hotfix_fuckyou.cmds
+
+RunCommands workingdir\cmds\viewmodels.cmds
 
 ##echo emotes
 

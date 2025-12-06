@@ -1,0 +1,5 @@
+EditTag objects\weapons\melee\energy_blade\energy_blade.weapon
+SetField FirstPersonWeaponOffset 0.055 0.006 0.015
+SetField CenteredFirstPersonWeaponOffset 0.055 0.006 0.005
+SaveTagChanges
+Exit

@@ -1,0 +1,18 @@
+EditTag objects\weapons\rifle\plasma_rifle\fp_plasma_rifle\fp_plasma_rifle.render_model
+CopyBlockElements MarkerGroups 0 *
+Exit
+
+EditTag objects\weapons\rifle\brute_plasma_rifle\fp_brute_plasma_rifle\fp_brute_plasma_rifle.render_model
+RemoveBlockElements MarkerGroups 0 *
+PasteBlockElEments MarkerGroups 0
+SaveTagChanges
+Exit
+
+
+EditTag objects\weapons\rifle\brute_plasma_rifle\brute_plasma_rifle.weapon
+SetField FirstPersonWeaponOffset 0.075 0 0
+SetField UnitStowAnchorName weapon_thigh
+SetField CenteredFirstPersonWeaponOffset 0.075 0 -0.025
+SetField WeaponTypeName offset_plasma_rife
+SaveTagChanges
+Exit
