@@ -414,6 +414,7 @@ savetagchanges
 exit
 
 edittag objects\weapons\rifle\battle_rifle\battle_rifle_green.render_model
+SwapBlockElements Regions 0 1
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_green.shader
 setfield Materials[3].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_lens_green.shader
 setfield Materials[4].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones_green.shader
@@ -484,6 +485,7 @@ savetagchanges
 exit
 
 edittag objects\weapons\rifle\battle_rifle\battle_rifle_blue.render_model
+SwapBlockElements Regions 0 1
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_blue.shader
 setfield Materials[3].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_lens_blue.shader
 setfield Materials[4].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones_blue.shader
@@ -556,6 +558,7 @@ savetagchanges
 exit
 
 edittag objects\weapons\rifle\battle_rifle\battle_rifle_purple.render_model
+SwapBlockElements Regions 0 1
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_purple.shader
 setfield Materials[3].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_lens_purple.shader
 setfield Materials[4].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones_purple.shader
@@ -627,6 +630,7 @@ savetagchanges
 exit
 
 edittag objects\weapons\rifle\battle_rifle\battle_rifle_yellow.render_model
+SwapBlockElements Regions 0 1
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_yellow.shader
 setfield Materials[3].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_lens_yellow.shader
 setfield Materials[4].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones_yellow.shader
@@ -693,6 +697,7 @@ replacerendergeometry "workingdir\models\red_br.dae" TriangleList
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_red.shader
 setfield Materials[3].RenderMethod objects\weapons\rifle\battle_rifle\shaders\ones_red.shader
 setfield Materials[4].RenderMethod objects\weapons\rifle\battle_rifle\shaders\tens_red.shader
+SwapBlockElements Regions 0 1
 savetagchanges
 exit
 
@@ -756,6 +761,7 @@ savetagchanges
 exit
 
 edittag objects\weapons\rifle\battle_rifle\battle_rifle_gold.render_model
+SwapBlockElements Regions 0 1
 setfield Materials[0].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_gold.shader
 setfield Materials[2].RenderMethod objects\weapons\rifle\battle_rifle\shaders\battle_rifle_metal_gold.shader
 savetagchanges
