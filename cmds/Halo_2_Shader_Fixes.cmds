@@ -759,6 +759,30 @@ exit
 
 
 ## echo IvoryTower Shader Fixes
+
+Duplicatetag levels\multi\cyberdyne\shaders\metal_out_fence.shader scenarios\shaders\human\urban\glass\window_high_rise_working
+Duplicatetag levels\multi\cyberdyne\shaders\metal_out_fence.shader scenarios\shaders\human\urban\glass\window_roof_working
+savetagnames
+
+edittag scenarios\shaders\human\urban\glass\window_roof_working.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\human\urban\glass\window_roof.bitmap
+SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\human\urban\glass\window_roof.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\human\urban\glass\window_roof.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\human\urban\glass\window_roof.bitmap
+SetField ShaderProperties[0].BlendMode MultiplyAdd
+SaveTagChanges
+exit
+
+edittag scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\human\urban\glass\window_high_rise.bitmap
+SetField ShaderProperties[0].TextureConstants[1].Bitmap scenarios\bitmaps\human\urban\glass\window_high_rise.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\human\urban\glass\window_high_rise.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\human\urban\glass\window_high_rise.bitmap
+SetField ShaderProperties[0].BlendMode MultiplyAdd
+SaveTagChanges
+exit
+
+
 EditTag scenarios\shaders\nature\trees\palm_frond_a.shader
 SetField ShaderProperties[0].BlendMode Opaque
 SaveTagChanges
@@ -786,30 +810,36 @@ SaveTagChanges
 Exit
 
 Edittag scenarios\multi\cyclotron\cyclotron.scenario_structure_bsp
+SetField Materials[0].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
 
-SetField Materials[0].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+
 SetField Materials[12].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[24].RenderMethod scenarios\shaders\human\urban\glass\window_roof_working.shader
 SetField Materials[25].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
-SetField Materials[48].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[49].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[50].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[51].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[52].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[53].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[54].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[55].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[56].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[57].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[58].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[59].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[60].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[61].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[62].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[63].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[64].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[65].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[66].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[67].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+SetField Materials[48].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[49].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[50].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[51].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[52].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[53].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[54].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[55].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[56].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[57].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[58].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[59].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[60].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[61].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[62].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[63].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[64].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[65].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[66].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[67].RenderMethod scenarios\shaders\human\urban\glass\window_high_rise_working.shader
+SetField Materials[68].RenderMethod scenarios\shaders\human\urban\glass\window_roof_working.shader
+SetField Materials[69].RenderMethod scenarios\shaders\human\urban\glass\window_roof_working.shader
+SetField Materials[70].RenderMethod scenarios\shaders\human\urban\glass\window_roof_working.shader
+SetField Materials[71].RenderMethod scenarios\shaders\human\urban\glass\window_roof_working.shader
 SaveTagChanges
 exit
 
