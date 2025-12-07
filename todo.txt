@@ -3,9 +3,6 @@
 - Credit, Oli, Alexis, and others who helped on H2AMP
 - Credit the guy who makes the H2 HUD for H3
 
-# Taggy Waggy in My Tummy
-- Mips in general aren't porting correctly for normals resulting in harsh shadow/texture when you're far away from it
-
 # Animation TODO
 - Elite mouth wailing when it's picking up the energy sword
 - Elite sprint animation
