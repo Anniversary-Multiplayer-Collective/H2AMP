@@ -424,6 +424,11 @@ Exit
 # ------------------------------------------
 EditTag objects\characters\masterchief\fp\weapons\rifle\fp_plasma_rifle\fp_plasma_rifle.model_animation_graph
 AddAnimation Keep workingdir\animations\spartan_fp\plasma_rifle
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\fp\weapons\rifle\fp_plasma_rifle\fp_plasma_rifle.model_animation_graph
+SortModes
 
 SetField Animations[28].PlaybackFlags DisableWeaponIk
 SetField Animations[29].PlaybackFlags DisableWeaponIk
