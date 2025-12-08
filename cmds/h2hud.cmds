@@ -259,11 +259,11 @@ SetField HudWidgets[0].StateData[0].NonWeaponFlashHO ShieldMajor,ShieldCritical
 SetField HudWidgets[0].BitmapWidgets[1].RenderData[0].LocalScalarB 0.09
 SetField HudWidgets[2].PlacementData[0].Offset 0 -12
 SetField HudWidgets[2].PlacementData[0].Scale 1.25 1.25
-SetField HudWidgets[3].PlacementData[0].Offset 50 -12
+SetField HudWidgets[3].PlacementData[0].Offset 75 -12
 SetField HudWidgets[3].PlacementData[0].Scale 1.25 1.25
-SetField HudWidgets[4].PlacementData[0].Offset 100 -12
+SetField HudWidgets[4].PlacementData[0].Offset 150 -12
 SetField HudWidgets[4].PlacementData[0].Scale 1.25 1.25
-SetField HudWidgets[5].PlacementData[0].Offset 150 -12
+SetField HudWidgets[5].PlacementData[0].Offset 225 -12
 SetField HudWidgets[5].PlacementData[0].Scale 1.25 1.25
 SetField HudWidgets[2].BitmapWidgets[0].SortLayer Foreground
 SetField HudWidgets[3].BitmapWidgets[0].SortLayer Foreground
@@ -1038,12 +1038,1675 @@ ImportBitmap 0 workingdir\bitmaps\vision_mask.dds
 SaveTagChanges
 Exit
 
+
+echo 4:3 MENU FIXES
+
+EditTag ui\chud\globals.chud_globals_definition
+SetField HudGlobals[0].HudAttributes[0].ResolutionFlags _720pFullscreen
+SetField HudGlobals[0].HudAttributes[5].WarpDestinationOffsetZ 0
+SetField HudGlobals[0].HudAttributes[5].MotionSensorOrigin 88 688
+SaveTagChanges
+Exit
+EditTag objects\characters\elite\mp_elite\chud\globals.chud_globals_definition
+SetField HudGlobals[0].HudAttributes[0].ResolutionFlags _720pFullscreen
+SetField HudGlobals[0].HudAttributes[5].WarpDestinationOffsetZ 0
+SetField HudGlobals[0].HudAttributes[5].MotionSensorOrigin 88 688
+SetField HudGlobals[0].GrenadeAnchorOffset 53
+SaveTagChanges
+Exit
+
+EditTag ui\chud\spartan_h2.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 21 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[22].PlacementData[0].Offset 88 -116
+SetField HudWidgets[22].PlacementData[0].Origin 0 0
+SetField HudWidgets[22].PlacementData[0].Scale 1.05 1.4
+SetField HudWidgets[23].PlacementData[0].Scale 1.05 1.4
+SetField HudWidgets[23].PlacementData[0].Offset 35 85
+CopyBlockElements HudWidgets 20 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[20].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[24].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[21].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[22].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[23].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[24].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[25].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[26].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[27].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[28].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[29].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[24].PlacementData[0].Offset 0 -95
+SetField HudWidgets[24].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[25].PlacementData[0].Offset 35 -96
+SetField HudWidgets[25].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[26].PlacementData[0].Offset 70 -96
+SetField HudWidgets[26].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[27].PlacementData[0].Offset 105 -96
+SetField HudWidgets[27].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[28].PlacementData[0].Offset -15 -145
+SetField HudWidgets[29].PlacementData[0].Offset 60 35
+SetField HudWidgets[29].PlacementData[0].Scale 0.7 0.9
+SetField HudWidgets[10].PlacementData[0].Scale 0.86 1
+SaveTagChanges
+Exit
+
+EditTag ui\chud\elite_h2.chud_definition
+CopyBlockElements HudWidgets 19 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 18 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[21].PlacementData[0].Offset 88 -116
+SetField HudWidgets[21].PlacementData[0].Origin 0 0
+SetField HudWidgets[21].PlacementData[0].Scale 1.05 1.4
+SetField HudWidgets[22].PlacementData[0].Scale 1.05 1.4
+SetField HudWidgets[22].PlacementData[0].Offset 35 85
+SetField HudWidgets[9].PlacementData[0].Scale 1.1 1.55
+SetField HudWidgets[9].PlacementData[0].Offset 0 50
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[18].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[19].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[20].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[21].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[22].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[23].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[24].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[25].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[26].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[27].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[20].PlacementData[0].Offset -15 -145
+SetField HudWidgets[23].PlacementData[0].Offset 0 -95
+SetField HudWidgets[23].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[24].PlacementData[0].Offset 35 -96
+SetField HudWidgets[24].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[25].PlacementData[0].Offset 70 -96
+SetField HudWidgets[25].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[26].PlacementData[0].Offset 105 -96
+SetField HudWidgets[26].PlacementData[0].Scale 0.85 1
+SetField HudWidgets[27].PlacementData[0].Offset 60 35
+SetField HudWidgets[27].PlacementData[0].Scale 0.7 0.9
+SaveTagChanges
+Exit
+
+EditTag ui\chud\scoreboard.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[7].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[8].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[9].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[10].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[11].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[12].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[1].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[2].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[1].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[2].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].PlacementData[0].Scale 2 2
+SetField HudWidgets[7].PlacementData[0].Offset 6 -130
+SetField HudWidgets[9].PlacementData[0].Scale 1 1.25
+SetField HudWidgets[9].PlacementData[0].Offset -30 15
+SetField HudWidgets[10].PlacementData[0].Scale 1 1.25
+SetField HudWidgets[10].PlacementData[0].Offset -30 88
+SetField HudWidgets[11].PlacementData[0].Scale 1.25 1.5
+SetField HudWidgets[11].PlacementData[0].Offset -20 -25
+SetField HudWidgets[12].BitmapWidgets[8].PlacementData[0].Scale 0.5 0.6
+SetField HudWidgets[12].BitmapWidgets[8].PlacementData[0].Offset -172 84
+SaveTagChanges
+Exit
+
+
+
+EditTag ui\chud\magnum.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[10].PlacementData[0].Scale 1 1
+SetField HudWidgets[10].PlacementData[0].Offset -8 -44
+SetField HudWidgets[10].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -20 10
+SetField HudWidgets[10].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -115 -38
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 115 -38
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 47 10
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[15].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[15].PlacementData[0].Offset 105 -75
+
+SaveTagChanges
+Exit
+EditTag ui\chud\smg.chud_definition
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 8 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].PlacementData[0].Scale 1 1
+SetField HudWidgets[10].PlacementData[0].Offset -8 -44
+SetField HudWidgets[10].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.51 0.6
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -20 21
+SetField HudWidgets[10].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -115 -38
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 115 -38
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale -0.51 0.6
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 47 21
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[15].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\assault_rifle.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[6].PlacementData[0].Scale 1 1
+SetField HudWidgets[6].PlacementData[0].Offset -8 -44
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Offset -17 13
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[6].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[6].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\battle_rifle.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+
+SetField HudWidgets[6].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[7].PlacementData[0].Scale 1 1
+SetField HudWidgets[7].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -17 13
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -40
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\spike_rifle.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 8 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[8].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[11].PlacementData[0].Scale 1 1
+SetField HudWidgets[11].PlacementData[0].Offset -8 -44
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.51 0.6
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -20 13
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -115 -38
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 115 -38
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale -0.51 0.6
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 47 21
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[10].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+Edittag ui\chud\excavator.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 8 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[8].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].BitmapWidgets[0].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[11].PlacementData[0].Scale 1 1
+SetField HudWidgets[11].PlacementData[0].Offset -8 -44
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.51 0.6
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -20 13
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -115 -38
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 115 -38
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale -0.51 0.6
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 47 21
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[10].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\carbine.chud_definition
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[8].PlacementData[0].Scale 1 1
+SetField HudWidgets[8].PlacementData[0].Offset -8 -44
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -17 10
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[8].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[8].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].PlacementData[0].Offset 95 -75
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 1.5 1.5
+SaveTagChanges
+Exit
+
+EditTag ui\chud\sniper_rifle.chud_definition
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[0].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].BitmapWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+
+SetField HudWidgets[4].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[1].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].BitmapWidgets[1].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[0].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[1].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[2].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[3].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[4].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].BitmapWidgets[5].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[8].PlacementData[0].Scale 1 1
+SetField HudWidgets[8].PlacementData[0].Offset -8 -44
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -17 5
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[8].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[8].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].PlacementData[0].Offset 95 -75
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 1.2 1.2
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Scale 0.95 0.95
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Offset -6 80
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Scale 0.68 0.8
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Offset -150 80
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Scale 1.8000001 1.8000001
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Scale 2.4750001 0.59625
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Offset 0 0
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Origin 10 0
+SaveTagChanges
+Exit
+EditTag ui\chud\beam_rifle.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 8 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[9].BitmapWidgets[0].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+
+
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[11].PlacementData[0].Scale 1 1
+SetField HudWidgets[11].PlacementData[0].Offset -8 -44
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].PlacementData[0].Offset 95 -75
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Offset 37 0
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SaveTagChanges
+Exit
+
+EditTag ui\chud\brute_shot.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[3].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+SetField HudWidgets[7].PlacementData[0].Scale 1 1
+SetField HudWidgets[7].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -17 13
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+
+SetField HudWidgets[6].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\flamethrower.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[1].Name crosshair
+SetField HudWidgets[5].Name crosshair_halfscreen
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+SetField HudWidgets[4].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[4].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[4].PlacementData[0].Scale 1 1
+SetField HudWidgets[4].PlacementData[0].Offset -8 -44
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Offset -19 5
+SetField HudWidgets[4].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[4].BitmapWidgets[1].PlacementData[0].Offset -110 -40
+SetField HudWidgets[4].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[4].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[4].BitmapWidgets[5].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[4].BitmapWidgets[5].PlacementData[0].Offset 37 0
+SetField HudWidgets[4].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[4].BitmapWidgets[4].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\shotgun.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[3].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+SetField HudWidgets[7].PlacementData[0].Scale 1 1
+SetField HudWidgets[7].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -17 13
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[6].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\fuel_rod_cannon.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+
+SetField HudWidgets[7].PlacementData[0].Scale 1 1
+SetField HudWidgets[7].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -17 5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[12].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\hammer.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].PlacementData[0].Offset 95 -75
+
+SetField HudWidgets[5].PlacementData[0].Scale 1 1
+SetField HudWidgets[5].PlacementData[0].Offset -8 -44
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Offset -30 -38
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Offset -148 -22
+
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset 37 0
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\rocket.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.75 1
+SetField HudWidgets[4].BitmapWidgets[1].PlacementData[0].Scale 1.8 1.8
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Scale 0.4 0.4
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Offset -100 100
+SetField HudWidgets[4].TextWidgets[0].PlacementData[0].Scale 1.35 1.35
+SetField HudWidgets[4].TextWidgets[0].PlacementData[0].Offset 130 105
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -8 -44
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -17 10
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[8].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\sword.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].PlacementData[0].Offset 100 -75
+
+SetField HudWidgets[5].PlacementData[0].Scale 1 1
+SetField HudWidgets[5].PlacementData[0].Offset -8 -44
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Offset -30 -38
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Offset -148 -22
+
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset 37 0
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\spartan_laser.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].BitmapWidgets[0].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[1].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[2].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState  _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState  _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].BitmapWidgets[0].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -8 -44
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -19 5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -38
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[1].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].PlacementData[0].Offset 110 -75
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[5].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[5].PlacementData[0].Offset 37 0
+SetField HudWidgets[9].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[9].BitmapWidgets[4].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.9 1.2
+SaveTagChanges
+Exit
+
+EditTag ui\chud\needler.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[3].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -8 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -20 10
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -115 -40
+
+SetField HudWidgets[14].PlacementData[0].Scale 1 1
+SetField HudWidgets[14].PlacementData[0].Offset -18 -44
+SetField HudWidgets[14].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[14].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset 115 -40
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset 47 10
+SetField HudWidgets[14].StateData[0].WeaponArmedStateHO LeftHand
+SetField HudWidgets[14].PlacementData[0].Anchor TopLeft
+
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[10].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[10].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Anchor TopLeft
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Anchor TopLeft
+SetField HudWidgets[8].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[8].PlacementData[0].Offset 95 -75
+SaveTagChanges
+Exit
+
+EditTag ui\chud\plasma_pistol.chud_definition
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 8 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[8].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[9].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.45 0.6
+SetField HudWidgets[10].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[10].PlacementData[0].Offset 105 -75
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 49 5
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale -0.375 0.5
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 115 -38
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[4].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[4].PlacementData[0].Offset -10 -1
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Offset 48 5
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Offset 48 5
+
+
+SetField HudWidgets[11].PlacementData[0].Scale 1 1
+SetField HudWidgets[11].PlacementData[0].Offset -8 -44
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -115 -38
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[11].BitmapWidgets[3].StateData[0].SkinState Spartan,Elite
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Offset 37 0
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\plasma_rifle.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 5 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 6 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 7 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[7].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[8].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[10].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[11].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[12].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[13].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[14].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[15].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
+SetField HudWidgets[10].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[10].PlacementData[0].Offset 105 -75
+
+SetField HudWidgets[9].PlacementData[0].Scale 1 1
+SetField HudWidgets[9].PlacementData[0].Offset -18 -44
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[9].TextWidgets[0].PlacementData[0].Offset 80 -22
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset 49 5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale -0.375 0.5
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset 115 -40
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[4].PlacementData[0].Scale -0.525 0.525
+SetField HudWidgets[9].BitmapWidgets[2].PlacementData[0].Offset 48 5
+SetField HudWidgets[9].BitmapWidgets[3].PlacementData[0].Offset 50 5
+SetField HudWidgets[9].BitmapWidgets[5].PlacementData[0].Offset 49 5
+SetField HudWidgets[11].PlacementData[0].Scale 1 1
+SetField HudWidgets[11].PlacementData[0].Offset -8 -44
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Offset -115 -40
+SetField HudWidgets[11].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[12].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[12].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[13].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[14].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[14].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[0].PlacementData[0].Offset 110 -68
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[15].BitmapWidgets[1].PlacementData[0].Offset 110 -68
+
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Offset 37 0	
+SetField HudWidgets[11].BitmapWidgets[4].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[11].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[5].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[11].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[11].BitmapWidgets[1].PlacementData[0].Scale -0.35 0.5
+SaveTagChanges
+Exit
+
+EditTag ui\chud\sentinel_beam.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[8].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[9].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.45 0.6
+SetField HudWidgets[6].PlacementData[0].Scale 1.5 1.5
+SetField HudWidgets[6].PlacementData[0].Offset 105 -75
+
+SetField HudWidgets[7].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[7].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[7].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[8].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[8].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[9].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[9].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].PlacementData[0].Scale 1 1
+SetField HudWidgets[7].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -19 5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -40
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[7].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[7].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[7].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[5].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[7].BitmapWidgets[5].PlacementData[0].Offset -14 5
+SetField HudWidgets[7].BitmapWidgets[4].PlacementData[0].Offset 37 0
+SetField HudWidgets[7].BitmapWidgets[4].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[7].BitmapWidgets[3].StateData[0].SkinState Spartan,Elite
+SaveTagChanges
+Exit
+
+EditTag ui\chud\machinegun_turret.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[2].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[5].PlacementData[0].Scale 1 1
+SetField HudWidgets[5].PlacementData[0].Offset -8 -44
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Offset -30 -38
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Offset -148 -22
+
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset 37 0
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\plasma_turret.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 4 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[2].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+SetField HudWidgets[2].BitmapWidgets[0].BitmapSequenceIndex 1
+
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+
+SetField HudWidgets[5].PlacementData[0].Scale 1 1
+SetField HudWidgets[5].PlacementData[0].Offset -8 -44
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Offset -35 -40
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale -0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Offset -148 -22
+
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Scale 0.525 0.525
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Scale 1.05 1.05
+SetField HudWidgets[5].BitmapWidgets[2].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[4].PlacementData[0].Offset -19 5
+SetField HudWidgets[5].BitmapWidgets[3].PlacementData[0].Offset 37 0
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale 1.05 1.05
+SaveTagChanges
+Exit
+
+EditTag ui\chud\missile.chud_definition
+CopyBlockElements HudWidgets 0 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 1 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 2 1
+PasteBlockElements HudWidgets
+CopyBlockElements HudWidgets 3 1
+PasteBlockElements HudWidgets
+
+SetField HudWidgets[0].BitmapWidgets[0].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[4].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[0].BitmapWidgets[5].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[1].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen
+SetField HudWidgets[4].BitmapWidgets[0].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[1].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[2].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[3].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[4].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[5].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[6].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[7].StateData[0].WindowState _480pFullscreen,_480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
+SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.375 0.5
+SetField HudWidgets[4].BitmapWidgets[1].PlacementData[0].Scale 0.5 0.5
+SetField HudWidgets[4].BitmapWidgets[2].PlacementData[0].Scale 0.5 0.5
+SetField HudWidgets[4].BitmapWidgets[3].PlacementData[0].Scale 0.5 0.5
+SetField HudWidgets[4].BitmapWidgets[4].PlacementData[0].Scale 0.5 0.5
+SetField HudWidgets[4].BitmapWidgets[5].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Scale 0.37 0.5
+SetField HudWidgets[5].BitmapWidgets[1].PlacementData[0].Offset -35 -36
+SetField HudWidgets[5].PlacementData[0].Scale 1 1
+SetField HudWidgets[5].PlacementData[0].Offset -8 -44
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[7].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[7].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Offset -110 -68
+SetField HudWidgets[6].BitmapWidgets[0].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Scale 0.8 1
+SetField HudWidgets[6].BitmapWidgets[1].PlacementData[0].Offset -110 -68
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Scale 1.1 1.5
+SetField HudWidgets[5].TextWidgets[0].PlacementData[0].Offset -148 -22
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Scale 0.51 0.6
+SetField HudWidgets[5].BitmapWidgets[0].PlacementData[0].Offset -20 20
+SaveTagChanges
+Exit
 EditTag ui\chud\needler.chud_definition
 CopyBlockElements HudWidgets 2 1
 PasteBlockElements HudWidgets
-SetField HudWidgets[8].Name ammo_area_left
-SetField HudWidgets[8].PlacementData[0].Anchor TopLeft
-SetField HudWidgets[8].StateData[0].WeaponArmedStateHO LeftHand
-SetField HudWidgets[8].PlacementData[0].Offset 288 -12
+SetField HudWidgets[15].Name ammo_area_left
+SetField HudWidgets[15].PlacementData[0].Anchor TopLeft
+SetField HudWidgets[15].StateData[0].WeaponArmedStateHO LeftHand
+SetField HudWidgets[15].PlacementData[0].Offset 288 -12
 SaveTagChanges
 Exit
