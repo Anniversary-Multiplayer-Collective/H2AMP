@@ -1,13 +1,13 @@
-"E:\ElDewrito 0.7 Official\maps\tags.dat"
+D:\eldewrito\eldewrito 0.7\ElDewrito\maps
+SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
+SetVariable h2maps "E:\Halo Resources\Halo2V"
+SetVariable h3maps "E:\Halo Resources\Halo3"
+SetVariable h3mythicmaps "E:\Halo Resources\Halo3mythic"
+SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+SetVariable h3mccmaps "D:\Games\steamapps\common\Halo The Master Chief Collection\halo3\maps"
+SetVariable workshop "D:\Games\steamapps\workshop\content\976730\2962955878"
+SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\H2AMP"
 
-# echo ==Set Variables...==
-SetVariable modsfolder "E:\ElDewrito 0.7 Official\mods"
-SetVariable h2maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 2 maps"
-SetVariable h3maps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 maps"
-SetVariable h3mccmaps "E:\SteamLibrary\steamapps\common\Halo The Master Chief Collection\halo3\maps"
-SetVariable h3mythicmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 Mythic maps"
-SetVariable odstmaps "Z:\Halo Stuff\retail maps for porting and ed caches\Halo 3 ODST maps"
-SetVariable workingdir "C:\Users\zekken\Documents\AMP PROJECTS\H2AMP"
 
 
 

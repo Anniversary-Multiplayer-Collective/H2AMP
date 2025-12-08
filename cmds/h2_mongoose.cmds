@@ -53,18 +53,14 @@ generatebitmap objects\vehicles\mongoose\bitmaps\mongoose_cc workingdir\bitmaps\
 
 edittag objects\vehicles\mongoose\shaders\mongoose_hull_shiny.rmsh
 setbitmap base_map objects\vehicles\mongoose\bitmaps\mongoose.bitm
-setbitmap change_color_map objects\vehicles\mongoose\bitmaps\mongoose_cc.bitm
 setbitmap bump_map objects\vehicles\mongoose\bitmaps\mongoose_bump.bitm
-setbitmap self_illum_map objects\vehicles\mongoose\bitmaps\mongoose_illum.bitm
 setargument specular_coefficient 1 1 1 1
 savetagchanges
 exit
 
 edittag objects\vehicles\mongoose\shaders\anniversary_mongoose_hull.rmsh
 setbitmap base_map objects\vehicles\mongoose\bitmaps\mongoose.bitm
-setbitmap change_color_map objects\vehicles\mongoose\bitmaps\mongoose_cc.bitm
 setbitmap bump_map objects\vehicles\mongoose\bitmaps\mongoose_bump.bitm
-setbitmap self_illum_map objects\vehicles\mongoose\bitmaps\mongoose_illum.bitm
 savetagchanges
 exit
 
