@@ -118,14 +118,28 @@ foreach rmsh named: \mongoose\ setargument change_color_map 1 1 0 0
 
 edittag objects\vehicles\mongoose\mongoose.mode
 replacerendergeometry "workingdir\models\h2_mongoose.dae" trianglelist
-setfield materials[0].rendermethod objects\vehicles\mongoose\shaders\mongoose_wheel.shader
-setfield materials[1].rendermethod objects\vehicles\mongoose\shaders\mongoose_hull_shiny.shader
-setfield materials[2].rendermethod objects\vehicles\mongoose\shaders\anniversary_mongoose_hull.shader
-setfield materials[3].rendermethod objects\vehicles\mongoose\shaders\lights.shader
-setfield materials[4].rendermethod objects\vehicles\mongoose\shaders\rubber.shader
-setfield materials[5].rendermethod objects\vehicles\mongoose\shaders\mongoose_glass.shader
-setfield materials[6].rendermethod objects\vehicles\mongoose\shaders\mongoose_blur.shader
+SetField MarkerGroups[14].Markers[0].Translation 0.3 0.09 0.04
+SetField MarkerGroups[14].Markers[1].Translation 0.3 -0.09 0.04
+SetField MarkerGroups[23].Markers[0].Translation 0.31 0.11500018 0.052012403
+SetField MarkerGroups[23].Markers[1].Translation 0.31 -0.114999816 0.05201243
+setfield markergroups[3].markers[0].translation -0.14 0 -0.014
+setfield markergroups[42].markers[0].translation -0.09 0.1112247 -0.24
+setfield markergroups[42].markers[0].rotation 6.429E-07 -0.2502072 -3.206E-07 -0.9366723
+setfield markergroups[43].markers[0].nodeindex 0
+setfield markergroups[43].markers[0].translation 0.22 0.1084592 0
+setfield markergroups[43].markers[0].rotation 0 -0.2290483 0.09445696 -0.8138382
+setfield markergroups[62].markers[0].translation -0.09 -0.1112247 -0.24
+setfield markergroups[62].markers[0].rotation 6.429E-07 -0.2502072 -3.206E-07 -0.9366723
+setfield markergroups[63].markers[0].nodeindex 0
+setfield markergroups[63].markers[0].translation 0.22 -0.1084592 0
+setfield markergroups[63].markers[0].rotation 0 -0.2290483 0.09445696 -0.8138382
 savetagchanges
 exit
 
+
+edittag objects\characters\masterchief\masterchief.jmad
+setfield modes[50].modeik[0].attachtomarker right_hand
+setfield modes[50].modeik[1].attachtomarker left_hand
+savetagchanges
+exit
 
