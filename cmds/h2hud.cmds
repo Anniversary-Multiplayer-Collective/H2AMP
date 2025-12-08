@@ -1620,10 +1620,7 @@ SaveTagChanges
 Exit
 
 EditTag ui\chud\carbine.chud_definition
-SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
-SetField HudWidgets[4].StateData[0].WindowState _480iFullscreen,_720pQuarterscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
 SetField HudWidgets[4].BitmapWidgets[0].PlacementData[0].Scale 0.6 0.8
-
 CopyBlockElements HudWidgets 2 1
 PasteBlockElements HudWidgets
 CopyBlockElements HudWidgets 3 1
@@ -1637,10 +1634,10 @@ PasteBlockElements HudWidgets
 CopyBlockElements HudWidgets 1 1
 PasteBlockElements HudWidgets
 
-SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[0].StateData[0].WindowState _720pFullscreen
 SetField HudWidgets[2].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
 SetField HudWidgets[3].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
-SetField HudWidgets[4].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
+SetField HudWidgets[4].StateData[0].WindowState _480iFullscreen,_480Halfscreen,_480pQuarterscreen,_480iQuarterscreen
 SetField HudWidgets[5].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
 SetField HudWidgets[6].StateData[0].WindowState _720pFullscreen,_720pHalfscreen,_720pQuarterscreen
 
