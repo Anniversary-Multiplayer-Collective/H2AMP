@@ -338,3 +338,11 @@ Porttag replace objects\weapons\rifle\spike_rifle\spike_rifle.model
 Porttag replace objects\weapons\rifle\spike_rifle\fp_spike_rifle\fp_spike_rifle.render_model
 Exit
 
+echo fix carbine circle thingy
+
+
+EditTag objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model
+SetField Materials[2].RenderMethod null
+savetagchanges
+exit
+
