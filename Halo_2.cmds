@@ -507,6 +507,11 @@ exit
 
 echo fix warthog and turret sounds
 
+edittag objects\vehicles\warthog\turrets\chaingun\weapon\chaingun_turret.weapon
+SetField Barrels[0].Firing.RoundsPerSecond 10 15
+savetagchanges
+exit
+
 Edittag objects\vehicles\warthog\fx\weapon\chaingun\firing.effect
 SetField Events[0].Parts[1].Type sound\weapons\chain_gun\fire.snd!
 Savetagchanges
