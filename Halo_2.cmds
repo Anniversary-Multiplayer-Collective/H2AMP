@@ -505,6 +505,19 @@ Savetagchanges
 exit
 
 
+echo fix warthog and turret sounds
+
+Edittag objects\vehicles\warthog\fx\weapon\chaingun\firing.effect
+SetField Events[0].Parts[1].Type sound\weapons\chain_gun\fire.snd!
+Savetagchanges
+Exit
+
+Edittag objects\vehicles\warthog\fx\weapon\chaingun\projectile.effect
+SetField LoopingSound sound\weapons\chain_gun\fire.snd!
+Savetagchanges
+Exit
+
+
 MapFile Remove 8765
 MapFile Remove 0
 
