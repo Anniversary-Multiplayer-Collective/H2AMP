@@ -1465,6 +1465,11 @@ SetField ShaderProperties[0].TextureConstants[4].Bitmap scenarios\bitmaps\multi\
 SaveTagChanges
 Exit
 
+EditTag scenarios\objects\multi\halo\highplains\longlight_flicker\longlight_flicker.render_model
+SetField Materials[0].RenderMethod scenarios\shaders\multi\halo\highplains\highplains_lights_dim.shader
+SaveTagChanges
+Exit
+
 EditTag scenarios\objects\multi\halo\highplains\longlight_dim\longlight_dim.render_model
 SetField Materials[0].RenderMethod scenarios\shaders\multi\halo\highplains\highplains_lights_dim.shader
 SaveTagChanges
