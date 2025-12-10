@@ -246,6 +246,18 @@ SetField Locations[0].MarkerName secondary_trigger
 SaveTagChanges
 Exit
 
+edittag objects\vehicles\scorpion\damage_effects\shell_explosion.damage_effect
+SetField Flags DetonatesExplosives,TransferDamageAlwaysUsesMinimum,EnablesSpecialDeath
+SetField AreaOfEffectCoreRadius 1
+SetField DamageLowerBound 70
+SetField DamageUpperBound 280 280
+SetField ActiveCamoflageDamage 0.5
+SetField AoeSpikeRadius 0.15
+SetField AoeSpikeDamageBump 400
+SetField DamageResponse globals\damage_responses\explosion_large.damage_response_definition
+SaveTagChanges
+exit
+
 echo wraith
 
 opencachefile "h2maps\zanzibar.map"

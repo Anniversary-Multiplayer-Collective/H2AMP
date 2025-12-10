@@ -1,6 +1,8 @@
 
 
 opencachefile "h3maps\zanzibar.map"
+DoNotReplaceGroups chdt
+ignoreblamtag ui\chud\bitmaps\weapon_scematics.bitmap
 Porttag replace objects\weapons\turret\machinegun_turret\machinegun_turret.weapon
 porttag replace objects\weapons\turret\machinegun_turret\machinegun_turret.vehicle
 exit
