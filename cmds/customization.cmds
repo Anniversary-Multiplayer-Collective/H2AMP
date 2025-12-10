@@ -1,7 +1,5 @@
 
 
-
-
 duplicatetag bean\objects\characters\masterchief\h2_masterchief\shaders\mp_masterchief.shader objects\characters\masterchief\shaders\mp_cobra_h2
 
 EditTag objects\characters\masterchief\shaders\mp_cobra_h2.shader
@@ -90,6 +88,7 @@ duplicatetag bean\objects\characters\masterchief\h2_masterchief\shaders\mp_maste
 opencachefile "h2maps\05a_deltaapproach.map"
 porttag objects\characters\marine\bitmaps\marine_odst.bitmap
 porttag objects\characters\marine\bitmaps\marine_odst_bump.bitmap
+porttag objects\characters\marine\marine.render_model
 exit
 
 
@@ -122,8 +121,46 @@ SetField ShaderProperties[0].TextureConstants[4].Bitmap objects\characters\marin
 savetagchanges
 exit
 
+echo arms
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[0].Regions[1].Permutations
+setfield Universal[0].CustomizableCharacters[0].Regions[1].Permutations[*].Name spartan_helmet_mp_odst
+setfield Universal[0].CustomizableCharacters[0].Regions[1].Permutations[*].Description spartan_helmet_mp_odst_description
+addblockelements Universal[0].CustomizableCharacters[0].Regions[1].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[0].Regions[1].Permutations[*].Variant[0].Region leftshoulder
+setfield Universal[0].CustomizableCharacters[0].Regions[1].Permutations[*].Variant[0].Permutation odst
+savetagchanges
+exit
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[0].Regions[2].Permutations
+setfield Universal[0].CustomizableCharacters[0].Regions[2].Permutations[*].Name spartan_helmet_mp_odst
+setfield Universal[0].CustomizableCharacters[0].Regions[2].Permutations[*].Description spartan_helmet_mp_odst_description
+addblockelements Universal[0].CustomizableCharacters[0].Regions[2].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[0].Regions[2].Permutations[*].Variant[0].Region rightshoulder
+setfield Universal[0].CustomizableCharacters[0].Regions[2].Permutations[*].Variant[0].Permutation odst
+savetagchanges
+exit
 
 
+echo body
+
+edittag *.mulg
+addblockelements Universal[0].CustomizableCharacters[1].Regions[3].Permutations
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Name spartan_helmet_mp_odst
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Description spartan_helmet_mp_odst_description
+addblockelements Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant[0].Region chest
+setfield Universal[0].CustomizableCharacters[1].Regions[3].Permutations[*].Variant[0].Permutation odst
+savetagchanges
+exit
+
+EditTag multiplayer\multiplayer_globals.multiplayer_globals
+SetField Universal[0].CustomizableCharacters[0].Regions[3].Permutations[7].Name spartan_helmet_mp_odst
+SetField Universal[0].CustomizableCharacters[0].Regions[3].Permutations[7].Description spartan_helmet_mp_odst_description
+savetagchanges
+exit
 
 
 duplicatetag objects\characters\masterchief\shaders\mp_scout_h2.shader objects\characters\masterchief\shaders\mp_markv_h2
@@ -251,6 +288,11 @@ SetField Variants[0].Regions[5].Permutations[7].Probability 0.1
 SetField Variants[0].Regions[6].Permutations[0].Probability 0
 SetField Variants[0].Regions[6].Permutations[7].Probability 0.1
 savetagchanges
+exit
+
+edittag bean\objects\characters\masterchief\h2_masterchief\mp_h2_masterchief\mp_h2_masterchief.render_model
+SetField Materials[24].RenderMethod objects\characters\marine\shaders\packs.shader
+SaveTagChanges
 exit
 
 
