@@ -1,0 +1,106 @@
+
+
+opencachefile "h3maps\zanzibar.map"
+Porttag replace objects\weapons\turret\machinegun_turret\machinegun_turret.weapon
+porttag replace objects\weapons\turret\machinegun_turret\machinegun_turret.vehicle
+exit
+
+edittag objects\weapons\turret\machinegun_turret\machinegun_turret_vehicle\machinegun_turret_vehicle.render_model
+replacerendergeometry "workingdir\models\machinegunturret.dae"
+SetField Materials[0].RenderMethod objects\weapons\fixed\h_turret_mp\shaders\h_turret_mp_gun.shader
+SetField Materials[1].RenderMethod objects\weapons\fixed\h_turret_mp\shaders\h_turret_mp_tripod.shader
+savetagchanges
+exit
+
+edittag objects\weapons\turret\machinegun_turret\machinegun_turret_vehicle\garbage\machinegun_turret_tripod_mp\machinegun_turret_tripod_mp.render_model
+replacerendergeometry "workingdir\models\tripod.dae"
+SetField Materials[0].RenderMethod objects\weapons\fixed\h_turret_mp\shaders\h_turret_mp_tripod.shader
+savetagchanges
+exit
+
+duplicatetag objects\weapons\rifle\assault_rifle\assault_rifle.weapon objects\weapons\rifle\h2\h2_lmg
+duplicatetag objects\weapons\rifle\assault_rifle\assault_rifle.model objects\weapons\rifle\h2\h2_lmg
+duplicatetag objects\weapons\rifle\assault_rifle\assault_rifle.render_model objects\weapons\rifle\h2\h2_lmg
+duplicatetag objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle.render_model objects\weapons\rifle\h2\h2_lmg_fp
+duplicatetag objects\weapons\turret\machinegun_turret\fx\firing.effect objects\weapons\turret\machinegun_turret\fx\firing_fp
+
+edittag objects\weapons\rifle\h2\h2_lmg.weapon
+SetField Model objects\weapons\rifle\h2\h2_lmg.model
+SetField WeaponFlags.NewFlags SupportWeapon
+SetField Barrels[0].Flags.HaloOnline ProjectilesUseWeaponOrigin
+SetField Barrels[0].Projectile objects\weapons\turret\machinegun_turret\projectiles\machinegun_turret_bullet.projectile
+SetField FirstPerson[0].FirstPersonModel objects\weapons\rifle\h2\h2_lmg_fp.render_model
+SetField FirstPerson[1].FirstPersonModel objects\weapons\rifle\h2\h2_lmg_fp.render_model
+SetField Magazines[0].RoundsRecharged 0
+SetField Magazines[0].RoundsTotalInitial 200
+SetField Magazines[0].RoundsTotalInitial 200
+SetField Magazines[0].RoundsTotalMaximum 400
+SetField Magazines[0].RoundsLoadedMaximum 400
+SetField Magazines[0].RoundsInventoryMaximum 0
+SetField Magazines[0].RoundsReloaded 0
+RemoveBlockElements Magazines[0].MagazineEquipment 0 1
+RemoveBlockElements Magazines[0].MagazineEquipment 0 1
+SetField Barrels[0].FiringEffects[0].FiringEffect objects\weapons\turret\machinegun_turret\fx\firing.effect
+SetField HudInterface ui\chud\machinegun_turret.chud_definition
+Savetagchanges
+exit
+
+edittag objects\weapons\rifle\h2\h2_lmg.model
+SetField RenderModel objects\weapons\rifle\h2\h2_lmg.mode
+savetagchanges
+Exit
+
+Edittag objects\weapons\rifle\h2\h2_lmg.mode
+replacerendergeometry "workingdir\models\machinegunfp.dae"
+SetField Materials[0].RenderMethod objects\weapons\fixed\h_turret_mp\shaders\h_turret_mp_gun.shader
+Savetagchanges
+exit
+
+Edittag objects\weapons\rifle\h2\h2_lmg_fp.mode
+replacerendergeometry "workingdir\models\machinegunfp.dae"
+SetField Materials[0].RenderMethod objects\weapons\fixed\h_turret_mp\shaders\h_turret_mp_gun.shader
+Savetagchanges
+exit
+
+edittag objects\weapons\turret\machinegun_turret\machinegun_turret.vehicle
+SetField DetachedWeapon objects\weapons\rifle\h2\h2_lmg.weapon
+Savetagchanges
+exit
+
+
+edittag objects\weapons\rifle\assault_rifle\fx\firing.effect
+CopyBlockElements Events 0 1
+exit
+
+edittag objects\weapons\turret\machinegun_turret\fx\firing.effect
+Pasteblockelements Events 0
+SetField Events[0].Parts[0].Type sound\weapons\machinegun_turret\machine_gun_turret_fire.sound
+SetField Events[0].Parts[1].Type sound\weapons\chain_gun\chain_gun_lod_far.sound
+SetField Events[0].Parts[0].CameraMode FirstPersonOnly
+SetField Events[0].Parts[1].CameraMode FirstPersonOnly
+SetField Events[0].Parts[2].CameraMode FirstPersonOnly
+SetField Events[0].Parts[3].CameraMode FirstPersonOnly
+SetField Events[0].Parts[4].CameraMode FirstPersonOnly
+SetField Events[1].Parts[0].CameraMode ThirdPersonOnly
+SetField Events[1].Parts[1].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[0].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[1].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[2].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[3].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[4].CameraMode ThirdPersonOnly
+SetField Events[1].ParticleSystems[5].CameraMode ThirdPersonOnly
+AddBlockElements Locations
+SetField Locations[2].MarkerName muzzle_flash
+SetField Events[0].ParticleSystems[0].LocationIndex 2
+SetField Events[0].ParticleSystems[1].LocationIndex 2
+SetField Events[0].ParticleSystems[2].LocationIndex 2
+RemoveBlockElements Events[0].Parts 2 1
+RemoveBlockElements Events[0].Parts 2 1
+savetagchanges
+exit
+
+
+EditTag objects\weapons\turret\machinegun_turret\machinegun_turret_weapon_spawn.effect
+SetField Events[0].Parts[0].Type objects\weapons\rifle\h2\h2_lmg.weapon
+SaveTagChanges
+Exit
