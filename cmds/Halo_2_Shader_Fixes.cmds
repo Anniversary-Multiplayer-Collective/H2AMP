@@ -80,7 +80,7 @@ savetagchanges
 exit
 
 Edittag scenarios\multi\halo\coagulation\coagulation.scenario_structure_bsp
-SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water_opaque.shader
+SetField Materials[0].RenderMethod objects\eldewrito\reforge\shaders\water.shader
 SetField Materials[2].RenderMethod levels\multi\s3d_avalanche\materials\s3d_avalanche_collision_material_55.shader
 SetField Materials[8].RenderMethod scenarios\shaders\solo\alphagasgiant\metals\panel_d.shader
 SetField Materials[13].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
