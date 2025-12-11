@@ -1,0 +1,39 @@
+
+
+opencachefile "workingdir\maps\ceamp.map"
+DoNotReplaceGroups effe 
+Nameblamtag custom\weapons\hce\hce_flamethrower\hce_flamethrower.weapon objects\weapons\turret\flamethrower\flamethrower
+porttag replace objects\weapons\turret\flamethrower\flamethrower.weapon
+Exit
+
+edittag custom\weapons\hce\tgof_hce_flamethrower\bitmaps\pbr\flamethrower_diffuse.bitmap
+importbitmap 0 "workingdir\bitmaps\flamethrower\flamethrower.dds"
+exit
+
+edittag custom\weapons\hce\tgof_hce_flamethrower\fp\fp.render_model
+replacerendergeometry "workingdir\models\flamethrower.dae" TriangleList
+SetField MarkerGroups[1].Markers[0].Translation 0.3109153 -0.07 0
+SetField Materials[0].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_ammo.shader
+SetField Materials[1].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_gun.shader
+SetField Materials[2].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\heat_gauge.shader
+savetagchanges
+Exit
+
+edittag custom\weapons\hce\tgof_hce_flamethrower\tgof_hce_flamethrower.render_model
+replacerendergeometry "workingdir\models\flamethrower_tp.dae" TriangleList
+SetField Materials[0].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_ammo.shader
+SetField Materials[1].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_gun.shader
+SetField Materials[2].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_gun.shader
+SetField Materials[3].RenderMethod custom\weapons\hce\tgof_hce_flamethrower\shaders\ft_gun.shader
+savetagchanges
+Exit
+
+Edittag objects\weapons\turret\flamethrower\flamethrower.weapon
+SetField CenteredFirstPersonWeaponOffset 0.09 0 0
+savetagchanges
+Exit
+
+edittag custom\ui\chud\hce_flamethrower.chud_definition
+SetField HudWidgets[1].PlacementData[0].Offset 1875 -18.75
+Savetagchanges
+Exit
