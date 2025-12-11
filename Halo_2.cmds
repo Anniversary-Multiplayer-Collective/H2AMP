@@ -526,6 +526,37 @@ SetField LoopingSound sound\weapons\chain_gun\fire.snd!
 Savetagchanges
 Exit
 
+echo brute grenade 
+
+edittag objects\weapons\grenade\claymore_grenade\claymore_grenade.render_model
+replacerendergeometry "workingdir\models\brute_grenade.dae" TriangleList
+SetField Materials[0].RenderMethod objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0.shader
+SaveTagChanges
+Exit
+
+Edittag objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0\base_map.bitmap
+importbitmap 0 "workingdir\bitmaps\spike\brute_grenade.dds"
+exit
+
+Edittag objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0\bump_map.bitmap
+importbitmap 0 "workingdir\bitmaps\spike\brute_grenade_bump.dds"
+exit
+
+Edittag objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0\material_texture.bitmap
+importbitmap 0 "workingdir\bitmaps\spike\brute_grenade.dds"
+exit
+
+Edittag objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0\self_illum_map.bitmap
+importbitmap 0 "workingdir\bitmaps\spike\brute_grenade_illum.dds"
+exit
+
+edittag objects\weapons\grenade\claymore_grenade\claymore_grenade\material_0.shader
+SetArgument diffuse_coefficient 0.5
+SetArgument self_illum_color 0.5 0 0 1
+savetagchanges
+exit
+
+
 
 MapFile Remove 8765
 MapFile Remove 0
