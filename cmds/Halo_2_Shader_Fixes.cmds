@@ -682,14 +682,6 @@ SetField Materials[17].RenderMethod temp\scenarios\shaders\multi\elongation\elon
 SetField Materials[18].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
 SetField Materials[19].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
 SetField Materials[20].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-
-SetField CollisionMaterials[10].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[21].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[22].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[23].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[24].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[25].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
-SetField CollisionMaterials[26].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
 SaveTagChanges
 Exit
 
