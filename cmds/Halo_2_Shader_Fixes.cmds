@@ -53,16 +53,13 @@ SetArgument environment_map_specular_contribution 0
 SetArgument Booleans order3_area_specular
 
 SetField ShaderProperties[0].Functions[0].Type TranslationX
-SetField ShaderProperties[0].Functions[0].TimePeriod 3.5
-SetField ShaderProperties[0].Functions[0].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+SetField ShaderProperties[0].Functions[0].TimePeriod 2.5
 
 SetField ShaderProperties[0].Functions[1].Type TranslationX
-SetField ShaderProperties[0].Functions[1].TimePeriod 3.5
-SetField ShaderProperties[0].Functions[1].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+SetField ShaderProperties[0].Functions[1].TimePeriod 2.5
 
 SetField ShaderProperties[0].Functions[2].Type TranslationX
-SetField ShaderProperties[0].Functions[2].TimePeriod 3.5
-SetField ShaderProperties[0].Functions[2].Function.Data 0834000000008040000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+SetField ShaderProperties[0].Functions[2].TimePeriod 2.5
 SaveTagChanges
 Exit
 
@@ -89,13 +86,17 @@ SetArgument environment_map_specular_contribution 0
 SetArgument Booleans order3_area_specular
 
 SetField ShaderProperties[0].Functions[0].Type TranslationX
-SetField ShaderProperties[0].Functions[0].TimePeriod 2.5
+SetField ShaderProperties[0].Functions[0].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[0].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
 
 SetField ShaderProperties[0].Functions[1].Type TranslationX
-SetField ShaderProperties[0].Functions[1].TimePeriod 2.5
+SetField ShaderProperties[0].Functions[1].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[1].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
 
 SetField ShaderProperties[0].Functions[2].Type TranslationX
-SetField ShaderProperties[0].Functions[2].TimePeriod 2.5
+SetField ShaderProperties[0].Functions[2].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[2].Function.Data 0834000000008040000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+
 SaveTagChanges
 Exit
 
