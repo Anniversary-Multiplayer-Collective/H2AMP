@@ -1,3 +1,5 @@
+## DUPE SHADER TEMP FIX
+
 DuplicateTag objects\eldewrito\reforge\shaders\water.shader objects\eldewrito\reforge\shaders\water_opaque
 
 EditTag objects\eldewrito\reforge\shaders\water_opaque.shader
@@ -25,6 +27,75 @@ Exit
 
 EditTag levels\multi\riverworld\shaders\vahalla_waterfall.shader
 SetField SortLayer PostPass
+SaveTagChanges
+Exit
+
+DuplicateTag levels\multi\chill\shaders\panel_door_trimmove.shader temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro
+EditTag temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\elongation\elongation_conveyor.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\multi\elongation\elongation_conveyor_bump.bitmap
+
+SetField ShaderProperties[0].TextureConstants[3].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
+SetField ShaderProperties[0].TextureConstants[4].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
+
+
+SetArgument detail_map 16 16 0 0
+SetArgument bump_detail_map 1 1 0 0
+SetArgument specular_coefficient 0.5
+SetArgument normal_specular_power 10
+SetArgument normal_specular_tint 0.6666667 0.6431373 0.58431375 1
+SetArgument glancing_specular_power 10
+SetArgument glancing_specular_tint 0.49019608 0.43529412 0.34117648 1
+SetArgument fresnel_curve_steepness 5
+SetArgument area_specular_contribution 0
+SetArgument analytical_specular_contribution 0.25
+SetArgument environment_map_specular_contribution 0
+SetArgument Booleans order3_area_specular
+
+SetField ShaderProperties[0].Functions[0].Type TranslationX
+SetField ShaderProperties[0].Functions[0].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[0].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+
+SetField ShaderProperties[0].Functions[1].Type TranslationX
+SetField ShaderProperties[0].Functions[1].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[1].Function.Data 083400000000803F000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+
+SetField ShaderProperties[0].Functions[2].Type TranslationX
+SetField ShaderProperties[0].Functions[2].TimePeriod 3.5
+SetField ShaderProperties[0].Functions[2].Function.Data 0834000000008040000000000000000000000000000000000000000014000000010000000400003FFFFF7F7F0000803F00000000
+SaveTagChanges
+Exit
+
+DuplicateTag levels\multi\chill\shaders\panel_door_trimmove.shader temp\scenarios\shaders\multi\colossus\conveyor_belt_pro
+EditTag temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\alphagasgiant\conveyor_belt.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\solo\alphagasgiant\conveyor_belt_bump.bitmap
+
+SetField ShaderProperties[0].TextureConstants[3].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
+SetField ShaderProperties[0].TextureConstants[4].Bitmap shaders\default_bitmaps\bitmaps\default_detail.bitmap
+
+
+SetArgument detail_map 16 16 0 0
+SetArgument bump_detail_map 1 1 0 0
+SetArgument specular_coefficient 0.5
+SetArgument normal_specular_power 10
+SetArgument normal_specular_tint 0.6666667 0.6431373 0.58431375 1
+SetArgument glancing_specular_power 10
+SetArgument glancing_specular_tint 0.49019608 0.43529412 0.34117648 1
+SetArgument fresnel_curve_steepness 5
+SetArgument area_specular_contribution 0
+SetArgument analytical_specular_contribution 0.25
+SetArgument environment_map_specular_contribution 0
+SetArgument Booleans order3_area_specular
+
+SetField ShaderProperties[0].Functions[0].Type TranslationX
+SetField ShaderProperties[0].Functions[0].TimePeriod 2.5
+
+SetField ShaderProperties[0].Functions[1].Type TranslationX
+SetField ShaderProperties[0].Functions[1].TimePeriod 2.5
+
+SetField ShaderProperties[0].Functions[2].Type TranslationX
+SetField ShaderProperties[0].Functions[2].TimePeriod 2.5
 SaveTagChanges
 Exit
 
@@ -388,6 +459,31 @@ Exit
 edittag scenarios\multi\colossus\colossus.scenario_structure_bsp
 SetField Materials[17].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
 SetField Materials[19].RenderMethod scenarios\shaders\multi\halo\coagulation\coag_light_bands_blue.shader
+
+SetField Materials[18].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[23].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[24].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[25].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[26].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[27].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[28].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[29].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[30].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[31].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[32].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[33].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[34].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[35].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[36].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[37].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[38].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[39].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[40].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[41].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[42].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[43].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+SetField Materials[44].RenderMethod temp\scenarios\shaders\multi\colossus\conveyor_belt_pro.shader
+
 savetagchanges
 exit
 
@@ -577,6 +673,23 @@ SetField Materials[52].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_gl
 SetField Materials[55].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[68].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
+
+
+SetField Materials[3].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[15].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[16].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[17].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[18].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[19].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField Materials[20].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+
+SetField CollisionMaterials[10].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[21].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[22].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[23].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[24].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[25].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
+SetField CollisionMaterials[26].RenderMethod temp\scenarios\shaders\multi\elongation\elongation_conveyor_pro.shader
 SaveTagChanges
 Exit
 
@@ -1525,25 +1638,31 @@ exit
 
 Echo Turf Shader fixes
 
-DuplicateTag scenarios\shaders\solo\earthcity\base_stucco1_door.shader scenarios\shaders\multi\turf\base_stucco1_damaged_01
+OpenCacheFile h2maps\turf.map
+PortTag scenarios\bitmaps\multi\turf\base_stucco1_damaged_01_alpha.bitm
+Exit
 
-Edittag scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
-SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\multi\halo\highplains\sodamachinetexture.bitmap
+DuplicateTag scenarios\shaders\nature\trees\palm_frond_a.shader temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01
+
+Edittag temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField ShaderProperties[0].TextureConstants[0].Bitmap scenarios\bitmaps\solo\earthcity\base_stucco_1_door.bitmap
+SetField ShaderProperties[0].TextureConstants[2].Bitmap scenarios\bitmaps\multi\turf\base_stucco1_damaged_01_alpha.bitmap
+SetField ShaderProperties[0].TextureConstants[3].Bitmap scenarios\bitmaps\multi\turf\base_stucco1_damaged_01_alpha.bitmap
 SaveTagChanges
 Exit
 
 Edittag scenarios\multi\turf\turf_bsp0.scenario_structure_bsp
 SetField Materials[53].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
-SetField Materials[58].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
-SetField Materials[59].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
-SetField Materials[71].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[58].RenderMethod null
+SetField Materials[59].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField Materials[71].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
 SetField Materials[74].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[75].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
 SetField Materials[83].RenderMethod scenarios\shaders\multi\zanzibar\zanzibar_glass.shader
-SetField Materials[86].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
-SetField Materials[97].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
-SetField Materials[107].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
-SetField Materials[115].RenderMethod scenarios\shaders\solo\earthcity\base_stucco1_door.shader
+SetField Materials[86].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField Materials[97].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField Materials[107].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
+SetField Materials[115].RenderMethod temp\scenarios\shaders\multi\turf\base_stucco1_damaged_01.shader
 SetField Materials[168].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
 SetField Materials[170].RenderMethod scenarios\bitmaps\multi\turf\signs_storefront_01.shader
 SaveTagChanges

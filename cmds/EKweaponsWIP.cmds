@@ -1,3 +1,5 @@
+# H3 WEAPONS FIRST
+
 # -------------------------------------
 # |           ASSAULT RIFLE           |
 # -------------------------------------
@@ -5,6 +7,30 @@ OpenCacheFile "h3maps\zanzibar.map"
 
 PortTag Replace objects\weapons\rifle\assault_rifle\assault_rifle.model
 PortTag Replace objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_rifle.mode
+
+# -------------------------------------
+# |           SPARTAN LASER           |
+# -------------------------------------
+IgnoreBlamTag objects\characters\masterchief\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
+IgnoreBlamTag objects\characters\dervish\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
+
+Porttag replace objects\weapons\support_high\spartan_laser\spartan_laser.model
+Porttag replace objects\weapons\support_high\spartan_laser\fp_spartan_laser\fp_spartan_laser.render_model
+
+# -------------------------------------
+# |              MAULER               |
+# -------------------------------------
+Ignoreblamtag objects\characters\masterchief\fp\weapons\pistol\fp_excavator\fp_excavator.model_animation_graph
+Porttag replace objects\weapons\pistol\excavator\excavator.model
+Porttag replace objects\weapons\pistol\excavator\fp_excavator\fp_excavator.render_model
+
+# -------------------------------------
+# |              SPIKER               |
+# -------------------------------------
+IgnoreBlamTag objects\characters\masterchief\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
+IgnoreBlamTag objects\characters\dervish\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
+Porttag replace objects\weapons\rifle\spike_rifle\spike_rifle.model
+Porttag replace objects\weapons\rifle\spike_rifle\fp_spike_rifle\fp_spike_rifle.render_model
 Exit
 
 # Weapons are still WIP
@@ -314,35 +340,17 @@ ReplaceRenderGeometry workingdir\models\fp_19_needles_needler.dae TriangeStrip
 SaveTagChanges
 Exit
 
-echo spartan laser
-
-opencachefile "h3maps\zanzibar.map"
-ignoreblamtag objects\characters\masterchief\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
-ignoreblamtag objects\characters\dervish\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
-Porttag replace objects\weapons\support_high\spartan_laser\spartan_laser.model
-Porttag replace objects\weapons\support_high\spartan_laser\fp_spartan_laser\fp_spartan_laser.render_model
-Exit
-
-echo Mauler
-opencachefile "h3maps\guardian.map"
-Ignoreblamtag objects\characters\masterchief\fp\weapons\pistol\fp_excavator\fp_excavator.model_animation_graph
-Porttag replace objects\weapons\pistol\excavator\excavator.model
-Porttag replace objects\weapons\pistol\excavator\fp_excavator\fp_excavator.render_model
-Exit
-
-echo spiker
-opencachefile "h3maps\zanzibar.map"
-ignoreblamtag objects\characters\masterchief\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
-ignoreblamtag objects\characters\dervish\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
-Porttag replace objects\weapons\rifle\spike_rifle\spike_rifle.model
-Porttag replace objects\weapons\rifle\spike_rifle\fp_spike_rifle\fp_spike_rifle.render_model
-Exit
-
 echo fix carbine circle thingy
-
-
 EditTag objects\weapons\rifle\covenant_carbine\fp_covenant_carbine\fp_covenant_carbine.render_model
 SetField Materials[2].RenderMethod null
 savetagchanges
 exit
+
+echo plasma rifle gauge
+EditTag objects\temp\zekken\weapons\plasma_rifle\shaders\plasma_rifle_gauge.shader
+SetArgument meter_color_off 0.17450982 0.17450985 0.8011765 1
+SetArgument meter_color_on 0.17450982 0.17450985 0.8011765 1
+SetField ShaderProperties[0].Functions[0].Function.Data 0234040018CF080018CF080017FF7D000000FF0000000000000000000C00000001000000000000000000803F
+SaveTagChanges
+Exit
 
