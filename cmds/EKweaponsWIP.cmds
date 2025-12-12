@@ -11,24 +11,18 @@ PortTag Replace objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_
 # -------------------------------------
 # |           SPARTAN LASER           |
 # -------------------------------------
-IgnoreBlamTag objects\characters\masterchief\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
-IgnoreBlamTag objects\characters\dervish\fp\weapons\support_high\fp_spartan_laser\fp_spartan_laser.model_animation_graph
-
 Porttag replace objects\weapons\support_high\spartan_laser\spartan_laser.model
 Porttag replace objects\weapons\support_high\spartan_laser\fp_spartan_laser\fp_spartan_laser.render_model
 
 # -------------------------------------
 # |              MAULER               |
 # -------------------------------------
-Ignoreblamtag objects\characters\masterchief\fp\weapons\pistol\fp_excavator\fp_excavator.model_animation_graph
 Porttag replace objects\weapons\pistol\excavator\excavator.model
 Porttag replace objects\weapons\pistol\excavator\fp_excavator\fp_excavator.render_model
 
 # -------------------------------------
 # |              SPIKER               |
 # -------------------------------------
-IgnoreBlamTag objects\characters\masterchief\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
-IgnoreBlamTag objects\characters\dervish\fp\weapons\rifle\fp_spike_rifle\fp_spike_rifle.model_animation_graph
 Porttag replace objects\weapons\rifle\spike_rifle\spike_rifle.model
 Porttag replace objects\weapons\rifle\spike_rifle\fp_spike_rifle\fp_spike_rifle.render_model
 Exit
