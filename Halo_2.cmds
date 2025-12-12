@@ -604,6 +604,34 @@ PasteBlockElements ShaderProperties[0].Functions 0
 Savetagchanges
 Exit
 
+Edittag objects\multi\shaders\green_plasma_sender.shader_halogram
+CopyBlockElements ShaderProperties[0].RoutingInfo 0 *
+exit
+
+edittag objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+PasteBlockElements ShaderProperties[0].RoutingInfo 0
+Savetagchanges
+Exit
+
+Edittag objects\multi\shaders\green_plasma_sender.shader_halogram
+CopyBlockElements ShaderProperties[0].Passes 0 *
+exit
+
+edittag objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+PasteBlockElements ShaderProperties[0].Passes 0
+Savetagchanges
+Exit
+
+Edittag objects\multi\shaders\green_plasma_sender.shader_halogram
+CopyBlockElements ShaderProperties[0].EntryPoints 0 *
+exit
+
+edittag objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+PasteBlockElements ShaderProperties[0].EntryPoints 0
+Savetagchanges
+Exit
+
+
 
 MapFile Remove 8765
 MapFile Remove 0
