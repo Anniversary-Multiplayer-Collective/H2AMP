@@ -13,10 +13,12 @@ PortTag Replace objects\weapons\rifle\assault_rifle\fp_assault_rifle\fp_assault_
 # -------------------------------------
 Porttag replace objects\weapons\support_high\spartan_laser\spartan_laser.model
 Porttag replace objects\weapons\support_high\spartan_laser\fp_spartan_laser\fp_spartan_laser.render_model
+Exit
 
 # -------------------------------------
 # |              MAULER               |
 # -------------------------------------
+OpenCacheFile "h3maps\guardian.map"
 Porttag replace objects\weapons\pistol\excavator\excavator.model
 Porttag replace objects\weapons\pistol\excavator\fp_excavator\fp_excavator.render_model
 
