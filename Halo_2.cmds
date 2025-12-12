@@ -556,6 +556,53 @@ SetArgument self_illum_color 0.5 0 0 1
 savetagchanges
 exit
 
+Echo H2 Teleporters
+
+edittag objects\multi\teleporter_reciever\teleporter_reciever.render_model
+replacerendergeometry "workingdir\models\reciever.dae" TriangleList
+SetField Materials[0].RenderMethod objects\multi\2way_teleporter\shaders\2way_teleporter.shader
+SetField Materials[2].RenderMethod objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+SetField Materials[1].RenderMethod objects\multi\2way_teleporter_variant\shaders\teleporter_emitter_core.shader
+savetagchanges
+Exit
+
+edittag objects\multi\teleporter_sender\teleporter_sender.render_model
+replacerendergeometry "workingdir\models\sender.dae" TriangleList
+SetField Materials[0].RenderMethod objects\multi\2way_teleporter\shaders\2way_teleporter.shader
+SetField Materials[2].RenderMethod objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+SetField Materials[1].RenderMethod objects\multi\2way_teleporter_variant\shaders\teleporter_emitter_core.shader
+savetagchanges
+Exit
+
+EditTag objects\multi\teleporter_sender\teleporter_sender.model
+SetField Animation objects\multi\2way_teleporter\2way_teleporter.model_animation_graph
+SaveTagChanges
+exit
+
+edittag objects\multi\2way_teleporter_variant\shaders\teleporter_emitter_core.shader
+SetField ShaderProperties[0].TextureConstants[2].Bitmap shaders\default_bitmaps\bitmaps\color_white.bitmap
+savetagchanges
+exit
+
+edittag objects\multi\teleporter_reciever\fx\teleporter_base.effect
+SetField Events[0].ParticleSystems[0].Emitters[0].RuntimeMGpu.Colors[0].Color 0 0.25 0.5647059 1
+Savetagchanges
+exit
+
+EditTag objects\multi\teleporter_reciever\fx\base.light_volume_system
+SetField LightVolumes[0].RuntimeMGpuData.Colors[0].Color 0 0.25 1
+SetField LightVolumes[0].RuntimeMGpuData.Colors[1].Color 0 0.25 0.58431375
+Savetagchanges
+exit
+
+Edittag objects\multi\shaders\green_plasma_sender.shader_halogram
+CopyBlockElements ShaderProperties[0].Functions 0 *
+exit
+
+edittag objects\multi\2way_teleporter_variant\shaders\teleporter_plasma.shader_halogram
+PasteBlockElements ShaderProperties[0].Functions 0
+Savetagchanges
+Exit
 
 
 MapFile Remove 8765
