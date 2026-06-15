@@ -1,0 +1,159 @@
+
+Echo Ascension
+
+EditTag scenarios\skies\multi\ascension\ascension.render_model
+SetField Nodes[0].DefaultScale 50
+SetField Materials[5].RenderMethod null
+savetagchanges
+Exit
+
+Duplicatetag levels\multi\riverworld\sky\riverworld.sky_atm_parameters levels\multi\ascension\sky\ascension
+
+Edittag scenarios\multi\ascension\ascension.scenario
+SetField SkyParameters levels\multi\ascension\sky\ascension.sky_atm_parameters
+savetagchanges
+exit
+
+Edittag levels\multi\ascension\sky\ascension.sky_atm_parameters
+SetField AtmosphereSettings[0].Color 0.56578946 0.56578946 0.56578946
+SetField AtmosphereSettings[0].Intensity 1
+SetField AtmosphereSettings[0].SeaLevel 255
+SetField AtmosphereSettings[0].RayleignHeightScale 255
+SetField AtmosphereSettings[0].MieHeightScale 6
+SetField AtmosphereSettings[0].RayleighMultiplier 0.05
+SetField AtmosphereSettings[0].MieMultiplier 0.025
+SetField AtmosphereSettings[0].SunPhaseFunction 0
+SetField AtmosphereSettings[0].DistanceBias 5
+SetField AtmosphereSettings[0].MaxFogThickness 1000000
+SetField AtmosphereSettings[0].BetaM 0.00029466028 0.00050242565 0.0010586029
+SetField AtmosphereSettings[0].SheetDensity 0
+SetField AtmosphereSettings[0].FullIntensityHeight 0
+SetField AtmosphereSettings[0].HalfIntensityHeight 0
+SetField AtmosphereSettings[0].WindDirection 55 255 0
+SetField AtmosphereSettings[0].RuntimeWeight 0
+SetField AtmosphereSettings[0].RuntimeEffectWeight 55
+savetagchanges
+exit
+
+Edittag scenarios\multi\ascension\ascension.scenario
+importmapvariant MapFile "workingdir\map_variants\Ascension\sandbox.map"
+Exit
+
+
+Echo Backwash
+
+Edittag scenarios\multi\backwash\backwash.scenario
+importmapvariant MapFile "workingdir\map_variants\backwash\sandbox.map"
+Exit
+
+Echo BeaverCreek
+
+Edittag scenarios\skies\multi\halo\coagulation\coagulation.render_model
+SetField Materials[5].RenderMethod null
+savetagchanges
+Exit
+
+echo Colossus
+
+EditTag scenarios\skies\solo\alphagasgiant\alphagasgiant.render_model
+SetField Nodes[0].DefaultScale 50
+savetagchanges
+exit
+
+
+echo headlong
+
+EditTag scenarios\skies\multi\ascension\ascension.render_model
+SetField Materials[2].RenderMethod null
+savetagchanges
+Exit
+
+echo lockout
+
+edittag scenarios\skies\multi\lockout\lockout.render_model
+SetField Nodes[0].DefaultScale 1
+SetField Materials[4].RenderMethod null
+SetField Materials[5].RenderMethod null
+Savetagchanges
+Exit
+
+
+echo midship
+
+EditTag scenarios\skies\multi\midship\midship.render_model
+SetField Nodes[0].DefaultScale 5
+savetagchanges
+exit
+
+EditTag scenarios\skies\multi\midship\shaders\space.shader
+SetField ShaderProperties[0].BlendMode Opaque
+savetagchanges
+exit
+
+
+echo Relic
+
+EditTag scenarios\skies\multi\dune\dune.render_model
+SetField Nodes[0].DefaultScale 2
+Savetagchanges
+exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AddSkyBox "Ascension" scenarios\multi\ascension\ascension
+AddSkyBox "Battle Creek" levels\dlc\cex_beaver_creek\cex_beaver_creek
+
+
+
+
+AddSkyBox "Beachhead" levels\firefight\ff50_park\ff50_park
+AddSkyBox "Boardwalk" levels\multi\50_panopticon\50_panopticon
+AddSkyBox "Boneyard" levels\multi\70_boneyard\70_boneyard
+AddSkyBox "Breakneck" levels\dlc\cex_headlong\cex_headlong
+AddSkyBox "Breakpoint" levels\multi\dlc\dlc_invasion\dlc_invasion
+AddSkyBox "Condemned" levels\dlc\condemned\condemned
+AddSkyBox "Corvette" levels\firefight\ff45_corvette\ff45_corvette
+AddSkyBox "Countdown" levels\multi\45_launch_station\45_launch_station
+AddSkyBox "Courtyard" levels\firefight\ff20_courtyard\ff20_courtyard
+AddSkyBox "Forge World" levels\multi\forge_halo\forge_halo
+AddSkyBox "High Noon" levels\dlc\cex_hangemhigh\cex_hangemhigh
+AddSkyBox "Highlands" levels\dlc\trainingpreserve\trainingpreserve
+AddSkyBox "Holdout" levels\firefight\ff70_holdout\ff70_holdout
+AddSkyBox "Installation 04" levels\dlc\cex_ff_halo\cex_ff_halo
+AddSkyBox "Outpost" levels\firefight\ff60_airview\ff60_airview
+AddSkyBox "Overlook" levels\firefight\ff10_prototype\ff10_prototype
+AddSkyBox "Penance" levels\dlc\cex_damnation\cex_damnation
+AddSkyBox "Power House" levels\multi\30_settlement\30_settlement
+AddSkyBox "Reflection" levels\multi\52_ivory_tower\52_ivory_tower
+AddSkyBox "Ridgeline" levels\dlc\cex_timberland\cex_timberland
+AddSkyBox "Solitary" levels\dlc\cex_prisoner\cex_prisoner
+AddSkyBox "Spire" levels\multi\35_island\35_island
+AddSkyBox "Sword Base" levels\multi\20_sword_slayer\20_sword_slayer
+AddSkyBox "Tempest" levels\multi\dlc\dlc_medium\dlc_medium
+AddSkyBox "Unearthed" levels\dlc\ff_unearthed\ff_unearthed
+AddSkyBox "Waterfront" levels\firefight\ff30_waterfront\ff30_waterfront
+AddSkyBox "Zealot" levels\multi\45_aftship\45_aftship
+

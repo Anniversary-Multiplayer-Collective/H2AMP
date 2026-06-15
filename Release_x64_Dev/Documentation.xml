@@ -19274,6 +19274,140 @@
             blends colors through more hues (goes the long way around the color wheel)
             </summary>
         </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.AccelerationScale">
+            <summary>
+            marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc.
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.DynamicLightSphereRadius">
+            <summary>
+            sphere to use for dynamic lights and shadows. only used if not 0
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.DynamicLightSphereOffset">
+            <summary>
+            only used if radius not 0
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.ApplyCollisionDamageScale">
+            <summary>
+            for things that want to cause more or less collision damage
+            </summary>
+            <summary>
+            0 means 1.  1 is standard scale.  Some things may want to apply more damage
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MinGameAccDefault">
+            <summary>
+            0 - means take default value from globals.globals
+            </summary>
+            <summary>
+            0-oo
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MaxGameAccDefault">
+            <summary>
+            0-oo
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MinGameScaleDefault">
+            <summary>
+            0-1
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MaxGameScaleDefault">
+            <summary>
+            0-1
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MinAbsAccDefault">
+            <summary>
+            0 - means take default value from globals.globals
+            </summary>
+            <summary>
+            0-oo
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MaxAbsAccDefault">
+            <summary>
+            0-oo
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MinAbsScaleDefault">
+            <summary>
+            0-1
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.GameObject.MaxAbsScaleDefault">
+            <summary>
+            0-1
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.FlagsValue.ExtensionOfParent">
+            <summary>
+            object passes all function values to parent and uses parent's markers
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.FlagsValue.UseStaticMassiveLightmapSample">
+            <summary>
+            cast a ton of rays once and store the results for lighting
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.FlagsValue.AttachToClustersByDynamicSphere">
+            <summary>
+            use this for the mac gun on spacestation
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectAiPropertiesBlock.AiTypeName">
+            <summary>
+            used for combat dialogue, etc.
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.TurnOffWith">
+            <summary>
+            if the specified function is off, so is this function
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.MinValue">
+            <summary>
+            function must exceed this value (after mapping) to be active 0. means do nothing
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.FlagsValue.Invert">
+            <summary>
+            result of function is one minus actual result
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.FlagsValue.MappingDoesNotControlsActive">
+            <summary>
+            the curve mapping can make the function active/inactive
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.FlagsValue.AlwaysActive">
+            <summary>
+            function does not deactivate when at or below lower bound
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectFunctionBlock.FlagsValue.RandomTimeOffset">
+            <summary>
+            function offsets periodic function input by random value between 0 and 1
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectChangeColors.ObjectChangeColorInitialPermutation.VariantName">
+            <summary>
+            if empty, may be used by any model variant
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectChangeColors.ObjectChangeColorFunction.ScaleFlagsValue.BlendInHsv">
+            <summary>
+            blends colors in hsv rather than rgb space
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.ObjectChangeColors.ObjectChangeColorFunction.ScaleFlagsValue.MoreColors">
+            <summary>
+            blends colors through more hues (goes the long way around the color wheel)
+            </summary>
+        </member>
         <member name="F:TagTool.Tags.Definitions.Gen2.Garbage.AccelerationScale">
             <summary>
             marine 1.0, grunt 1.4, elite 0.9, hunter 0.5, etc.
@@ -20463,6 +20597,11 @@
         <member name="F:TagTool.Tags.Definitions.Gen2.HudGlobals.GlobalNewHudGlobalsStructBlock.PlayerTrainingEntryDataBlock.DisplayDelayS">
             <summary>
             how long the event can be triggered before it's displayed
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Item.PickupMessage">
+            <summary>
+            everything you need to display stuff
             </summary>
         </member>
         <member name="F:TagTool.Tags.Definitions.Gen2.ItemCollection.ItemPermutation.Weight">
@@ -23861,6 +24000,102 @@
         <member name="F:TagTool.Tags.Definitions.Gen2.Style.StyleControl">
             <summary>
             Check the appropriate box to turn on/off the given behavior
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.DistanceOfEvadeAnim">
+            <summary>
+            this must be set to tell the AI how far it should expect our evade animation to move us
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.DistanceOfDiveAnim">
+            <summary>
+            this must be set to tell the AI how far it should expect our dive animation to move us
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.StunnedMovementThreshold">
+            <summary>
+            if we take this much damage in a short space of time we will play our 'stunned movement' animations
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.SpawnedTurretCharacter">
+            <summary>
+            automatically created character when this unit is driven
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.SpawnedActorCount">
+            <summary>
+            number of actors which we spawn
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.SpawnedVelocity">
+            <summary>
+            velocity at which we throw spawned actors
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.RightHandNode">
+            <summary>
+            where the primary weapon is attached
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.LeftHandNode">
+            <summary>
+            where the seconday weapon is attached (for dual-pistol modes)
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitAdditionalNodeNamesStructBlock.PreferredGunNode">
+            <summary>
+            if found, use this gun marker
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.DialogueVariantBlock.VariantNumber">
+            <summary>
+            variant number to use this dialogue with (must match the suffix in the permutations on the unit's model)
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.PingScale">
+            <summary>
+            nathan is too lazy to make pings for each seat.
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.TurnoverTime">
+            <summary>
+            how much time it takes to evict a rider from a flipped vehicle
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.ListenerInterpolationFactor">
+            <summary>
+            how far to interpolate listener position from camera to occupant's head
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.YawRateBounds">
+            <summary>
+            when the unit velocity is 0, the yaw/pitch rates are the left values
+            at [max speed reference], the yaw/pitch rates are
+            the right values.
+            the max speed reference is what the code uses to generate a clamped speed from 0..1
+            the exponent
+            controls how midrange speeds are interpreted.
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.EntryRadius">
+            <summary>
+            note: the entry radius shouldn't exceed 3 world units, 
+            as that is as far as the player will search for a vehicle
+            to
+            enter.
+            </summary>
+            <summary>
+            how close to the entry marker a unit must be
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.EntryMarkerConeAngle">
+            <summary>
+            angle from marker forward the unit must be
+            </summary>
+        </member>
+        <member name="F:TagTool.Tags.Definitions.Gen2.Unit.UnitSeatBlock.EntryMarkerFacingAngle">
+            <summary>
+            angle from unit facing the marker must be
             </summary>
         </member>
         <member name="F:TagTool.Tags.Definitions.Gen2.UnitHudInterface.FlashDelay">

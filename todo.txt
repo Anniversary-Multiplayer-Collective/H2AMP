@@ -1,5 +1,4 @@
 # CREDIT TODO
-- Port Peestain H2 Mongoose Port
 - Credit, Oli, Alexis, and others who helped on H2AMP
 - Credit the guy who makes the H2 HUD for H3
 
@@ -12,7 +11,7 @@
 - Skybox needs proper lighting and fog, fuck riverworld (valhalla) blue tint
 |-> to fix the skybox not appearing, it needs proper Nodes and Collision Region in the model tag
   |-> and the first mesh shader need to be set to opaque
- 
+- Containment explosives don't have a explosive effect
 - Ivory Tower glass look like dogshit, and the foliage need to be set to prepass
 - MainMenu fog don't appear
 

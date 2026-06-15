@@ -15,7 +15,7 @@
 LOCAL_SAMPLER_2D(surface_sampler, 0);		
 LOCAL_SAMPLER_2D(dark_surface_sampler, 1);		
 LOCAL_SAMPLER_2D(bloom_sampler, 2);	
-uniform sampler2D unknown3 : register(s3);
+LOCAL_SAMPLER_2D(bling_sampler, 3);
 LOCAL_SAMPLER_3D(color_grading0, 4);
 LOCAL_SAMPLER_3D(color_grading1, 5);
 LOCAL_SAMPLER_2D(depth_sampler, 6);		// depth of field
@@ -91,7 +91,7 @@ float4 default_calc_bloom(in float2 texcoord)
 
 float3 default_calc_blend(in float2 texcoord, in float4 combined, in float4 bloom)
 {
-    return combined.rgb * bloom.a + bloom.rgb;
+    return (combined.rgb * bloom.a + bloom.rgb) + (sample2D(bling_sampler, texcoord).rgb * intensity.z);
 }
 
 float4 apply_noise( in float2 noise_space_texcoord, in float4 input_color )

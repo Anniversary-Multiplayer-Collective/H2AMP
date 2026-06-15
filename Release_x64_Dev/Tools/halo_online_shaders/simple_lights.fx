@@ -304,6 +304,54 @@ void calc_simple_lights_ggx(
 	}
 }
 
+void calc_simple_lights_uma(
+		in float3 fragment_position_world,
+		in float3 surface_normal,
+		in float3 view_reflect_dir_world,							// view direction = fragment to camera,   reflected around fragment normal
+        in float3 view_dir,
+		in float  spec_mask,
+        in float3 albedo,
+		out float3 diffusely_reflected_light,						// diffusely reflected light (not including diffuse surface color)
+		out float3 specularly_reflected_light)
+{
+	
+
+	diffusely_reflected_light= float3(0.0f, 0.0f, 0.0f);
+	specularly_reflected_light= float3(0.0f, 0.0f, 0.0f);
+
+#ifndef pc
+	[loop]
+#endif
+	for (int light_index= 0; light_index < SIMPLE_LIGHT_COUNT; light_index++)
+	{
+		// Compute distance squared to light, to see if we can skip this light.
+		// Note: This is also computed in calculate_simple_light below, but the shader
+		// compiler will remove the second computation and share the results of this
+		// computation.
+		float3 fragment_to_light_test= LIGHT_POSITION - fragment_position_world;				// vector from fragment to light
+		float  light_dist2_test= dot(fragment_to_light_test, fragment_to_light_test);				// distance to the light, squared
+		if( light_dist2_test >= LIGHT_BOUNDING_RADIUS )
+		{
+			// debug: use a strong green tint to highlight area outside of the light's radius
+			//diffusely_reflected_light += float3( 0, 1, 0 );
+			//specularly_reflected_light += float3( 0, 1, 0 );
+			continue;
+		}
+
+		float3 fragment_to_light;
+		float3 light_radiance;
+		calculate_simple_light(
+			light_index, fragment_position_world, light_radiance, fragment_to_light);
+
+        float NdotL = smoothstep(0.0, 0.03f, dot(surface_normal, fragment_to_light));
+		float NdotV = dot(surface_normal, view_dir);
+
+		specularly_reflected_light += saturate(spec_mask * 50 * (NdotV - 0.6)) * (albedo / PI) * NdotL * light_radiance;
+		
+		diffusely_reflected_light	+= NdotL * light_radiance * (albedo / PI);
+	}
+}
+
 void calc_simple_lights_spec_gloss(
 		in float3 fragment_position_world,
 		in float3 surface_normal,
