@@ -98,6 +98,13 @@ SetField Nodes[0].DefaultScale 2
 Savetagchanges
 exit
 
+echo Sanctuary
+
+EditTag scenarios\skies\multi\deltatap\deltatap.render_model
+SetField Nodes[0].DefaultScale 5
+savetagchanges
+exit
+
 
 
 
