@@ -519,11 +519,11 @@ savetagchanges
 exit
 edittag ui\halox\main_menu\main_menu.scn3
 setfield guirenderblock.Bounds720p -413 -300 420 756
-foreach groupwidgets[0].Definition.bitmapwidgets setfield bitmap null
-foreach groupwidgets[0].Definition.bitmapwidgets setfield flags 0
+ForEach GroupWidgets[0].Definition.BitmapWidgets SetField Definition.Bitmap null  
+ForEach GroupWidgets[0].Definition.BitmapWidgets SetField Definition.Flags 0  
 setfield groupwidgets[0].Definition.listwidgets[0].Definition.Items[7].guirenderblock.Bounds720p 198 0 0 0
 setfield groupwidgets[0].Definition.listwidgets[0].Definition.Items[7].guirenderblock.Bounds480i 0 0 0 0
-setfield groupwidgets[0].Definition.textwidgets[1].Definition.flags DoNotApplyOldContentUpscaling,Scrollable
+setfield groupwidgets[0].Definition.textwidgets[1].Definition.Flags DoNotApplyOldContentUpscaling,Scrollable
 setfield groupwidgets[0].Definition.textwidgets[1].Definition.guirenderblock.Bounds720p 800 111 830 489
 setfield groupwidgets[0].Definition.textwidgets[1].Definition.guirenderblock.Bounds480i 534 52 573 270
 setfield groupwidgets[0].Definition.bitmapwidgets[0].Definition.Flags None
