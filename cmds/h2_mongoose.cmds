@@ -108,13 +108,19 @@ setfield modes[50].modeik[1].attachtomarker left_hand
 savetagchanges
 exit
 
-foreach vehi named: \mongoose\ addblockelements changecolors
-foreach vehi named: \mongoose\ addblockelements changecolors[0].initialpermutations
-foreach vehi named: \mongoose\ setfield changecolors[0].initialpermutations[0].weight 1
-foreach vehi named: \mongoose\ setfield changecolors[0].initialpermutations[0].colorlowerbound 0.4588 0.5333 0.3020
-foreach vehi named: \mongoose\ setfield changecolors[0].initialpermutations[0].colorupperbound 0.4588 0.5333 0.3020
-foreach rmsh named: \mongoose\ setargument change_color_map 1 1 0 0
+edittag objects\vehicles\mongoose\mongoose.vehicle
+addblockelements changecolors
+addblockelements changecolors[0].initialpermutations
+setfield changecolors[0].initialpermutations[0].weight 1
+setfield changecolors[0].initialpermutations[0].colorlowerbound 0.4588 0.5333 0.3020
+setfield changecolors[0].initialpermutations[0].colorupperbound 0.4588 0.5333 0.3020
+savetagchanges
+exit
 
+edittag objects\vehicles\mongoose\shaders\mongoose_metal_cc.shader
+setbitmap change_color_map objects\vehicles\mongoose\bitmaps\mongoose_cc.bitmap 1 1 0 0
+savetagchanges
+exit
 
 edittag objects\vehicles\mongoose\mongoose.mode
 replacerendergeometry "workingdir\models\h2_mongoose.dae" trianglelist
