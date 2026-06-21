@@ -244,13 +244,13 @@ SetField Blf.Scenario.MapId 60014
 SaveMapChanges
 Exit
 
-##EditMap highplains.map
-##SetField Blf.Scenario.Names[0].Name "Tombstone"
-##SetField Blf.Scenario.Descriptions[0].Name "The UNSC decommissioned this munitions testing complex after safety concerns came to light."
-##SetField Header.MapId 60015
-##SetField Blf.Scenario.MapId 60015
-##SaveMapChanges
-##Exit
+EditMap highplains.map
+SetField Blf.Scenario.Names[0].Name "Tombstone"
+SetField Blf.Scenario.Descriptions[0].Name "The UNSC decommissioned this munitions testing complex after safety concerns came to light."
+SetField Header.MapId 60015
+SetField Blf.Scenario.MapId 60015
+SaveMapChanges
+Exit
 
 EditMap lockout.map
 SetField Blf.Scenario.Names[0].Name "Lockout"

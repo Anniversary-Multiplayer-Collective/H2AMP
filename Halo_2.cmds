@@ -47,7 +47,7 @@ NameTag objects\gear\human\military\crate_packing\crate_packing.model objects\ge
 NameTag objects\gear\human\military\crate_packing\crate_packing.render_model objects\gear\human\military\crate_packing\crate_packing_ho
 
 OpenCacheFile "h2maps\ascension.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 #EditTag scenarios\multi\ascension\ascension.scenario
@@ -57,11 +57,11 @@ Exit
 
 OpenCacheFile "h2maps\backwash.map"
 NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\beavercreek.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 EditTag scenarios\bitmaps\multi\halo\beavercreek\bc_carve.bitmap
@@ -70,23 +70,23 @@ SaveTagChanges
 Exit
 
 OpenCacheFile "h2maps\burial_mounds.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\coagulation.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\colossus.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\containment.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\cyclotron.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 EditTag scenarios\objects\multi\cyclotron\elevator_cyclotron\elevator_cyclotron.model_animation_graph
@@ -101,68 +101,68 @@ SaveTagChanges
 Exit
 
 OpenCacheFile "h2maps\deltatap.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\derelict.map"
 NameBlamTag objects\characters\sentinel_aggressor\weapons\beam\sentinel_aggressor_beam.weap objects\weapons\support_low\sentinel_gun\sentinel_gun
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\dune.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\elongation.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\foundation.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\gemini.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\headlong.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\highplains.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\lockout.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\midship.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\needle.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\street_sweeper.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\triplicate.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\turf.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\warlock.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\waterworks.map"
-PortTag *.scnr
+PortTag !UpdateMapFiles *.scnr
 Exit
 
 OpenCacheFile "h2maps\zanzibar.map"
