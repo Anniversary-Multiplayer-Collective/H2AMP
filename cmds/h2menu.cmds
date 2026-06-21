@@ -447,10 +447,8 @@ setfield lightvolumes[*].paletteindex 0
 setfield lightvolumes[*].nameindex -1
 setfield lightvolumes[*].position 1330.8 -767.825 -769.445
 setfield lightvolumes[*].rotation 65.14979 0 -90
-setfield lightvolumes[*].x 1349.8
-setfield lightvolumes[*].y -759.825
-setfield lightvolumes[*].z -773.445
-setfield lightvolumes[*].type2 Sphere
+setfield lightvolumes[*].targetpoint 1349.8 -759.825 -773.445
+setfield lightvolumes[*].type Sphere
 savetagchanges
 exit
 

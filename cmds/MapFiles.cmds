@@ -73,10 +73,10 @@ SetField MapId 60014
 SaveTagChanges
 Exit
 
-##EditTag scenarios\multi\halo\highplains\highplains.scenario
-##SetField MapId 60015
-##SaveTagChanges
-##Exit
+EditTag scenarios\multi\halo\highplains\highplains.scenario
+SetField MapId 60015
+SaveTagChanges
+Exit
 
 EditTag scenarios\multi\lockout\lockout.scenario
 SetField MapId 60016
