@@ -631,6 +631,7 @@ PasteBlockElements ShaderProperties[0].EntryPoints 0
 Savetagchanges
 Exit
 
+ImportFonts workingdir\font_package.bin
 
 
 MapFile Remove 8765
