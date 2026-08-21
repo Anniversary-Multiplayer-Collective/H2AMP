@@ -285,6 +285,8 @@ RunCommands workingdir\cmds\h2lmg.cmds
 
 RunCommands workingdir\cmds\flamethrower.cmds
 
+RunCommands workingdir\cmds\SkyBoxes.cmds
+
 # Heat still doesnt appear
 # And shooting flare isn't working as intended
 RunCommands workingdir\cmds\brute_plasma_rifle_hotfix_fuckyou.cmds
